@@ -27,7 +27,7 @@ Version:1.0
 15. Newslatter CSS
 16. About Us CSS
 17. Team CSS
-18. Blog CSS	
+18. Blog CSS
 	+ Blog Archive
 	+ Blog Sidebar
 	+ Blog Single
@@ -489,7 +489,7 @@ Version:1.0
 	width: 70px;
 	height: 70px;
 	border-radius:0;
-	
+
 }
 .header .shopping-list .cart-img:hover img{
 	transform:scale(1.09);
@@ -1075,7 +1075,7 @@ Version:1.0
 .header.sticky .all-category{}
 .header.sticky .all-category h3{
 	cursor:pointer;
-	
+
 }
 .header.sticky .all-category .main-category{
 	opacity:0;
@@ -1138,7 +1138,7 @@ Version:1.0
 
 /*======================================
    Hero Area CSS
-========================================*/ 
+========================================*/
 .hero-slider {
 	background: #fff;
 	overflow: hidden;
@@ -1152,7 +1152,7 @@ Version:1.0
     height: 510px;
 }
 .hero-slider .text-inner {
-	
+
 }
 .hero-slider .hero-text {
 	padding: 0 30px;
@@ -1385,7 +1385,7 @@ Version:1.0
 }
 /* Hero Area 4 */
 .hero-area4 .big-content{
-	
+
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -1454,11 +1454,11 @@ Version:1.0
 
 /*======================================
    End Hero Area CSS
-========================================*/ 
+========================================*/
 
 /*======================================
    Start Small Banner CSS
-========================================*/ 
+========================================*/
 .small-banner{
 	padding:30px 0;
 	padding-bottom:0;
@@ -1513,11 +1513,11 @@ Version:1.0
 }
 /*======================================
    End Small Banner CSS
-========================================*/ 
+========================================*/
 
 /*======================================
    Start Mid Banner CSS
-========================================*/ 
+========================================*/
 .midium-banner{
 	padding:0;
 }
@@ -1579,7 +1579,7 @@ Version:1.0
 }
 /*======================================
    End Mid Banner CSS
-========================================*/ 
+========================================*/
 
 /*======================================
    Start Most Popular CSS
@@ -1665,7 +1665,7 @@ Version:1.0
 }
 .product-area .nav-tabs li:last-child a{
 	border-color:transparent;
-} 
+}
 .product-area .nav-tabs li a i{
 	margin-right:10px;
 }
@@ -1959,7 +1959,7 @@ Version:1.0
 /*======================================
    Start Shop Sidebar CSS
 ========================================*/
-.shop-sidebar .single-widget {
+.shop-sidebar .{
 	margin-top: 30px;
 	background: #F6F7FB;
 	padding: 30px;
@@ -1967,7 +1967,7 @@ Version:1.0
 .shop-sidebar .single-widget:first-child {
 	margin-top: 0;
 }
-.shop-sidebar .single-widget .title {
+.shop-sidebar ..title {
 	position: relative;
 	font-size: 18px;
 	font-weight: 500;
@@ -2056,7 +2056,7 @@ Version:1.0
 	margin-top: 10px;
 }
 .shop-sidebar .categor-list li{
-	
+
 }
 .shop-sidebar .categor-list li {
 	margin-bottom: 10px;
@@ -2527,7 +2527,7 @@ Version:1.0
 	border-color:transparent;
 }
 .shop.single .tab-single {
-	
+
 }
 .shop.single .single-des {
 	margin-top:35px;
@@ -2536,7 +2536,7 @@ Version:1.0
 	margin-bottom:15px;
 	font-weight:500;
 	font-size:22px;
-	
+
 }
 .shop.single .single-des ul{}
 .shop.single .single-des ul li {
@@ -2905,7 +2905,7 @@ Version:1.0
 	transform:rotate(360deg);
 }
 .shopping-cart .border{
-	
+
 }
 .shopping-cart .table .remove-icon{
 	font-size:16px;
@@ -3062,7 +3062,7 @@ Version:1.0
 	padding-left: 100px;
 }
 .shopping-cart .total-amount .right ul{
-	
+
 }
 .shopping-cart .total-amount .right ul li {
 	font-size: 15px;
@@ -3148,7 +3148,7 @@ Version:1.0
 	background: #F6F7FB;
 }
 .shop.checkout .form .form-group input:hover{
-	
+
 }
 .shop.checkout .nice-select {
 	width: 100%;
@@ -3198,13 +3198,13 @@ Version:1.0
 	padding: 15px 0 30px 0;
 	border: 1px solid #eee;
 }
-.shop.checkout .single-widget {
+.shop.checkout .{
 	margin-bottom: 30px;
 }
 .shop.checkout .single-widget:last-child{
 	margin:0;
 }
-.shop.checkout .single-widget h2 {
+.shop.checkout .h2 {
 	position:relative;
 	font-size: 15px;
 	font-weight: 600;
@@ -3214,7 +3214,7 @@ Version:1.0
 	color: #333;
 	padding-bottom: 5px;
 }
-.shop.checkout .single-widget h2:before{
+.shop.checkout .h2:before{
 	position:absolute;
 	content:"";
 	left:30px;
@@ -3223,10 +3223,10 @@ Version:1.0
 	width:50px;
 	background:#F7941D;
 }
-.shop.checkout .single-widget .content ul{
+.shop.checkout ..content ul{
 	margin-top:30px;
 }
-.shop.checkout .single-widget .content ul li {
+.shop.checkout ..content ul li {
 	display: block;
 	padding: 0px 30px;
 	font-size: 15px;
@@ -3265,13 +3265,13 @@ Version:1.0
 .shop.checkout .single-widget .checkbox label:last-child{
 	margin-bottom:0;
 }
-.shop.checkout .single-widget .checkbox label:hover{
+.shop.checkout ..checkbox label:hover{
 	cursor:pointer;
 }
-.shop.checkout .single-widget .checkbox label input{
+.shop.checkout ..checkbox label input{
 	display:none;
 }
-.shop.checkout .single-widget .checkbox label::before {
+.shop.checkout ..checkbox label::before {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -3282,7 +3282,7 @@ Version:1.0
 	border: 1px solid #666;
 	border-radius: 100%;
 }
-.shop.checkout .single-widget .checkbox label::after {
+.shop.checkout ..checkbox label::after {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -3298,7 +3298,7 @@ Version:1.0
 	-moz-transition:all 0.4s ease;
 	transition:all 0.4s ease;
 }
-.shop.checkout .single-widget .checkbox label.checked::after{
+.shop.checkout ..checkbox label.checked::after{
 	opacity:1;
 	visibility:visible;
 	transform:scale(1);
@@ -3637,7 +3637,7 @@ Version:1.0
 	margin-top:40px;
 	width: 80px;
 	display:inline-block;
-	
+
 }
 .cown-down .content .cdown {
 	text-align: center;
@@ -3896,7 +3896,7 @@ Version:1.0
 .about-us .about-img img{
 	height:100%;
 	width:100%;
-	
+
 }
 /*=============================
 	End About US CSS
@@ -3904,7 +3904,7 @@ Version:1.0
 
 /*======================================
   10. Start Team CSS
-========================================*/  
+========================================*/
 .team{
 	background:#F6F7FB;
 }
@@ -3967,7 +3967,7 @@ Version:1.0
 }
 /*======================================
   End Team CSS
-========================================*/ 
+========================================*/
 
 /*======================================
    Start Shop Blog CSS
@@ -4044,7 +4044,7 @@ Version:1.0
 .main-sidebar .single-widget{
 	margin-bottom:50px;
 }
-.main-sidebar .single-widget .title {
+.main-sidebar ..title {
 	position: relative;
 	font-size: 18px;
 	font-weight: 600;
@@ -4112,7 +4112,7 @@ Version:1.0
 	margin-top: 15px;
 }
 .main-sidebar .categor-list li{
-	
+
 }
 .main-sidebar .categor-list li {
 	margin-bottom: 10px;
@@ -4158,7 +4158,7 @@ Version:1.0
 	border:none;
 }
 .main-sidebar .single-post .image {
-	
+
 }
 .main-sidebar .single-post .image img{
 	float: left;
@@ -4226,7 +4226,7 @@ Version:1.0
 }
 /* Blog Newslatter CSS */
 .main-sidebar .newsletter{
-	
+
 }
 .main-sidebar .newsletter .letter-inner {
 	position:relative;
@@ -4425,7 +4425,7 @@ Version:1.0
 	background:#F7941D;
 }
 .blog-single .comments{
-	
+
 }
 .blog-single .comments .single-comment {
 	position: relative;
@@ -4444,7 +4444,7 @@ Version:1.0
 	left: 0;
 }
 .blog-single .single-comment .content {
-	
+
 }
 .blog-single .single-comment .content h4 {
 	color: #333;
@@ -4892,7 +4892,7 @@ Version:1.0
 }
 /* Copyright */
 .footer .copyright{
-	
+
 }
 .footer .copyright .inner{
 	border-top:1px solid #eeeeee3d;
@@ -4912,4 +4912,3 @@ Version:1.0
 /*=============================
 	End Footer CSS
 ===============================*/
-
