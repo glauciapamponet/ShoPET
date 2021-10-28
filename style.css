@@ -569,16 +569,16 @@ Version:1.0
 }
 .header.shop .search-bar {
 	margin-top: 33px;
-	/* width: 460px; */
-	width: 550px;
+	width: 460px;
+	/* width: 550px; */
 	height: 40px;
 	display: inline-block;
 	background: #fff;
 	position: relative;
 }
 .header.shop .search-bar {
-	/* width: 535px; */
-	width: 590px;
+	width: 460px;
+	/* width: 590px; */
 	height: 50px;
 	display: inline-block;
 	background: #fff;
@@ -682,7 +682,9 @@ Version:1.0
 	border:none;
 }
 .header.shop .header-inner {
-	background: #333;
+	padding: 20px 0;
+	background: #fff;
+	border-top: 1px solid #eee;
 }
 .header.shop.v3 .header-inner {
 	background: transparent;
