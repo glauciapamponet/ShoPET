@@ -121,17 +121,41 @@
 									<h3><i class="fa fa-bars" aria-hidden="true"></i>CATEGORIAS</h3>
 								</a>
 								<ul class="main-category collapse" id="collapse">
-									<li><a href="#">Acessórios</a></li>
-									<li><a href="#">Alimentação</a></li>
-									<li><a href="#">Beleza</a></li>
-									<li><a href="#">Cargos</a></li>
-									<li><a href="#">Contas</a></li>
-									<li><a href="#">Decoração</a></li>
-									<li><a href="#">Eletrônicos</a></li>
-									<li><a href="#">Escritório</a></li>
-									<li><a href="#">Estudos</a></li>
-									<li><a href="#">Instrumentos</a></li>
-									<li><a href="#">Moda</a></li>
+									<li><a href="#">Tipos<i class="fa fa-angle-right"
+										aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											<li><a href="#">Acessórios</a></li>
+											<li><a href="#">Alimentação</a></li>
+											<li><a href="#">Beleza</a></li>
+											<li><a href="#">Cargos</a></li>
+											<li><a href="#">Contas</a></li>
+											<li><a href="#">Decoração</a></li>
+											<li><a href="#">Eletrônicos</a></li>
+											<li><a href="#">Escritório</a></li>
+											<li><a href="#">Estudos</a></li>
+											<li><a href="#">Instrumentos</a></li>
+											<li><a href="#">Moda</a></li>
+										</ul>
+									<li>
+									<li><a href="#">Petianos<i class="fa fa-angle-right"
+												aria-hidden="true"></i></a>
+										<ul class="sub-category">
+											<li><a href="#">Alexandre</a></li>
+											<li><a href="#">Caio</a></li>
+											<li><a href="#">Cairolli</a></li>
+											<li><a href="#">Eler</a></li>
+											<li><a href="#">Furquim</a></li>
+											<li><a href="#">Giovanna</a></li>
+											<li><a href="#">Glaucia</a></li>
+											<li><a href="#">João</a></li>
+											<li><a href="#">Marin</a></li>
+											<li><a href="#">Michelly</a></li>
+											<li><a href="#">PET</a></li>
+											<li><a href="#">Sena</a></li>
+											<li><a href="#">Stefany</a></li>
+											<li><a href="#">Thaís</a></li>
+										</ul>
+									</li>
 								</ul>
 							</div>
 						</div>
