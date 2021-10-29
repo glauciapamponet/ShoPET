@@ -1959,7 +1959,7 @@ Version:1.0
 /*======================================
    Start Shop Sidebar CSS
 ========================================*/
-.shop-sidebar .{
+.shop-sidebar {
 	margin-top: 30px;
 	background: #F6F7FB;
 	padding: 30px;
@@ -1967,7 +1967,7 @@ Version:1.0
 .shop-sidebar .single-widget:first-child {
 	margin-top: 0;
 }
-.shop-sidebar ..title {
+.shop-sidebar .title {
 	position: relative;
 	font-size: 18px;
 	font-weight: 500;
@@ -3198,7 +3198,7 @@ Version:1.0
 	padding: 15px 0 30px 0;
 	border: 1px solid #eee;
 }
-.shop.checkout .{
+.shop.checkout {
 	margin-bottom: 30px;
 }
 .shop.checkout .single-widget:last-child{
@@ -3223,10 +3223,10 @@ Version:1.0
 	width:50px;
 	background:#F7941D;
 }
-.shop.checkout ..content ul{
+.shop.checkout .content ul{
 	margin-top:30px;
 }
-.shop.checkout ..content ul li {
+.shop.checkout .content ul li {
 	display: block;
 	padding: 0px 30px;
 	font-size: 15px;
@@ -3265,13 +3265,13 @@ Version:1.0
 .shop.checkout .single-widget .checkbox label:last-child{
 	margin-bottom:0;
 }
-.shop.checkout ..checkbox label:hover{
+.shop.checkout .checkbox label:hover{
 	cursor:pointer;
 }
-.shop.checkout ..checkbox label input{
+.shop.checkout .checkbox label input{
 	display:none;
 }
-.shop.checkout ..checkbox label::before {
+.shop.checkout .checkbox label::before {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -3282,7 +3282,7 @@ Version:1.0
 	border: 1px solid #666;
 	border-radius: 100%;
 }
-.shop.checkout ..checkbox label::after {
+.shop.checkout .checkbox label::after {
 	position: absolute;
 	content: "";
 	left: 0;
@@ -3298,7 +3298,7 @@ Version:1.0
 	-moz-transition:all 0.4s ease;
 	transition:all 0.4s ease;
 }
-.shop.checkout ..checkbox label.checked::after{
+.shop.checkout .checkbox label.checked::after{
 	opacity:1;
 	visibility:visible;
 	transform:scale(1);
@@ -4044,7 +4044,7 @@ Version:1.0
 .main-sidebar .single-widget{
 	margin-bottom:50px;
 }
-.main-sidebar ..title {
+.main-sidebar .title {
 	position: relative;
 	font-size: 18px;
 	font-weight: 600;
