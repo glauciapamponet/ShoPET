@@ -309,7 +309,7 @@
   		</div>
   	</div>
   	<!-- End Most Popular Area
-		<!-- <span class="text-white wow fadeInDown" data-wow-delay=".2s"
+		 <span class="text-white wow fadeInDown" data-wow-delay=".2s"
 							style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">Eshop Free
 							Lite version</span>
 						<h2 class="text-white wow fadeInUp" data-wow-delay=".4s"
@@ -353,7 +353,52 @@
 		</div>
 	</section>
 	<!-- End Midium Banner -->
-<div class="section"></div>
+
+	<!-- Start Shop Services Area -->
+	<section class="shop-services section home">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-rocket"></i>
+						<h4>Frete grátis</h4>
+						<p>Para compras acima de R$100,00</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-reload"></i>
+						<h4>Devolução gratuita</h4>
+						<p>Dentro de 30 dias</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-lock"></i>
+						<h4>Pagamento seguro</h4>
+						<p>100% de segurança</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+				<div class="col-lg-3 col-md-6 col-12">
+					<!-- Start Single Service -->
+					<div class="single-service">
+						<i class="ti-tag"></i>
+						<h4>Melhor preço</h4>
+						<p>Preço garantido</p>
+					</div>
+					<!-- End Single Service -->
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Shop Services Area -->
+
 	<!-- Start Footer Area -->
 	<footer class="footer">
 		<!-- Footer Top -->
@@ -377,13 +422,13 @@
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Information</h4>
+							<h4>Informação</h4>
 							<ul>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">Faq</a></li>
-								<li><a href="#">Terms & Conditions</a></li>
-								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Help</a></li>
+								<li><a href="#">Sobre nós</a></li>
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Termos e Condições</a></li>
+								<li><a href="#">Contate-nos</a></li>
+								<li><a href="#">Ajuda</a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -391,13 +436,13 @@
 					<div class="col-lg-2 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer links">
-							<h4>Customer Service</h4>
+							<h4>Atendimento ao Cliente</h4>
 							<ul>
-								<li><a href="#">Payment Methods</a></li>
-								<li><a href="#">Money-back</a></li>
-								<li><a href="#">Returns</a></li>
-								<li><a href="#">Shipping</a></li>
-								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Métodos de pagamento</a></li>
+								<li><a href="#">Estorno</a></li>
+								<li><a href="#">Devolução</a></li>
+								<li><a href="#">Frete</a></li>
+								<li><a href="#">Política de Privacidade</a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -405,22 +450,24 @@
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
-							<h4>Get In Tuch</h4>
+							<h4>Entre em Contato</h4>
 							<!-- Single Widget -->
 							<div class="contact">
 								<ul>
-									<li>NO. 342 - London Oxford Street.</li>
-									<li>012 United Kingdom.</li>
-									<li>info@eshop.com</li>
-									<li>+032 3456 7890</li>
+									<li>Rua: Arlindo Bettio, 1000</li>
+									<li>CEP: 03828-000</li>
+									<li>Bairro: Vila Guaraciaba</li>
+									<li>Cidade/UF: São Paulo/SP</li>
+									<li>Email: contato@shopet.com.br</li>
+									<li>11 912345678</li>
 								</ul>
 							</div>
 							<!-- End Single Widget -->
 							<ul>
 								<li><a href="#"><i class="ti-facebook"></i></a></li>
-								<li><a href="#"><i class="ti-twitter"></i></a></li>
-								<li><a href="#"><i class="ti-flickr"></i></a></li>
 								<li><a href="#"><i class="ti-instagram"></i></a></li>
+								<li><a href="#"><i class="ti-twitter"></i></a></li>
+								<li><a href="#"><i class="ti-linkedin"></i></a></li>
 							</ul>
 						</div>
 						<!-- End Single Widget -->
@@ -435,8 +482,7 @@
 					<div class="row">
 						<div class="col-lg-6 col-12">
 							<div class="left">
-								<p>Copyright © 2020 <a href="http://www.wpthemesgrid.com"
-										target="_blank">Wpthemesgrid</a> - All Rights Reserved.</p>
+								<p>Copyright © 2021 ShoPET - Todos os direitos reservados.</p>
 							</div>
 						</div>
 						<div class="col-lg-6 col-12">
