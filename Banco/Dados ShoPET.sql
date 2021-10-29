@@ -28,6 +28,7 @@ INSERT INTO `shopet`.`petiano` (`nomepetiano`) VALUES ('Michelly');
 INSERT INTO `shopet`.`petiano` (`nomepetiano`) VALUES ('PET');
 
 -- PRODUTOS
+INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Almofada Nicholas Cage', '500.00', 'Acessórios', '1', '\\images\\Produtos\\1.jpg', '1', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Pistola Stefanya', '500.00', 'Acessórios', '1', '\\images\\Produtos\\2.jpg', '1', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Bandolim', '300.00', 'Instrumentos', '2', '\\images\\Produtos\\3.jpg', '1', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Berrante', '500.00', 'Instrumentos', '2', '\\images\\Produtos\\4.jpg', '1', '1');
@@ -50,7 +51,7 @@ INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`,
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Cargo Senhor das Demandas', '3500.00', 'Cargos', '14', '\\images\\Produtos\\21.jpg', '1', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Cargo Rei do Spotted', '3200.00', 'Cargos', '14', '\\images\\Produtos\\22.jpg', '1', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Cargo Rei do W2M', '3500.00', 'Cargos', '14', '\\images\\Produtos\\23.jpg', '1', '1');
-INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Cargo Paciente 0', '3000.00', 'Cargos ', '14', '\\images\\Produtos\\24.jpg', '1', '1');
+INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Cargo Paciente 0', '3000.00', 'Cargos', '14', '\\images\\Produtos\\24.jpg', '1', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Cargo Banco Central PET', '3400.00', 'Cargos', '14', '\\images\\Produtos\\25.jpg', '1', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Calendário Organizado', '2000.00', 'Escritório', '8', '\\images\\Produtos\\26.jpg', '50', '1');
 INSERT INTO `shopet`.`produto` (`nomeprod`, `precoprod`, `nomecat`, `idpetiano`, `pathimage`, `estoque`, `status_dispo`) VALUES ('Alarme', '1500.00', 'Acessórios', '8', '\\images\\Produtos\\27.jpg', '1', '1');
