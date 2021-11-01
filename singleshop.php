@@ -96,7 +96,7 @@
 						<div class="col-lg-2 col-md-2 col-12">
 							<!-- Logo -->
 							<div class="logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="index.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<!--/ End Logo -->
 							<!-- Search Form -->
@@ -362,7 +362,7 @@
       														<div class="row">
       															<div class="col-12">
       																<div class="single-des">
-      																	<p>simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with deskto</p>
+      																	<p><?php echo $resprod["desc"]; ?></p>
       																</div>
       																<!-- <div class="single-des">
       																	<p>Suspendisse consequatur voluptates lorem nobis accumsan natus mattis. Optio pede, optio qui metus, delectus! Ultricies impedit, minus tempor fuga, quasi, pede felis commodo bibendum voluptas nisi? Voluptatem risus tempore tempora. Quaerat aspernatur? Error praesent laoreet, cras in fames hac ea, massa montes diamlorem nec quaerat, quos occaecati leo nam aliquet corporis, ab recusandae parturient, etiam fermentum, a quasi possimus commodi, mollis voluptate mauris mollis, quisque donec</p>
@@ -463,7 +463,7 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index.html"><img src="images/logo2.png" alt="#"></a>
+								<a href="index.php"><img src="images/logo2.png" alt="#"></a>
 							</div>
 							<p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
 							<p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
