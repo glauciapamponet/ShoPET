@@ -76,19 +76,19 @@
 						<div class="col-lg-2 col-md-2 col-12">
 							<!-- Logo -->
 							<div class="logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="index.php"><img src="images/logo.png" alt="logo"></a>
 							</div>
 							<!--/ End Logo -->
 							<!-- Search Form -->
 							<div class="search-top">
 								<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
 								<!-- Search Form -->
-								<div class="search-top">
+								<!-- <div class="search-top">
 									<form class="search-form">
 										<input type="text" placeholder="Search here..." name="search">
-										<button value="search" type="submit"><i class="ti-search"></i></button>
+										<button value="search" type="submit" onclick="redirecionar()"><i class="ti-search" ></i></button>
 									</form>
-								</div>
+								</div> -->
 								<!--/ End Search Form -->
 							</div>
 							<!--/ End Search Form -->
@@ -104,36 +104,36 @@
 									<li><a href="#">Tipos<i class="fa fa-angle-right"
 										aria-hidden="true"></i></a>
 										<ul class="sub-category">
-											<li><a href="#">Acessórios</a></li>
-											<li><a href="#">Alimentação</a></li>
-											<li><a href="#">Beleza</a></li>
-											<li><a href="#">Cargos</a></li>
-											<li><a href="#">Contas</a></li>
-											<li><a href="#">Decoração</a></li>
-											<li><a href="#">Eletrônicos</a></li>
-											<li><a href="#">Escritório</a></li>
-											<li><a href="#">Estudos</a></li>
-											<li><a href="#">Instrumentos</a></li>
-											<li><a href="#">Moda</a></li>
+											<li><a href="cat.php?nomecat=Acessórios">Acessórios</a></li>
+											<li><a href="cat.php?nomecat=Alimentação">Alimentação</a></li>
+											<li><a href="cat.php?nomecat=Beleza">Beleza</a></li>
+											<li><a href="cat.php?nomecat=Cargos">Cargos</a></li>
+											<li><a href="cat.php?nomecat=Contas">Contas</a></li>
+											<li><a href="cat.php?nomecat=Decoração">Decoração</a></li>
+											<li><a href="cat.php?nomecat=Eletrônicos">Eletrônicos</a></li>
+											<li><a href="cat.php?nomecat=Escritório">Escritório</a></li>
+											<li><a href="cat.php?nomecat=Estudos">Estudos</a></li>
+											<li><a href="cat.php?nomecat=Instrumentos">Instrumentos</a></li>
+											<li><a href="cat.php?nomecat=Moda">Moda</a></li>
 										</ul>
 									<li>
 									<li><a href="#">Petianos<i class="fa fa-angle-right"
 												aria-hidden="true"></i></a>
 										<ul class="sub-category">
-											<li><a href="#">Alexandre</a></li>
-											<li><a href="#">Caio</a></li>
-											<li><a href="#">Cairolli</a></li>
-											<li><a href="#">Eler</a></li>
-											<li><a href="#">Furquim</a></li>
-											<li><a href="#">Giovanna</a></li>
-											<li><a href="#">Glaucia</a></li>
-											<li><a href="#">João</a></li>
-											<li><a href="#">Marin</a></li>
-											<li><a href="#">Michelly</a></li>
-											<li><a href="#">PET</a></li>
-											<li><a href="#">Sena</a></li>
-											<li><a href="#">Stefany</a></li>
-											<li><a href="#">Thaís</a></li>
+											<li><a href="pet/?nomepetiano=Alexandre">Alexandre</a></li>
+											<li><a href="pet/?nomepetiano=Caio">Caio</a></li>
+											<li><a href="pet/?nomepetiano=Cairolli">Cairolli</a></li>
+											<li><a href="pet/?nomepetiano=Eler">Eler</a></li>
+											<li><a href="pet/?nomepetiano=Furquim">Furquim</a></li>
+											<li><a href="pet/?nomepetiano=Giovanna">Giovanna</a></li>
+											<li><a href="pet/?nomepetiano=Glaucia">Glaucia</a></li>
+											<li><a href="pet/?nomepetiano=João">João</a></li>
+											<li><a href="pet/?nomepetiano=Marin">Marin</a></li>
+											<li><a href="pet/?nomepetiano=Michelly">Michelly</a></li>
+											<li><a href="pet/?nomepetiano=PET">PET</a></li>
+											<li><a href="pet/?nomepetiano=Sena">Sena</a></li>
+											<li><a href="pet/?nomepetiano=Stefany">Stefany</a></li>
+											<li><a href="pet/?nomepetiano=Thaís">Thaís</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -147,10 +147,10 @@
 										<div class="nav-inner">
 											<div class="search-bar-top">
 												<div class="search-bar">
-													<form>
-														<input name="search" placeholder="Pesquise por produtos aqui"
-															type="search">
-														<button class="btnn"><i class="ti-search"></i></button>
+													<form action="busca.php" method="GET">
+														<input name="search" id="prodnome" placeholder="Pesquise por produtos aqui"
+															type="text" autocomplete="off">
+														<button class="btnn" type="submit"><i class="ti-search" ></i></button>
 													</form>
 												</div>
 											</div>
@@ -164,16 +164,16 @@
 							<div class="right-bar">
 								<!-- Search Form -->
 								<div class="sinlge-bar">
-									<a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+									<!-- <a href="#" class="single-icon"><i class="fa fa-heart-o" aria-hidden="true"></i></a> -->
 								</div>
 								<div class="sinlge-bar">
-									<a href="#" class="single-icon"><i class="fa fa-user-circle-o"
-											aria-hidden="true"></i></a>
+									<!-- <a href="#" class="single-icon"><i class="fa fa-user-circle-o"
+											aria-hidden="true"></i></a> -->
 								</div>
-								<div class="sinlge-bar shopping">
+								<!-- <div class="sinlge-bar shopping">
 									<a href="#" class="single-icon"><i class="ti-bag"></i> <span
 											class="total-count">2</span></a>
-									<!-- Shopping Item -->
+
 									<div class="shopping-item">
 										<div class="dropdown-cart-header">
 											<span>2 Itens</span>
@@ -185,28 +185,28 @@
 														class="fa fa-remove"></i></a>
 												<a class="cart-img" href="#"><img
 														src="https://via.placeholder.com/70x70" alt="#"></a>
-												<h4><a href="#">Woman Ring</a></h4>
-												<p class="quantity">1x - <span class="amount">$99.00</span></p>
+												<h4><a href="#">Produto</a></h4>
+												<p class="quantity">1x - <span class="amount">$00.00</span></p>
 											</li>
 											<li>
 												<a href="#" class="remove" title="Remove this item"><i
 														class="fa fa-remove"></i></a>
 												<a class="cart-img" href="#"><img
 														src="https://via.placeholder.com/70x70" alt="#"></a>
-												<h4><a href="#">Woman Necklace</a></h4>
-												<p class="quantity">1x - <span class="amount">$35.00</span></p>
+												<h4><a href="#">Produto</a></h4>
+												<p class="quantity">1x - <span class="amount">R$00.00</span></p>
 											</li>
 										</ul>
 										<div class="bottom">
 											<div class="total">
 												<span>Total</span>
-												<span class="total-amount">$134.00</span>
+												<span class="total-amount">R$00.00</span>
 											</div>
 											<a href="checkout.html" class="btn animate">Finalizar compra</a>
 										</div>
-									</div>
+									</div> -->
 									<!--/ End Shopping Item -->
-								</div>
+								<!-- </div> -->
 							</div>
 						</div>
 					</div>
@@ -314,7 +314,7 @@
 	<!--  -->
   <!-- <div class="section"></div> -->
 
-	<section class="section free-version-banner">
+	<!--<section class="section free-version-banner">
   	<div class="product-area most-popular">
   		<div class="container">
   			<div class="row">
@@ -322,16 +322,16 @@
   					<div class="section-title">
               <h2 class="text-white wow fadeInUp" data-wow-delay=".4s"
   							style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Sugestões Petianísticas</h2>
-  						<!-- <h2>Hot Item</h2> -->
+
   					</div>
   				</div>
   			</div>
   			<div class="row">
   				<div id="carrousselFETCH" class="col-12"> <!--DAQUI PRA BAIXO VAI PRO PHP -->
-  				</div> <!--DAQUI PRA CIMA VAI PRO PHP -->
-  			</div>
+        <!--</div> DAQUI PRA CIMA VAI PRO PHP -->
+  			<!-- </div>
   		</div>
-  	</div>
+  	</div> -->
   	<!-- End Most Popular Area
 		 <span class="text-white wow fadeInDown" data-wow-delay=".2s"
 							style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">Eshop Free
@@ -342,8 +342,8 @@
 						<p class="text-white wow fadeInUp" data-wow-delay=".6s"
 							style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Please,
 							purchase full version of the template to get all pages,<br> features and commercial license.
-						</p> -->
-	</section>
+						</p>
+	</section>-->
 
   <!-- Start Midium Banner  -->
 	<section class="midium-banner">
@@ -378,50 +378,7 @@
 	</section>
 	<!-- End Midium Banner -->
 
-	<!-- Start Shop Services Area -->
-	<section class="shop-services section home">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-rocket"></i>
-						<h4>Frete grátis</h4>
-						<p>Para compras acima de R$100,00</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-reload"></i>
-						<h4>Devolução gratuita</h4>
-						<p>Dentro de 30 dias</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-lock"></i>
-						<h4>Pagamento seguro</h4>
-						<p>100% de segurança</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-				<div class="col-lg-3 col-md-6 col-12">
-					<!-- Start Single Service -->
-					<div class="single-service">
-						<i class="ti-tag"></i>
-						<h4>Melhor preço</h4>
-						<p>Preço garantido</p>
-					</div>
-					<!-- End Single Service -->
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Shop Services Area -->
+  <div class="section"></div>
 
 	<!-- Start Footer Area -->
 	<footer class="footer">
@@ -433,7 +390,7 @@
 						<!-- Single Widget -->
 						<div class="single-footer about">
 							<div class="logo">
-								<a href="index.html"><img src="images/logo2.png" alt="#"></a>
+								<a href="index.php"><img src="images/logo2.png" alt="#"></a>
 							</div>
 							<p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
 							<p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
@@ -555,14 +512,15 @@
       $.post("PHP/productFETCH.php", function(exibicao){
           $("#prodExibition").html(exibicao);
       });
-      $.post("PHP/carrousselFETCH.php", function(carrossel){
-        $("#carrousselFETCH").html(carrossel);
-      });
+      // $.post("PHP/carrousselFETCH.php", function(carrossel){
+      //   $("#carrousselFETCH").html(carrossel);
+      // });
     });
 
-    // $(document).ready(function(){
-    //
-    // });
+    function redirecionar(){
+      var valor_busca = document.getElementById("prodnome").value;
+      location.href="busca.php/"+valor_busca;
+    }
   </script>
 </body>
 

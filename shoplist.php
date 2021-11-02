@@ -1,3 +1,8 @@
+<?php
+  include_once "connection.php";
+      session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -13,9 +18,9 @@
 	<link rel="icon" type="image/png" href="images/favicon.png">
 	<!-- Web Font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-	
+
 	<!-- StyleSheet -->
-	
+
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Magnific Popup -->
@@ -38,7 +43,7 @@
     <link rel="stylesheet" href="css/owl-carousel.css">
 	<!-- Slicknav -->
     <link rel="stylesheet" href="css/slicknav.min.css">
-	
+
 	<!-- Eshop StyleSheet -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="style.css">
@@ -59,10 +64,10 @@
 	<!--<link rel="stylesheet" href="css/color/color12.css">-->
 
 	<link rel="stylesheet" href="#" id="colors">
-	
+
 </head>
 <body class="js">
-	
+
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader-inner">
@@ -73,9 +78,9 @@
 		</div>
 	</div>
 	<!-- End Preloader -->
-	
+
 	<!-- Eshop Color Plate -->
-	<div class="color-plate ">
+	<!-- <div class="color-plate ">
 		<a class="color-plate-icon"><i class="ti-paint-bucket"></i></a>
 		<h4>Eshop Colors</h4>
 		<p>Here is some awesome color's available on Eshop Template.</p>
@@ -91,41 +96,11 @@
 		<span class="color10"></span>
 		<span class="color11"></span>
 		<span class="color12"></span>
-	</div>
+	</div> -->
 	<!-- /End Color Plate -->
-		
+
 		<!-- Header -->
 		<header class="header shop">
-			<!-- Topbar -->
-			<div class="topbar">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-6 col-md-12 col-12">
-							<!-- Top Left -->
-							<div class="top-left">
-								<ul class="list-main">
-									<li><i class="ti-headphone-alt"></i> +060 (800) 801-582</li>
-									<li><i class="ti-email"></i> support@shophub.com</li>
-								</ul>
-							</div>
-							<!--/ End Top Left -->
-						</div>
-						<div class="col-lg-6 col-md-12 col-12">
-							<!-- Top Right -->
-							<div class="right-content">
-								<ul class="list-main">
-									<li><i class="ti-location-pin"></i> Store location</li>
-									<li><i class="ti-alarm-clock"></i> <a href="#">Daily deal</a></li>
-									<li><i class="ti-user"></i> <a href="#">My account</a></li>
-									<li><i class="ti-power-off"></i><a href="login.html#">Login</a></li>
-								</ul>
-							</div>
-							<!-- End Top Right -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Topbar -->
 			<div class="middle-inner">
 				<div class="container">
 					<div class="row">
@@ -140,7 +115,7 @@
 								<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
 								<!-- Search Form -->
 								<div class="search-top">
-									<form class="search-form">
+									<form class="search-form" method="GET">
 										<input type="text" placeholder="Search here..." name="search">
 										<button value="search" type="submit"><i class="ti-search"></i></button>
 									</form>
@@ -221,8 +196,8 @@
 								<div class="menu-area">
 									<!-- Main Menu -->
 									<nav class="navbar navbar-expand-lg">
-										<div class="navbar-collapse">	
-											<div class="nav-inner">	
+										<div class="navbar-collapse">
+											<div class="nav-inner">
 												<ul class="nav main-menu menu navbar-nav">
 													<li class="active"><a href="#">Home<i class="ti-angle-down"></i></a>
 														<ul class="dropdown">
@@ -232,7 +207,7 @@
 															<li><a href="index4.html">Home Ecommerce V4</a></li>
 														</ul>
 													</li>
-													<li><a href="#">Product</a></li>												
+													<li><a href="#">Product</a></li>
 													<li><a href="#">Service</a></li>
 													<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">
@@ -251,7 +226,7 @@
 															<li><a href="mail-success.html">Mail Success</a></li>
 															<li><a href="404.html">404</a></li>
 														</ul>
-													</li>									
+													</li>
 													<li><a href="#">Blog<i class="ti-angle-down"></i></a>
 														<ul class="dropdown">
 															<li><a href="blog-grid.html">Blog Grid</a></li>
@@ -265,7 +240,7 @@
 											</div>
 										</div>
 									</nav>
-									<!--/ End Main Menu -->	
+									<!--/ End Main Menu -->
 								</div>
 							</div>
 						</div>
@@ -275,7 +250,7 @@
 			<!--/ End Header Inner -->
 		</header>
 		<!--/ End Header -->
-		
+
 		<!-- Breadcrumbs -->
 		<div class="breadcrumbs">
 			<div class="container">
@@ -292,7 +267,7 @@
 			</div>
 		</div>
 		<!-- End Breadcrumbs -->
-		
+
 		<!-- Product Style -->
 		<section class="product-area shop-sidebar shop section">
 			<div class="container">
@@ -300,7 +275,7 @@
 					<div class="col-lg-3 col-md-4 col-12">
 						<div class="shop-sidebar">
 								<!-- Single Widget -->
-								<div class="single-widget category">
+								<!-- <div class="single-widget category">
 									<h3 class="title">Categories</h3>
 									<ul class="categor-list">
 										<li><a href="#">T-shirts</a></li>
@@ -311,112 +286,49 @@
 										<li><a href="#">kitwears</a></li>
 										<li><a href="#">accessories</a></li>
 									</ul>
-								</div>
+								</div> -->
 								<!--/ End Single Widget -->
 								<!-- Shop By Price -->
 									<div class="single-widget range">
-										<h3 class="title">Shop by Price</h3>
-										<div class="price-filter">
-											<div class="price-filter-inner">
-												<div id="slider-range"></div>
-													<div class="price_slider_amount">
-													<div class="label-input">
-														<span>Range:</span><input type="text" id="amount" name="price" placeholder="Add Your Price"/>
-													</div>
-												</div>
-											</div>
-										</div>
-										<ul class="check-box-list">
-											<li>
-												<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">$20 - $50<span class="count">(3)</span></label>
-											</li>
-											<li>
-												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">$50 - $100<span class="count">(5)</span></label>
-											</li>
-											<li>
-												<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">$100 - $250<span class="count">(8)</span></label>
-											</li>
-										</ul>
+										<h3 class="title">Filtros</h3>
+                    <form class="" action="#" method="post">
+                      <div class="price-filter">
+  											<div class="price-filter-inner">
+  												<div id="slider-range"></div>
+  													<div class="price_slider_amount">
+  													<div class="label-input">
+  														<span>Preço:</span><input type="text" id="amount" name="price" placeholder="Add Your Price"/>
+  													</div>
+  												</div>
+  											</div>
+  										</div>
+  										<ul class="check-box-list">
+                        <?php
+
+                         ?>
+  											<li>
+  												<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">$20 - $50<span class="count">(3)</span></label>
+  											</li>
+  											<li>
+  												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">$50 - $100<span class="count">(5)</span></label>
+  											</li>
+  											<li>
+  												<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">$100 - $250<span class="count">(8)</span></label>
+  											</li>
+  										</ul>
+                    </form>
+
 									</div>
 									<!--/ End Shop By Price -->
-								<!-- Single Widget -->
-								<div class="single-widget recent-post">
-									<h3 class="title">Recent post</h3>
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/single-shop-img1.png" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Girls Dress</a></h5>
-											<p class="price">$99.50</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/single-shop-img2.png" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Women Clothings</a></h5>
-											<p class="price">$99.50</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-									<!-- Single Post -->
-									<div class="single-post first">
-										<div class="image">
-											<img src="images/single-shop-img3.png" alt="#">
-										</div>
-										<div class="content">
-											<h5><a href="#">Man Tshirt</a></h5>
-											<p class="price">$99.50</p>
-											<ul class="reviews">
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-												<li class="yellow"><i class="ti-star"></i></li>
-											</ul>
-										</div>
-									</div>
-									<!-- End Single Post -->
-								</div>
-								<!--/ End Single Widget -->
-								<!-- Single Widget -->
-								<div class="single-widget category">
-									<h3 class="title">Manufacturers</h3>
-									<ul class="categor-list">
-										<li><a href="#">Forever</a></li>
-										<li><a href="#">giordano</a></li>
-										<li><a href="#">abercrombie</a></li>
-										<li><a href="#">ecko united</a></li>
-										<li><a href="#">zara</a></li>
-									</ul>
-								</div>
-								<!--/ End Single Widget -->
+
+
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-8 col-12">
 						<div class="row">
 							<div class="col-12">
 								<!-- Shop Top -->
-								<div class="shop-top">
+								<!-- <div class="shop-top">
 									<div class="shop-shorter">
 										<div class="single-shorter">
 											<label>Show :</label>
@@ -440,7 +352,7 @@
 										<li class="active"><a href="shop-grid.html"><i class="fa fa-th-large"></i></a></li>
 										<li><a href="shop-list.html"><i class="fa fa-th-list"></i></a></li>
 									</ul>
-								</div>
+								</div> -->
 								<!--/ End Shop Top -->
 							</div>
 						</div>
@@ -689,33 +601,10 @@
 				</div>
 			</div>
 		</section>
-		<!--/ End Product Style 1  -->	
+		<!--/ End Product Style 1  -->
 
-		<!-- Start Shop Newsletter  -->
-		<section class="shop-newsletter section">
-			<div class="container">
-				<div class="inner-top">
-					<div class="row">
-						<div class="col-lg-8 offset-lg-2 col-12">
-							<!-- Start Newsletter Inner -->
-							<div class="inner">
-								<h4>Newsletter</h4>
-								<p> Subscribe to our newsletter and get <span>10%</span> off your first purchase</p>
-								<form action="mail/mail.php" method="get" target="_blank" class="newsletter-inner">
-									<input name="EMAIL" placeholder="Your email address" required="" type="email">
-									<button class="btn">Subscribe</button>
-								</form>
-							</div>
-							<!-- End Newsletter Inner -->
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<!-- End Shop Newsletter -->
-		
-		
-		
+
+
 		<!-- Modal -->
 			<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
 				<div class="modal-dialog" role="document">
@@ -828,7 +717,7 @@
 				</div>
 			</div>
 			<!-- Modal end -->
-		
+
 		<!-- Start Footer Area -->
 		<footer class="footer">
 			<!-- Footer Top -->
@@ -921,8 +810,8 @@
 			</div>
 		</footer>
 		<!-- /End Footer Area -->
-	
-	
+
+
     <!-- Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
