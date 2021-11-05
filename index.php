@@ -356,7 +356,7 @@
 						<div class="content">
 							<p>Coleção Glaucia</p>
 							<h3>Porca da Glaucia <br><span> Traumatizante</span></h3>
-							<a href="#">Compre Agora!</a>
+							<a href="singleshop.php?idproduto=7">Compre Agora!</a>
 						</div>
 					</div>
 				</div>
@@ -368,7 +368,7 @@
 						<div class="content">
 							<p>coleção thais</p>
 							<h3>GATA DA THAIS <br> <span>IMPERDÍVEL</span></h3>
-							<a href="#" class="btn">Compre Agora!</a>
+							<a href="singleshop.php?idproduto=12" class="btn">Compre Agora!</a>
 						</div>
 					</div>
 				</div>

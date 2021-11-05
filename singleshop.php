@@ -388,7 +388,6 @@
       												</div>
       												<!--/ End Description Tab -->
       												<!-- Reviews Tab -->
-                              Em produção.
       												<!-- <div class="tab-pane fade" id="reviews" role="tabpanel">
       													<div class="tab-single review-panel">
       														<div class="row">
