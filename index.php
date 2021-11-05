@@ -120,20 +120,20 @@
 									<li><a href="#">Petianos<i class="fa fa-angle-right"
 												aria-hidden="true"></i></a>
 										<ul class="sub-category">
-											<li><a href="pet/?nomepetiano=Alexandre">Alexandre</a></li>
-											<li><a href="pet/?nomepetiano=Caio">Caio</a></li>
-											<li><a href="pet/?nomepetiano=Cairolli">Cairolli</a></li>
-											<li><a href="pet/?nomepetiano=Eler">Eler</a></li>
-											<li><a href="pet/?nomepetiano=Furquim">Furquim</a></li>
-											<li><a href="pet/?nomepetiano=Giovanna">Giovanna</a></li>
-											<li><a href="pet/?nomepetiano=Glaucia">Glaucia</a></li>
-											<li><a href="pet/?nomepetiano=João">João</a></li>
-											<li><a href="pet/?nomepetiano=Marin">Marin</a></li>
-											<li><a href="pet/?nomepetiano=Michelly">Michelly</a></li>
-											<li><a href="pet/?nomepetiano=PET">PET</a></li>
-											<li><a href="pet/?nomepetiano=Sena">Sena</a></li>
-											<li><a href="pet/?nomepetiano=Stefany">Stefany</a></li>
-											<li><a href="pet/?nomepetiano=Thaís">Thaís</a></li>
+											<li><a href="pet.php?nomepetiano=Alexandre">Alexandre</a></li>
+											<li><a href="pet.php?nomepetiano=Caio">Caio</a></li>
+											<li><a href="pet.php?nomepetiano=Cairolli">Cairolli</a></li>
+											<li><a href="pet.php?nomepetiano=Eler">Eler</a></li>
+											<li><a href="pet.php?nomepetiano=Furquim">Furquim</a></li>
+											<li><a href="pet.php?nomepetiano=Giovanna">Giovanna</a></li>
+											<li><a href="pet.php?nomepetiano=Glaucia">Glaucia</a></li>
+											<li><a href="pet.php?nomepetiano=João">João</a></li>
+											<li><a href="ppet.php?nomepetiano=Marin">Marin</a></li>
+											<li><a href="pet.php?nomepetiano=Michelly">Michelly</a></li>
+											<li><a href="pet.php?nomepetiano=PET">PET</a></li>
+											<li><a href="pet.php?nomepetiano=Sena">Sena</a></li>
+											<li><a href="pet.php?nomepetiano=Stefany">Stefany</a></li>
+											<li><a href="pet.php?nomepetiano=Thaís">Thaís</a></li>
 										</ul>
 									</li>
 								</ul>
@@ -294,17 +294,17 @@
 	<!-- Start Product Area -->
 	<div class="product-area section">
 		<div class="container">
-			<div class="row">
+			<!-- <div class="row">
 				<div class="col-12">
 					<div class="section-title">
 						<h2>Navegue por Categoria</h2>
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="row">
 				<div class="col-12">
 					  <!--TERMINA AQUI -->
-            <div id="prodExibition" class="product-info"></div>
+            <!-- <div id="prodExibition" class="product-info"></div> -->
 				</div>
 			</div>
 		</div>
@@ -397,34 +397,7 @@
 						</div>
 						<!-- End Single Widget -->
 					</div>
-					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer links">
-							<h4>Informação</h4>
-							<ul>
-								<li><a href="#">Sobre nós</a></li>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Termos e Condições</a></li>
-								<li><a href="#">Contate-nos</a></li>
-								<li><a href="#">Ajuda</a></li>
-							</ul>
-						</div>
-						<!-- End Single Widget -->
-					</div>
-					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer links">
-							<h4>Atendimento ao Cliente</h4>
-							<ul>
-								<li><a href="#">Métodos de pagamento</a></li>
-								<li><a href="#">Estorno</a></li>
-								<li><a href="#">Devolução</a></li>
-								<li><a href="#">Frete</a></li>
-								<li><a href="#">Política de Privacidade</a></li>
-							</ul>
-						</div>
-						<!-- End Single Widget -->
-					</div>
+					
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">

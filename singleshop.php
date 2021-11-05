@@ -139,22 +139,22 @@
 									<li>
 									<li><a href="#">Petianos<i class="fa fa-angle-right"
 												aria-hidden="true"></i></a>
-										<ul class="sub-category">
-											<li><a href="pet/?nomepetiano=Alexandre">Alexandre</a></li>
-											<li><a href="pet/?nomepetiano=Caio">Caio</a></li>
-											<li><a href="pet/?nomepetiano=Cairolli">Cairolli</a></li>
-											<li><a href="pet/?nomepetiano=Eler">Eler</a></li>
-											<li><a href="pet/?nomepetiano=Furquim">Furquim</a></li>
-											<li><a href="pet/?nomepetiano=Giovanna">Giovanna</a></li>
-											<li><a href="pet/?nomepetiano=Glaucia">Glaucia</a></li>
-											<li><a href="pet/?nomepetiano=João">João</a></li>
-											<li><a href="pet/?nomepetiano=Marin">Marin</a></li>
-											<li><a href="pet/?nomepetiano=Michelly">Michelly</a></li>
-											<li><a href="pet/?nomepetiano=PET">PET</a></li>
-											<li><a href="pet/?nomepetiano=Sena">Sena</a></li>
-											<li><a href="pet/?nomepetiano=Stefany">Stefany</a></li>
-											<li><a href="pet/?nomepetiano=Thaís">Thaís</a></li>
-										</ul>
+                      <ul class="sub-category">
+  											<li><a href="pet.php?nomepetiano=Alexandre">Alexandre</a></li>
+  											<li><a href="pet.php?nomepetiano=Caio">Caio</a></li>
+  											<li><a href="pet.php?nomepetiano=Cairolli">Cairolli</a></li>
+  											<li><a href="pet.php?nomepetiano=Eler">Eler</a></li>
+  											<li><a href="pet.php?nomepetiano=Furquim">Furquim</a></li>
+  											<li><a href="pet.php?nomepetiano=Giovanna">Giovanna</a></li>
+  											<li><a href="pet.php?nomepetiano=Glaucia">Glaucia</a></li>
+  											<li><a href="pet.php?nomepetiano=João">João</a></li>
+  											<li><a href="pet.php?nomepetiano=Marin">Marin</a></li>
+  											<li><a href="pet.php?nomepetiano=Michelly">Michelly</a></li>
+  											<li><a href="pet.php?nomepetiano=PET">PET</a></li>
+  											<li><a href="pet.php?nomepetiano=Sena">Sena</a></li>
+  											<li><a href="pet.php?nomepetiano=Stefany">Stefany</a></li>
+  											<li><a href="pet.php?nomepetiano=Thaís">Thaís</a></li>
+  										</ul>
 									</li>
 								</ul>
 							</div>
@@ -243,8 +243,8 @@
 					<div class="col-12">
 						<div class="bread-inner">
 							<ul class="bread-list">
-								<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-								<li class="active"><a href="blog-single.html">Shop Details</a></li>
+								<li><a href="index.php">Home<i class="ti-arrow-right"></i></a></li>
+								<li class="active"><a href=""><?php echo $resprod["nomeprod"] ?></a></li>
 							</ul>
 						</div>
 					</div>
@@ -338,8 +338,11 @@
 													<!-- <a href="#" class="btn min"><i class="ti-heart"></i></a> -->
 
 												</div>
-												<p class="cat">Categoria/Petiano :<a href="#"><?php echo $resprod["nomecat"]; ?></a>,
-                          <a href="#"><?php echo $resprod["nomepetiano"]; ?></a></p>
+												<p class="cat">Categoria/Petiano :<a href="cat.php?nomecat=<?php echo $resprod["nomecat"]; ?>">
+                          <?php echo $resprod["nomecat"]; ?></a>,
+                          <a href="pet.php?nomepetiano=<?php echo $resprod["nomepetiano"]; ?>">
+                            <?php echo $resprod["nomepetiano"]; ?>
+                          </a></p>
 												<p class="availability">Disponibilidade : Limitada</p>
 											</div>
 											<!--/ End Product Buy -->
@@ -381,7 +384,8 @@
       												</div>
       												<!--/ End Description Tab -->
       												<!-- Reviews Tab -->
-      												<div class="tab-pane fade" id="reviews" role="tabpanel">
+                              Em produção.
+      												<!-- <div class="tab-pane fade" id="reviews" role="tabpanel">
       													<div class="tab-single review-panel">
       														<div class="row">
       															<div class="col-12">
@@ -390,7 +394,7 @@
       																		<h4>4.5 <span>(Overall)</span></h4>
       																		<span>Based on 1 Comments</span>
       																	</div>
-      																	<!-- Single Rating -->
+
       																	<div class="single-rating">
       																		<div class="rating-author">
       																			<img src="images/comments1.jpg" alt="#">
@@ -410,8 +414,8 @@
       																			<p>Duis tincidunt mauris ac aliquet congue. Donec vestibulum consequat cursus. Aliquam pellentesque nulla dolor, in imperdiet.</p>
       																		</div>
       																	</div>
-      																	<!--/ End Single Rating -->
-      																	<!-- Single Rating -->
+
+
       																	<div class="single-rating">
       																		<div class="rating-author">
       																			<img src="images/comments2.jpg" alt="#">
@@ -431,12 +435,12 @@
       																			<p>Duis tincidunt mauris ac aliquet congue. Donec vestibulum consequat cursus. Aliquam pellentesque nulla dolor, in imperdiet.</p>
       																		</div>
       																	</div>
-      																	<!--/ End Single Rating -->
+
       																</div>
       															</div>
       														</div>
       													</div>
-      												</div>
+      												</div> -->
       												<!--/ End Reviews Tab -->
       											</div>
       										</div>
@@ -452,100 +456,72 @@
 		</section>
 		<!--/ End Shop Single -->
 
-	<!-- Start Footer Area -->
-	<footer class="footer">
-		<!-- Footer Top -->
-		<div class="footer-top section">
-			<div class="container">
-				<div class="row">
-					<div class="col-lg-5 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer about">
-							<div class="logo">
-								<a href="index.php"><img src="images/logo2.png" alt="#"></a>
-							</div>
-							<p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
-							<p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
-						</div>
-						<!-- End Single Widget -->
-					</div>
-					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer links">
-							<h4>Informação</h4>
-							<ul>
-								<li><a href="#">Sobre nós</a></li>
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Termos e Condições</a></li>
-								<li><a href="#">Contate-nos</a></li>
-								<li><a href="#">Ajuda</a></li>
-							</ul>
-						</div>
-						<!-- End Single Widget -->
-					</div>
-					<div class="col-lg-2 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer links">
-							<h4>Atendimento ao Cliente</h4>
-							<ul>
-								<li><a href="#">Métodos de pagamento</a></li>
-								<li><a href="#">Estorno</a></li>
-								<li><a href="#">Devolução</a></li>
-								<li><a href="#">Frete</a></li>
-								<li><a href="#">Política de Privacidade</a></li>
-							</ul>
-						</div>
-						<!-- End Single Widget -->
-					</div>
-					<div class="col-lg-3 col-md-6 col-12">
-						<!-- Single Widget -->
-						<div class="single-footer social">
-							<h4>Entre em Contato</h4>
-							<!-- Single Widget -->
-							<div class="contact">
-								<ul>
-									<li>Rua: Arlindo Bettio, 1000</li>
-									<li>CEP: 03828-000</li>
-									<li>Bairro: Vila Guaraciaba</li>
-									<li>Cidade/UF: São Paulo/SP</li>
-									<li>Email: contato@shopet.com.br</li>
-									<li>11 912345678</li>
-								</ul>
-							</div>
-							<!-- End Single Widget -->
-							<ul>
-								<li><a href="#"><i class="ti-facebook"></i></a></li>
-								<li><a href="#"><i class="ti-instagram"></i></a></li>
-								<li><a href="#"><i class="ti-twitter"></i></a></li>
-								<li><a href="#"><i class="ti-linkedin"></i></a></li>
-							</ul>
-						</div>
-						<!-- End Single Widget -->
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End Footer Top -->
-		<div class="copyright">
-			<div class="container">
-				<div class="inner">
-					<div class="row">
-						<div class="col-lg-6 col-12">
-							<div class="left">
-								<p>Copyright © 2021 ShoPET - Todos os direitos reservados.</p>
-							</div>
-						</div>
-						<div class="col-lg-6 col-12">
-							<div class="right">
-								<img src="images/payments.png" alt="#">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<!-- /End Footer Area -->
+    <!-- Start Footer Area -->
+  	<footer class="footer">
+  		<!-- Footer Top -->
+  		<div class="footer-top section">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-lg-5 col-md-6 col-12">
+  						<!-- Single Widget -->
+  						<div class="single-footer about">
+  							<div class="logo">
+  								<a href="index.php"><img src="images/logo2.png" alt="#"></a>
+  							</div>
+  							<p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
+  							<p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
+  						</div>
+  						<!-- End Single Widget -->
+  					</div>
+
+  					<div class="col-lg-3 col-md-6 col-12">
+  						<!-- Single Widget -->
+  						<div class="single-footer social">
+  							<h4>Entre em Contato</h4>
+  							<!-- Single Widget -->
+  							<div class="contact">
+  								<ul>
+  									<li>Rua: Arlindo Bettio, 1000</li>
+  									<li>CEP: 03828-000</li>
+  									<li>Bairro: Vila Guaraciaba</li>
+  									<li>Cidade/UF: São Paulo/SP</li>
+  									<li>Email: contato@shopet.com.br</li>
+  									<li>11 912345678</li>
+  								</ul>
+  							</div>
+  							<!-- End Single Widget -->
+  							<ul>
+  								<li><a href="#"><i class="ti-facebook"></i></a></li>
+  								<li><a href="#"><i class="ti-instagram"></i></a></li>
+  								<li><a href="#"><i class="ti-twitter"></i></a></li>
+  								<li><a href="#"><i class="ti-linkedin"></i></a></li>
+  							</ul>
+  						</div>
+  						<!-- End Single Widget -->
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<!-- End Footer Top -->
+  		<div class="copyright">
+  			<div class="container">
+  				<div class="inner">
+  					<div class="row">
+  						<div class="col-lg-6 col-12">
+  							<div class="left">
+  								<p>Copyright © 2021 ShoPET - Todos os direitos reservados.</p>
+  							</div>
+  						</div>
+  						<div class="col-lg-6 col-12">
+  							<div class="right">
+  								<img src="images/payments.png" alt="#">
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
 
     <!-- Jquery -->
     <script src="js/jquery.min.js"></script>

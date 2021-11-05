@@ -1,10 +1,10 @@
 <?php
   include_once "connection.php";
-      session_start();
-      $productsearch = "Shop List";
-      if(isset($_GET["search"])){
-        $productsearch = $_GET["search"];
-      }
+  session_start();
+  $categ = "Shop List";
+  if(isset($_GET["nomepetiano"])){
+    $categ = $_GET["nomepetiano"];
+  }
 ?>
 
 <!DOCTYPE html>
@@ -125,22 +125,22 @@
 									<li>
 									<li><a href="#">Petianos<i class="fa fa-angle-right"
 												aria-hidden="true"></i></a>
-										<ul class="sub-category">
-											<li><a href="pet/?nomepetiano=Alexandre">Alexandre</a></li>
-											<li><a href="pet/?nomepetiano=Caio">Caio</a></li>
-											<li><a href="pet/?nomepetiano=Cairolli">Cairolli</a></li>
-											<li><a href="pet/?nomepetiano=Eler">Eler</a></li>
-											<li><a href="pet/?nomepetiano=Furquim">Furquim</a></li>
-											<li><a href="pet/?nomepetiano=Giovanna">Giovanna</a></li>
-											<li><a href="pet/?nomepetiano=Glaucia">Glaucia</a></li>
-											<li><a href="pet/?nomepetiano=João">João</a></li>
-											<li><a href="pet/?nomepetiano=Marin">Marin</a></li>
-											<li><a href="pet/?nomepetiano=Michelly">Michelly</a></li>
-											<li><a href="pet/?nomepetiano=PET">PET</a></li>
-											<li><a href="pet/?nomepetiano=Sena">Sena</a></li>
-											<li><a href="pet/?nomepetiano=Stefany">Stefany</a></li>
-											<li><a href="pet/?nomepetiano=Thaís">Thaís</a></li>
-										</ul>
+                      <ul class="sub-category">
+  											<li><a href="pet.php?nomepetiano=Alexandre">Alexandre</a></li>
+  											<li><a href="pet.php?nomepetiano=Caio">Caio</a></li>
+  											<li><a href="pet.php?nomepetiano=Cairolli">Cairolli</a></li>
+  											<li><a href="pet.php?nomepetiano=Eler">Eler</a></li>
+  											<li><a href="pet.php?nomepetiano=Furquim">Furquim</a></li>
+  											<li><a href="pet.php?nomepetiano=Giovanna">Giovanna</a></li>
+  											<li><a href="pet.php?nomepetiano=Glaucia">Glaucia</a></li>
+  											<li><a href="pet.php?nomepetiano=João">João</a></li>
+  											<li><a href="ppet.php?nomepetiano=Marin">Marin</a></li>
+  											<li><a href="pet.php?nomepetiano=Michelly">Michelly</a></li>
+  											<li><a href="pet.php?nomepetiano=PET">PET</a></li>
+  											<li><a href="pet.php?nomepetiano=Sena">Sena</a></li>
+  											<li><a href="pet.php?nomepetiano=Stefany">Stefany</a></li>
+  											<li><a href="pet.php?nomepetiano=Thaís">Thaís</a></li>
+  										</ul>
 									</li>
 								</ul>
 							</div>
@@ -230,7 +230,7 @@
 						<div class="bread-inner">
 							<ul class="bread-list">
 								<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-								<li class="active"><a href="blog-single.html"><?php echo $productsearch ?></a></li>
+								<li class="active"><a href=""><?php echo $categ ?></a></li>
 							</ul>
 						</div>
 					</div>
@@ -245,22 +245,9 @@
 				<div class="row">
 					<div class="col-lg-3 col-md-4 col-12">
 						<div class="shop-sidebar">
-								<!-- Single Widget -->
-								<!-- <div class="single-widget category">
-									<h3 class="title">Categories</h3>
-									<ul class="categor-list">
-										<li><a href="#">T-shirts</a></li>
-										<li><a href="#">jacket</a></li>
-										<li><a href="#">jeans</a></li>
-										<li><a href="#">sweatshirts</a></li>
-										<li><a href="#">trousers</a></li>
-										<li><a href="#">kitwears</a></li>
-										<li><a href="#">accessories</a></li>
-									</ul>
-								</div> -->
 								<!--/ End Single Widget -->
 								<!-- Shop By Price -->
-									<div class="single-widget range">
+									<!-- <div class="single-widget range">
 										<h3 class="title">Filtros</h3>
                     <form class="" action="#" method="post">
                       <div class="price-filter">
@@ -314,7 +301,7 @@
                       <span><strong>Petiano</strong></span>
                     </form>
 
-									</div>
+									</div> -->
 									<!--/ End Shop By Price -->
 
 
@@ -357,7 +344,7 @@
               $data = '';
               $queryPROD = "SELECT prod.idproduto, prod.nomeprod, prod.precoprod, cat.nomecat, pt.nomepetiano, prod.pathimage
                             FROM produto prod, petiano pt, categoria cat WHERE prod.nomecat = cat.nomecat AND
-                            prod.idpetiano = pt.idpetiano AND prod.nomeprod LIKE '%".$productsearch."%'";
+                            prod.idpetiano = pt.idpetiano AND pt.nomepetiano = '".$categ."'";
 
               $result2 = mysqli_query($connect, $queryPROD);
 
@@ -506,98 +493,72 @@
 			</div>
 			<!-- Modal end -->
 
-		<!-- Start Footer Area -->
-		<footer class="footer">
-			<!-- Footer Top -->
-			<div class="footer-top section">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-5 col-md-6 col-12">
-							<!-- Single Widget -->
-							<div class="single-footer about">
-								<div class="logo">
-									<a href="index.php"><img src="images/logo2.png" alt="#"></a>
-								</div>
-								<p class="text">Praesent dapibus, neque id cursus ucibus, tortor neque egestas augue,  magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.</p>
-								<p class="call">Got Question? Call us 24/7<span><a href="tel:123456789">+0123 456 789</a></span></p>
-							</div>
-							<!-- End Single Widget -->
-						</div>
-						<div class="col-lg-2 col-md-6 col-12">
-							<!-- Single Widget -->
-							<div class="single-footer links">
-								<h4>Information</h4>
-								<ul>
-									<li><a href="#">About Us</a></li>
-									<li><a href="#">Faq</a></li>
-									<li><a href="#">Terms & Conditions</a></li>
-									<li><a href="#">Contact Us</a></li>
-									<li><a href="#">Help</a></li>
-								</ul>
-							</div>
-							<!-- End Single Widget -->
-						</div>
-						<div class="col-lg-2 col-md-6 col-12">
-							<!-- Single Widget -->
-							<div class="single-footer links">
-								<h4>Customer Service</h4>
-								<ul>
-									<li><a href="#">Payment Methods</a></li>
-									<li><a href="#">Money-back</a></li>
-									<li><a href="#">Returns</a></li>
-									<li><a href="#">Shipping</a></li>
-									<li><a href="#">Privacy Policy</a></li>
-								</ul>
-							</div>
-							<!-- End Single Widget -->
-						</div>
-						<div class="col-lg-3 col-md-6 col-12">
-							<!-- Single Widget -->
-							<div class="single-footer social">
-								<h4>Get In Tuch</h4>
-								<!-- Single Widget -->
-								<div class="contact">
-									<ul>
-										<li>NO. 342 - London Oxford Street.</li>
-										<li>012 United Kingdom.</li>
-										<li>info@eshop.com</li>
-										<li>+032 3456 7890</li>
-									</ul>
-								</div>
-								<!-- End Single Widget -->
-								<ul>
-									<li><a href="#"><i class="ti-facebook"></i></a></li>
-									<li><a href="#"><i class="ti-twitter"></i></a></li>
-									<li><a href="#"><i class="ti-flickr"></i></a></li>
-									<li><a href="#"><i class="ti-instagram"></i></a></li>
-								</ul>
-							</div>
-							<!-- End Single Widget -->
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- End Footer Top -->
-			<div class="copyright">
-				<div class="container">
-					<div class="inner">
-						<div class="row">
-							<div class="col-lg-6 col-12">
-								<div class="left">
-									<p>Copyright © 2020 <a href="http://www.wpthemesgrid.com" target="_blank">Wpthemesgrid</a>  -  All Rights Reserved.</p>
-								</div>
-							</div>
-							<div class="col-lg-6 col-12">
-								<div class="right">
-									<img src="images/payments.png" alt="#">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!-- /End Footer Area -->
+      <!-- Start Footer Area -->
+    	<footer class="footer">
+    		<!-- Footer Top -->
+    		<div class="footer-top section">
+    			<div class="container">
+    				<div class="row">
+    					<div class="col-lg-5 col-md-6 col-12">
+    						<!-- Single Widget -->
+    						<div class="single-footer about">
+    							<div class="logo">
+    								<a href="index.php"><img src="images/logo2.png" alt="#"></a>
+    							</div>
+    							<p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
+    							<p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
+    						</div>
+    						<!-- End Single Widget -->
+    					</div>
+
+    					<div class="col-lg-3 col-md-6 col-12">
+    						<!-- Single Widget -->
+    						<div class="single-footer social">
+    							<h4>Entre em Contato</h4>
+    							<!-- Single Widget -->
+    							<div class="contact">
+    								<ul>
+    									<li>Rua: Arlindo Bettio, 1000</li>
+    									<li>CEP: 03828-000</li>
+    									<li>Bairro: Vila Guaraciaba</li>
+    									<li>Cidade/UF: São Paulo/SP</li>
+    									<li>Email: contato@shopet.com.br</li>
+    									<li>11 912345678</li>
+    								</ul>
+    							</div>
+    							<!-- End Single Widget -->
+    							<ul>
+    								<li><a href="#"><i class="ti-facebook"></i></a></li>
+    								<li><a href="#"><i class="ti-instagram"></i></a></li>
+    								<li><a href="#"><i class="ti-twitter"></i></a></li>
+    								<li><a href="#"><i class="ti-linkedin"></i></a></li>
+    							</ul>
+    						</div>
+    						<!-- End Single Widget -->
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    		<!-- End Footer Top -->
+    		<div class="copyright">
+    			<div class="container">
+    				<div class="inner">
+    					<div class="row">
+    						<div class="col-lg-6 col-12">
+    							<div class="left">
+    								<p>Copyright © 2021 ShoPET - Todos os direitos reservados.</p>
+    							</div>
+    						</div>
+    						<div class="col-lg-6 col-12">
+    							<div class="right">
+    								<img src="images/payments.png" alt="#">
+    							</div>
+    						</div>
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</footer>
     <!-- Jquery -->
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.0.js"></script>
