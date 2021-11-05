@@ -244,11 +244,7 @@
 						<div class="bread-inner">
 							<ul class="bread-list">
 								<li><a href="index.php">Home<i class="ti-arrow-right"></i></a></li>
-<<<<<<< HEAD
 								<li class="active"><a href=""><?php echo $resprod["nomeprod"] ?></a></li>
-=======
-								<li class="active"><a href="blog-single.html">Shop Details</a></li>
->>>>>>> 0ffb52bb1677ea5a01ccd31fa62b6102c2d13628
 							</ul>
 						</div>
 					</div>
@@ -388,10 +384,11 @@
       												</div>
       												<!--/ End Description Tab -->
       												<!-- Reviews Tab -->
-                              Em produção.
-      												<!-- <div class="tab-pane fade" id="reviews" role="tabpanel">
+
+      												<div class="tab-pane fade" id="reviews" role="tabpanel">
+                                <br>Em produção.
       													<div class="tab-single review-panel">
-      														<div class="row">
+      														<!-- <div class="row">
       															<div class="col-12">
       																<div class="ratting-main">
       																	<div class="avg-ratting">
@@ -442,9 +439,9 @@
 
       																</div>
       															</div>
-      														</div>
+      														</div> -->
       													</div>
-      												</div> -->
+      												</div>
       												<!--/ End Reviews Tab -->
       											</div>
       										</div>
