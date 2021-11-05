@@ -220,7 +220,7 @@
 	<!-- Slider Area -->
 	<section class="hero-slider">
 		<!-- Single Slider -->
-		<div class="single-slider">
+		<div class="single-slider" style="background-image: url('images/Banners/large_banner.jpg')">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-lg-9 offset-lg-3 col-12">
@@ -228,11 +228,11 @@
 							<div class="row">
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
-										<h1><span>UP TO 50% OFF </span>Shirt For Man</h1>
-										<p>Maboriosam in a nesciung eget magnae <br> dapibus disting tloctio in the find
-											it pereri <br> odiy maboriosm.</p>
+										<h1>Almofada da Ste</h1>
+										<p>Oportunidade única!! <br> Nicolas Cage,
+											<br> te observando a noite.</p>
 										<div class="button">
-											<a href="#" class="btn">Shop Now!</a>
+											<a href=singleshop.php?idproduto=1 class="btn">Compre Agora!</a>
 										</div>
 									</div>
 								</div>
@@ -255,9 +255,9 @@
 					<div class="single-banner">
 						<img src="/images/Banners/small_banner_2">
 						<div class="content">
-							<p>Man's Collectons</p>
-							<h3>Summer travel <br> collection</h3>
-							<a href="#">Discover Now</a>
+							<p>Coleção Tutor</p>
+							<h3>Caneca de Tutor </h3>
+							<a href="singleshop.php?idproduto=20">Compre Agora</a>
 						</div>
 					</div>
 				</div>
@@ -267,9 +267,9 @@
 					<div class="single-banner">
 						<img src="/images/Banners/small_banner_1" alt="#">
 						<div class="content">
-							<p>Bag Collectons</p>
-							<h3>Awesome Bag <br> 2020</h3>
-							<a href="#">Shop Now</a>
+							<p>Coleção PET</p>
+							<h3>Cafézinho do <br> PET</h3>
+							<a href=singleshop.php?idproduto=35>Compre Agora</a>
 						</div>
 					</div>
 				</div>
@@ -279,9 +279,9 @@
 					<div class="single-banner tab-height">
 						<img src="/images/Banners/small_banner_3" alt="#">
 						<div class="content">
-							<p>Flash Sale</p>
-							<h3>Mid Season <br> Up to <span>40%</span> Off</h3>
-							<a href="#">Discover Now</a>
+							<p>Coleção Tutor</p>
+							<h3>Tênis de Tutor <br> Para correr</h3>
+							<a href="singleshop.php?idproduto=19">Compre Agora</a>
 						</div>
 					</div>
 				</div>
@@ -352,11 +352,11 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-6 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="https://via.placeholder.com/600x370" alt="#">
+						<img src="/images/Banners/small_banner_4" alt="#">
 						<div class="content">
-							<p>Man's Collectons</p>
-							<h3>Man's items <br>Up to<span> 50%</span></h3>
-							<a href="#">Shop Now</a>
+							<p>Coleção Glaucia</p>
+							<h3>Porca da Glaucia <br><span> Traumatizante</span></h3>
+							<a href="#">Compre Agora!</a>
 						</div>
 					</div>
 				</div>
@@ -364,11 +364,11 @@
 				<!-- Single Banner  -->
 				<div class="col-lg-6 col-md-6 col-12">
 					<div class="single-banner">
-						<img src="https://via.placeholder.com/600x370" alt="#">
+						<img src="/images/Banners/small_banner_5" alt="#">
 						<div class="content">
-							<p>shoes women</p>
-							<h3>mid season <br> up to <span>70%</span></h3>
-							<a href="#" class="btn">Shop Now</a>
+							<p>coleção thais</p>
+							<h3>GATA DA THAIS <br> <span>IMPERDÍVEL</span></h3>
+							<a href="#" class="btn">Compre Agora!</a>
 						</div>
 					</div>
 				</div>
