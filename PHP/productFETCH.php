@@ -29,7 +29,7 @@
 
     $cont = 0;
     while($rowDIVS = mysqli_fetch_array($result)){
-      $queryPROD = "SELECT prod.idproduto, prod.nomeprod, prod.precoprod, cat.nomecat, pt.nomepetiano, prod.pathimage, prod.desc
+      $queryPROD = "SELECT prod.idproduto, prod.nomeprod, prod.precoprod, cat.nomecat, pt.nomepetiano, prod.pathimage
                     FROM produto prod, petiano pt, categoria cat WHERE prod.nomecat = cat.nomecat AND
                     prod.idpetiano = pt.idpetiano AND cat.nomecat = '".$rowDIVS["nomecat"]."'";
 

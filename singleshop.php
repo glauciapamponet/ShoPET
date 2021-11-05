@@ -4,7 +4,7 @@
 
     $idprod = $_GET["idproduto"];
     //echo $idprod;
-    $result = mysqli_query($connect, 'SELECT prod.nomeprod, prod.precoprod, cat.nomecat, pt.nomepetiano, prod.pathimage
+    $result = mysqli_query($connect, 'SELECT prod.nomeprod, prod.precoprod, cat.nomecat, pt.nomepetiano, prod.pathimage, prod.desc
                   FROM produto prod, petiano pt, categoria cat WHERE prod.nomecat = cat.nomecat AND
                   prod.idpetiano = pt.idpetiano AND prod.idproduto = "'.$idprod.'"');
 
@@ -243,7 +243,7 @@
 					<div class="col-12">
 						<div class="bread-inner">
 							<ul class="bread-list">
-								<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+								<li><a href="index.php">Home<i class="ti-arrow-right"></i></a></li>
 								<li class="active"><a href="blog-single.html">Shop Details</a></li>
 							</ul>
 						</div>
@@ -361,7 +361,7 @@
       														<div class="row">
       															<div class="col-12">
       																<div class="single-des">
-      																	<p><?php echo $resprod["desc"]; ?></p>
+      																	<p><?php echo nl2br($resprod["desc"]); ?></p>
       																</div>
       																<!-- <div class="single-des">
       																	<p>Suspendisse consequatur voluptates lorem nobis accumsan natus mattis. Optio pede, optio qui metus, delectus! Ultricies impedit, minus tempor fuga, quasi, pede felis commodo bibendum voluptas nisi? Voluptatem risus tempore tempora. Quaerat aspernatur? Error praesent laoreet, cras in fames hac ea, massa montes diamlorem nec quaerat, quos occaecati leo nam aliquet corporis, ab recusandae parturient, etiam fermentum, a quasi possimus commodi, mollis voluptate mauris mollis, quisque donec</p>
