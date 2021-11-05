@@ -384,13 +384,9 @@
       												</div>
       												<!--/ End Description Tab -->
       												<!-- Reviews Tab -->
-<<<<<<< HEAD
 
       												<div class="tab-pane fade" id="reviews" role="tabpanel">
                                 <br>Em produção.
-=======
-      												<!-- <div class="tab-pane fade" id="reviews" role="tabpanel">
->>>>>>> 34c05659fc25bb05f10471057ff4504c134a0a98
       													<div class="tab-single review-panel">
       														<!-- <div class="row">
       															<div class="col-12">
