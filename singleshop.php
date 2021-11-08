@@ -54,7 +54,7 @@
 	<!-- Eshop StyleSheet -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/responsive.css">
 
 	<!-- Color CSS -->
 	<link rel="stylesheet" href="css/color/color1.css">
