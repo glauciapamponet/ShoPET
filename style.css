@@ -244,11 +244,13 @@ Version:1.0
 /* Logo */
 .header .logo {
 	float: left;
-	margin-top: 35px;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition: all 0.4s ease;
 	transition: all 0.4s ease;
+	width: 70%;
+	height: 62.5px; 
 }
+
 .header .navbar {
 	padding: 0;
 }
@@ -371,10 +373,7 @@ Version:1.0
 .header.shop .nav-inner {
 	margin-right: 188px;
 }
-.header.shop .logo {
-	float: left;
-	margin-top: 35px;
-}
+
 .header.shop .top-contact {
 	margin-top:0px;
 }
@@ -569,10 +568,6 @@ Version:1.0
 
 .header.shop .right-nav li a {
 	color: #333;
-}
-.header.shop .logo {
-	float: left;
-	margin: 19px 0 0;
 }
 .header.shop .top-contact {
 	margin-top:0px;
@@ -1214,7 +1209,7 @@ Version:1.0
 	z-index: 0;
 }
 .hero-slider .hero-text .btn:hover{
-	background:;
+	/* background:; */
 	color:#fff;
 }
 /* Start Hero Area 2 CSS */
@@ -4715,6 +4710,8 @@ Version:1.0
 }
 .footer .about .logo{
 	margin-bottom:20px;
+	width: 40%;
+	/* height: 62.5px; */
 }
 
 .footer .about .text{

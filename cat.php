@@ -19,7 +19,7 @@
 	<!-- Title Tag  -->
     <title>ShoPET - Busca</title>
 	<!-- Favicon -->
-	<link rel="icon" type="image/png" href="images/favicon.png">
+	<link rel="icon" type="image/png" href="images/LogoIcone.png">
 	<!-- Web Font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
@@ -82,7 +82,7 @@
 						<div class="col-lg-2 col-md-2 col-12">
 							<!-- Logo -->
 							<div class="logo">
-								<a href="index.html"><img src="images/logo.png" alt="logo"></a>
+								<a href="index.html"><img src="images/LogoPrincipalCorte.png" alt="logo"></a>
 							</div>
 							<!--/ End Logo -->
 							<!-- Search Form -->
@@ -503,7 +503,7 @@
     						<!-- Single Widget -->
     						<div class="single-footer about">
     							<div class="logo">
-    								<a href="index.php"><img src="images/logo2.png" alt="#"></a>
+    								<a href="index.php"><img src="images/LogoFooterCorte.png" alt="#"></a>
     							</div>
     							<p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
     							<p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
