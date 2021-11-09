@@ -229,7 +229,7 @@
 					<div class="col-12">
 						<div class="bread-inner">
 							<ul class="bread-list">
-								<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
+								<li><a href="index.php">Home<i class="ti-arrow-right"></i></a></li>
 								<li class="active"><a href=""><?php echo $categ ?></a></li>
 							</ul>
 						</div>
