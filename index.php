@@ -229,8 +229,8 @@
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
 										<h1>Almofada da Ste</h1>
-										<p>Oportunidade única!! <br> Nicolas Cage,
-											<br> te observando a noite.</p>
+										<p><span>Oportunidade única!! <br> Nicolas Cage,
+											<br> te observando a noite.</span></p>
 										<div class="button">
 											<a href=singleshop.php?idproduto=1 class="btn">Compre Agora!</a>
 										</div>

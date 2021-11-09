@@ -359,7 +359,7 @@
                       </a>
                       <div class="button-head">
 
-                        <div class="product-action-2"><a title="Add to cart" href="#">Add to cart</a></div>
+                        <div class="product-action-2"><a title="Add to cart" href="#">Colocar no Carrinho</a></div>
                       </div>
                     </div>
                     <div class="product-content">

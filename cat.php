@@ -82,7 +82,7 @@
 						<div class="col-lg-2 col-md-2 col-12">
 							<!-- Logo -->
 							<div class="logo">
-								<a href="index.html"><img src="images/LogoPrincipalCorte.png" alt="logo"></a>
+								<a href="index.php"><img src="images/LogoPrincipalCorte.png" alt="logo"></a>
 							</div>
 							<!--/ End Logo -->
 							<!-- Search Form -->
@@ -359,7 +359,7 @@
                       </a>
                       <div class="button-head">
 
-                        <div class="product-action-2"><a title="Add to cart" href="#">Add to cart</a></div>
+                        <div class="product-action-2"><a title="Add to cart" href="#">Colocar no Carrinho</a></div>
                       </div>
                     </div>
                     <div class="product-content">
