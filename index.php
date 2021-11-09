@@ -397,7 +397,7 @@
 						</div>
 						<!-- End Single Widget -->
 					</div>
-					
+
 					<div class="col-lg-3 col-md-6 col-12">
 						<!-- Single Widget -->
 						<div class="single-footer social">
