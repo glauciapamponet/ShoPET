@@ -253,6 +253,9 @@
                     <form class="" action="#" method="GET">
                       <div class="price-filter">
   											<div class="price-filter-inner">
+                          <div id="slider_range"></div>
+
+
   												<div id="slider-range"></div>
   													<div class="price_slider_amount">
   													<div class="label-input">
@@ -483,53 +486,8 @@
 	<script src="js/active.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-    filter_data();
-
-    function filter_data()
-    {
-        $('.filter_data').html('<div id="loading" style="" ></div>');
-        var action = 'fetch_data';
-        var minimum_price = $('#hidden_minimum_price').val();
-        var maximum_price = $('#hidden_maximum_price').val();
-        var brand = get_filter('brand');
-        var ram = get_filter('ram');
-        var storage = get_filter('storage');
-        $.ajax({
-            url:"fetch_data.php",
-            method:"POST",
-            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
-            success:function(data){
-                $('.filter_data').html(data);
-            }
-        });
-    }
-
-    function get_filter(class_name)
-    {
-        var filter = [];
-        $('.'+class_name+':checked').each(function(){
-            filter.push($(this).val());
-        });
-        return filter;
-    }
-
-    $('.common_selector').click(function(){
-        filter_data();
-    });
-
-    $('#slider-range').slider({
-        range:true,
-        min:1000,
-        max:65000,
-        values:[1000, 65000],
-        step:10,
-        stop:function(event, ui)
-        {
-            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
-            $('#hidden_minimum_price').val(ui.values[0]);
-            $('#hidden_maximum_price').val(ui.values[1]);
-            filter_data();
-        }
+    $.post("PHP/searchFETCH.php", function(exibicao){
+        $("#searchResults").html(exibicao);
     });
   });
   </script>
