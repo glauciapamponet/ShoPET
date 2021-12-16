@@ -279,7 +279,7 @@
 						<div class="bread-inner">
 							<ul class="bread-list">
 								<li><a href="index1.html">Home<i class="ti-arrow-right"></i></a></li>
-								<li class="active"><a href="blog-single.html">Login</a></li>
+								<li class="active"><a href="blog-single.html">Register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -294,15 +294,28 @@
 				<div class="row"> 
 					<div class="col-lg-6 offset-lg-3 col-12">
 						<div class="login-form">
-							<h2>Login</h2>
+							<h2>Register</h2>
 							<p>Please register in order to checkout more quickly</p>
 							<!-- Form -->
-							<form class="form" method="post" action="#">
+							<!-- <form action = "" method="POST"> -->
+							<form action="PHP/registercli.php" name="formulario" class="form" method="POST" onsubmit="return validarSenha()">
 								<div class="row">
 									<div class="col-12">
 										<div class="form-group">
-											<label>Your Email<span>*</span></label>
-											<input type="email" name="email" placeholder="" required="required">
+											<label>Nome Completo<span>*</span></label>
+											<input type="text" name="name" placeholder="" maxlength="45" autofocus required="required">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label>Email<span>*</span></label>
+											<input type="text" name="email" placeholder="" required="required">
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="form-group">
+											<label>Data Nascimento<span>*</span></label>
+											<input type="date" name="datanasc" placeholder="" required="required">
 										</div>
 									</div>
 									<div class="col-12">
@@ -312,14 +325,21 @@
 										</div>
 									</div>
 									<div class="col-12">
+										<div class="form-group">
+											<label>Confirm Password<span>*</span></label>
+											<input type="password" name="passwordconfirm" placeholder="" required="required">
+										</div>
+									</div>
+									
+									<div class="col-12">
 										<div class="form-group login-btn">
-											<button class="btn" type="submit">Login</button>
-											<a href="register.html" class="btn">Register</a>
+											<input type="submit" value= "Register" class="btn">
+											<!-- <button class="btn" type="">Register</button> -->
+											<a href="login.html" class="btn">Login</a>
 										</div>
-										<div class="checkbox">
-											<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Remember me</label>
-										</div>
-										<a href="#" class="lost-pass">Lost your password?</a>
+										<!-- <div class="checkbox">
+											<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Sign Up for Newsletter</label>
+										</div> -->
 									</div>
 								</div>
 							</form>
@@ -424,6 +444,20 @@
 		</footer>
 		<!-- /End Footer Area -->
 		
+
+	<script> 
+		function validarSenha(){
+			password = document.formulario.password.value
+			passwordconfirm = document.formulario.passwordconfirm.value
+			if (password == passwordconfirm){
+				return true
+			}
+			else{ 
+				alert("SENHAS DIFERENTES")
+				return false
+			}	
+		}
+	</script>
 	<!-- Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
