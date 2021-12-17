@@ -13,9 +13,9 @@
 	<link rel="icon" type="image/png" href="images/LogoIcone.png">
 	<!-- Web Font -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins:200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
-	
+
 	<!-- StyleSheet -->
-	
+
 	<!-- Bootstrap -->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- Magnific Popup -->
@@ -36,7 +36,7 @@
     <link rel="stylesheet" href="css/owl-carousel.css">
 	<!-- Slicknav -->
     <link rel="stylesheet" href="css/slicknav.min.css">
-	
+
 	<!-- Eshop StyleSheet -->
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="style.css">
@@ -57,10 +57,10 @@
 	<!--<link rel="stylesheet" href="css/color/color12.css">-->
 
 	<link rel="stylesheet" href="#" id="colors">
-	
+
 </head>
 <body class="js">
-	
+
 	<!-- Preloader -->
 	<div class="preloader">
 		<div class="preloader-inner">
@@ -71,7 +71,7 @@
 		</div>
 	</div>
 	<!-- End Preloader -->
-	
+
 	<!-- Eshop Color Plate -->
 	<div class="color-plate ">
 		<a class="color-plate-icon"><i class="ti-paint-bucket"></i></a>
@@ -91,7 +91,7 @@
 		<span class="color12"></span>
 	</div>
 	<!-- /End Color Plate -->
-		
+
 		<!-- Header -->
 		<header class="header shop">
 			<!-- Topbar -->
@@ -216,8 +216,8 @@
 								<div class="menu-area">
 									<!-- Main Menu -->
 									<nav class="navbar navbar-expand-lg">
-										<div class="navbar-collapse">	
-											<div class="nav-inner">	
+										<div class="navbar-collapse">
+											<div class="nav-inner">
 												<ul class="nav main-menu menu navbar-nav">
 													<li class="active"><a href="#">Home<i class="ti-angle-down"></i></a>
 														<ul class="dropdown">
@@ -227,7 +227,7 @@
 															<li><a href="index4.html">Home Ecommerce V4</a></li>
 														</ul>
 													</li>
-													<li><a href="#">Product</a></li>												
+													<li><a href="#">Product</a></li>
 													<li><a href="#">Service</a></li>
 													<li><a href="#">Shop<i class="ti-angle-down"></i><span class="new">New</span></a>
 														<ul class="dropdown">
@@ -246,7 +246,7 @@
 															<li><a href="mail-success.html">Mail Success</a></li>
 															<li><a href="404.html">404</a></li>
 														</ul>
-													</li>									
+													</li>
 													<li><a href="#">Blog<i class="ti-angle-down"></i></a>
 														<ul class="dropdown">
 															<li><a href="blog-grid.html">Blog Grid</a></li>
@@ -260,7 +260,7 @@
 											</div>
 										</div>
 									</nav>
-									<!--/ End Main Menu -->	
+									<!--/ End Main Menu -->
 								</div>
 							</div>
 						</div>
@@ -270,7 +270,7 @@
 			<!--/ End Header Inner -->
 		</header>
 		<!--/ End Header -->
-	
+
 		<!-- Breadcrumbs -->
 		<div class="breadcrumbs">
 			<div class="container">
@@ -287,11 +287,11 @@
 			</div>
 		</div>
 		<!-- End Breadcrumbs -->
-				
+
 		<!-- Shop Login -->
 		<section class="shop login section">
 			<div class="container">
-				<div class="row"> 
+				<div class="row">
 					<div class="col-lg-6 offset-lg-3 col-12">
 						<div class="login-form">
 							<h2>Register</h2>
@@ -330,7 +330,7 @@
 											<input type="password" name="passwordconfirm" placeholder="" required="required">
 										</div>
 									</div>
-									
+
 									<div class="col-12">
 										<div class="form-group login-btn">
 											<input type="submit" value= "Register" class="btn">
@@ -350,7 +350,7 @@
 			</div>
 		</section>
 		<!--/ End Login -->
-		
+
 		<!-- Start Footer Area -->
 		<footer class="footer">
 			<!-- Footer Top -->
@@ -443,19 +443,19 @@
 			</div>
 		</footer>
 		<!-- /End Footer Area -->
-		
 
-	<script> 
+
+	<script>
 		function validarSenha(){
 			password = document.formulario.password.value
 			passwordconfirm = document.formulario.passwordconfirm.value
 			if (password == passwordconfirm){
 				return true
 			}
-			else{ 
+			else{
 				alert("SENHAS DIFERENTES")
 				return false
-			}	
+			}
 		}
 	</script>
 	<!-- Jquery -->

@@ -247,15 +247,15 @@
 								<!-- Shop By Price -->
 									<div class="single-widget range">
 										<h3 class="title">Filtros</h3>
-                    <form class="" action="#" method="GET">
+                    <!-- <form class="" action="#" method="GET"> -->
                       <div class="price-filter">
   											<div class="price-filter-inner">
+                          <h6>Preço </h6>
+                          <br>
   												<div id="slider-range"></div>
-  													<div class="price_slider_amount">
-  													<div class="label-input">
-  														<span>Preço:</span><input type="text" id="amount" name="precoprod" placeholder="Add Your Price"/>
-  													</div>
-  												</div>
+                          <input type="hidden" id="hidden_minimum_price" value="0" />
+                          <input type="hidden" id="hidden_maximum_price" value="65000" />
+                          <div class="label-input"><p id="price_show">R$120 - R$250</p></div>
   											</div>
   										</div>
                       <br>
@@ -270,8 +270,8 @@
                         while($rowPRODSfilter = mysqli_fetch_array($resultfilter)){
                           $datafilter .=
                           '<li>
-    												<label class="checkbox-inline" for="'.$numer.'"><input name="'.$rowPRODSfilter["nomecat"].'" id="'.$numer.'" type="checkbox">'
-                            .$rowPRODSfilter["nomecat"].'<span class="count">('.$rowPRODSfilter["qtd"].')</span></label>
+    												<label class="checkbox-inline" for="'.$numer.'"><input name="'.$rowPRODSfilter["nomecat"].'" id="'.$numer.'"
+                            class="common_selector cat" type="checkbox" value="'.$rowPRODSfilter["nomecat"].'">'.$rowPRODSfilter["nomecat"].'<span class="count">('.$rowPRODSfilter["qtd"].')</span></label>
     											</li>';
                           $numer += 1;
                         }
@@ -290,8 +290,8 @@
                         while($rowPRODSfilter = mysqli_fetch_array($resultfilter)){
                           $datafilter .=
                           '<li>
-    												<label class="checkbox-inline" for="'.$numer.'"><input name="'.$rowPRODSfilter["nomepetiano"].'" id="'.$numer.'" type="checkbox">'
-                            .$rowPRODSfilter["nomepetiano"].'<span class="count">('.$rowPRODSfilter["qtd"].')</span></label>
+    												<label class="checkbox-inline" for="'.$numer.'"><input name="'.$rowPRODSfilter["nomepetiano"].'" id="'.$numer.'"
+                            class="common_selector pet" type="checkbox" value="'.$rowPRODSfilter["nomepetiano"].'">' .$rowPRODSfilter["nomepetiano"].'<span class="count">('.$rowPRODSfilter["qtd"].')</span></label>
     											</li>';
                           $numer += 1;
                         }
@@ -299,8 +299,8 @@
                         echo $datafilter;
                       ?>
                       <br>
-                      <button class="btn" type="submit">Filtrar</button>
-                    </form>
+                      <!-- <button class="btn" type="submit">Filtrar</button>
+                    </form> -->
 
 									</div>
 									<!--/ End Shop By Price -->
@@ -309,66 +309,8 @@
 						</div>
 					</div>
 					<div class="col-lg-9 col-md-8 col-12">
-						<div class="row">
-              <?php
-              function pesq($get, $select, $cat, $connect){
-                $cont = 0;
-                $strquery = '';
-                $requery = mysqli_query($connect, $select);
-                $setter = false;
-                while($rows = mysqli_fetch_array($requery)){
-                  if(isset($get[$rows["coluna"]])){
-                    if($cont > 0){ $strquery .=" OR ";}
-                    else {$strquery .= ' AND (';}
-                    $strquery .= $cat." = '".$rows["coluna"]."'";
-                    $setter = true;
-                    $cont ++;
-                  }
-                }
-                if($setter) $strquery .= ")";
-                return $strquery;
-              }
+						<div class="row filter_data">
 
-              $data = '';
-              $queryPROD = "SELECT prod.idproduto, prod.nomeprod, prod.precoprod, cat.nomecat, pt.nomepetiano, prod.pathimage
-                            FROM produto prod, petiano pt, categoria cat WHERE prod.nomecat = cat.nomecat AND
-                            prod.idpetiano = pt.idpetiano AND prod.nomeprod LIKE '%".$productsearch."%'";
-
-              if(isset($_GET["precoprod"])){
-                $rangepreco = $_GET["precoprod"];
-                $precos = explode("-", $rangepreco);
-                 echo substr($precos[0], 1);
-                 $queryPROD .= "AND prod.precoprod BETWEEN ".substr($precos[0], 1)." AND ".substr($precos[1], 2);
-              }
-
-              $queryPROD .= pesq($_GET, "SELECT nomecat as coluna FROM categoria cat", "cat.nomecat", $connect);
-              $queryPROD .= pesq($_GET, "SELECT nomepetiano as coluna FROM petiano pt", "pt.nomepetiano", $connect);
-
-              $result2 = mysqli_query($connect, $queryPROD);
-
-              while($rowPRODS = mysqli_fetch_array($result2)){
-                $data .=
-                '<div class="col-xl-3 col-lg-4 col-md-4 col-12">
-                  <div class="single-product">
-                    <div class="product-img">
-                      <a href="singleshop.php?idproduto='.$rowPRODS["idproduto"].'">
-                        <img class="default-img" src="'.$rowPRODS["pathimage"].'" alt="#">
-                        <img class="hover-img" src="'.$rowPRODS["pathimage"].'" alt="#">
-                      </a>
-                      <div class="button-head">
-
-                        <div class="product-action-2"><a title="Add to cart" href="#">Colocar no Carrinho</a></div>
-                      </div>
-                    </div>
-                    <div class="product-content">
-                      <h3><a href="singleshop.php?idproduto='.$rowPRODS["idproduto"].'">'.$rowPRODS["nomeprod"].'</a></h3>
-                      <div class="product-price"> <span>R$'.$rowPRODS["precoprod"].'</span> </div>
-                    </div>
-                  </div>
-                </div>';
-              }
-              echo $data;
-               ?>
 						</div>
 					</div>
 				</div>
@@ -484,17 +426,17 @@
 
     function filter_data()
     {
-        $('.filter_data').html('<div id="loading" style="" ></div>');
+        $('.filter_data').html('<div style="" >CARREGANDO...</div>');
         var action = 'fetch_data';
+        var prod = '<?php echo $productsearch ?>';
         var minimum_price = $('#hidden_minimum_price').val();
         var maximum_price = $('#hidden_maximum_price').val();
-        var brand = get_filter('brand');
-        var ram = get_filter('ram');
-        var storage = get_filter('storage');
+        var cat = get_filter('cat');
+        var pet = get_filter('pet');
         $.ajax({
-            url:"fetch_data.php",
+            url:"PHP/fetchprod.php",
             method:"POST",
-            data:{action:action, minimum_price:minimum_price, maximum_price:maximum_price, brand:brand, ram:ram, storage:storage},
+            data:{action:action, prod:prod, minimum_price:minimum_price, maximum_price:maximum_price, cat:cat, pet:pet},
             success:function(data){
                 $('.filter_data').html(data);
             }
@@ -516,13 +458,13 @@
 
     $('#slider-range').slider({
         range:true,
-        min:1000,
+        min:0,
         max:65000,
         values:[1000, 65000],
         step:10,
         stop:function(event, ui)
         {
-            $('#price_show').html(ui.values[0] + ' - ' + ui.values[1]);
+            $('#price_show').html('R$'+ ui.values[0] + ' - '+ 'R$' + ui.values[1]);
             $('#hidden_minimum_price').val(ui.values[0]);
             $('#hidden_maximum_price').val(ui.values[1]);
             filter_data();
