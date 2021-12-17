@@ -261,8 +261,9 @@
                     <span><strong>Categoria</strong></span>
                     <?php
                       $datafilter = '<ul class="check-box-list">';
-                      $queryPRODfilter = "SELECT nomecat, count(nomecat) AS qtd from produto
-                                          where nomeprod like '%" .$categ. "%' GROUP by nomecat";
+                      $queryPRODfilter = "SELECT produto.nomecat, count(produto.idproduto) as qtd
+                                        from petiano INNER JOIN produto ON petiano.idpetiano = produto.idpetiano
+                                        where petiano.nomepetiano like '%".$categ."%' group by produto.nomecat";
 
                       $resultfilter = mysqli_query($connect, $queryPRODfilter);
                       $numer = 1;
@@ -289,7 +290,7 @@
 							<div class="col-12">
 							</div>
 						</div>
-						<div class="row">
+						<div class="row filter_data">
               <?php
               $data = '';
               $queryPROD = "SELECT prod.idproduto, prod.nomeprod, prod.precoprod, cat.nomecat, pt.nomepetiano, prod.pathimage
@@ -437,8 +438,57 @@
 	<script src="js/active.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-    $.post("PHP/searchFETCH.php", function(exibicao){
-        $("#searchResults").html(exibicao);
+    filter_data();
+
+    function filter_data()
+    {
+        $('.filter_data').html('<div style="" >CARREGANDO...</div>');
+        var action = 'fetch_data';
+        var pet = get_filter('soum');
+        var minimum_price = $('#hidden_minimum_price').val();
+        var maximum_price = $('#hidden_maximum_price').val();
+        var cat = get_filter('cat');
+        var prod = '';
+
+        $.ajax({
+            url:"PHP/fetchprod.php",
+            method:"POST",
+            data:{action:action, prod:prod, minimum_price:minimum_price, maximum_price:maximum_price, cat:cat, pet:pet},
+            success:function(data){
+                $('.filter_data').html(data);
+            }
+        });
+    }
+
+    function get_filter(class_name){
+      var filter = [];
+      if(class_name == 'soum'){
+        filter.push('<?php echo $categ ?>');
+      }else{
+        $('.'+class_name+':checked').each(function(){
+            filter.push($(this).val());
+        });
+      }
+      return filter;
+    }
+
+    $('.common_selector').click(function(){
+        filter_data();
+    });
+
+    $('#slider-range').slider({
+        range:true,
+        min:0,
+        max:65000,
+        values:[1000, 65000],
+        step:10,
+        stop:function(event, ui)
+        {
+            $('#price_show').html('R$'+ ui.values[0] + ' - '+ 'R$' + ui.values[1]);
+            $('#hidden_minimum_price').val(ui.values[0]);
+            $('#hidden_maximum_price').val(ui.values[1]);
+            filter_data();
+        }
     });
   });
   </script>

@@ -1,7 +1,7 @@
 <?php
   include_once "connection.php";
       session_start();
-      $categ = "Shop List";
+      $categ = "";
       if(isset($_GET["nomecat"])){
         $categ = $_GET["nomecat"];
       }
@@ -244,61 +244,42 @@
 						<div class="shop-sidebar">
 								<!--/ End Single Widget -->
 								<!-- Shop By Price -->
-									<!-- <div class="single-widget range">
-										<h3 class="title">Filtros</h3>
-                    <form class="" action="#" method="post">
-                      <div class="price-filter">
-  											<div class="price-filter-inner">
-  												<div id="slider-range"></div>
-  													<div class="price_slider_amount">
-  													<div class="label-input">
-  														<span>Preço:</span><input type="text" id="amount" name="price" placeholder="Add Your Price"/>
-  													</div>
-  												</div>
-  											</div>
-  										</div>
-                      <br>
-                      <span><strong>Categoria</strong></span>
-  										<ul class="check-box-list">
-  											<li>
-  												<label class="checkbox-inline" for="1"><input name="news" id="1" type="checkbox">Acessórios<span class="count">(3)</span></label>
-  											</li>
-  											<li>
-  												<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Alimentação<span class="count">(5)</span></label>
-  											</li>
-  											<li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="3" type="checkbox">Beleza<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="4" type="checkbox">Cargos<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="5" type="checkbox">Contas<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="6" type="checkbox">Decoração<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="7" type="checkbox">Eletrônicos<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="8" type="checkbox">Escritório<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="9" type="checkbox">Estudos<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="10" type="checkbox">Instrumentos<span class="count">(8)</span></label>
-  											</li>
-                        <li>
-  												<label class="checkbox-inline" for="3"><input name="news" id="11" type="checkbox">Moda<span class="count">(8)</span></label>
-  											</li>
-  										</ul>
-                      <br>
-                      <span><strong>Petiano</strong></span>
-                    </form>
+                <div class="single-widget range">
+                  <h3 class="title">Filtros</h3>
+                  <!-- <form class="" action="#" method="GET"> -->
+                    <div class="price-filter">
+                      <div class="price-filter-inner">
+                        <h6>Preço </h6>
+                        <br>
+                        <div id="slider-range"></div>
+                        <input type="hidden" id="hidden_minimum_price" value="0" />
+                        <input type="hidden" id="hidden_maximum_price" value="65000" />
+                        <div class="label-input"><p id="price_show">R$120 - R$250</p></div>
+                      </div>
+                    </div>
+                    <br>
+                    <span><strong>Petiano</strong></span>
+                    <?php
+                      $datafilter = '<ul class="check-box-list">';
+                      $queryPRODfilter = "SELECT petiano.nomepetiano, count(produto.idproduto) as qtd
+                                          from petiano INNER JOIN produto ON petiano.idpetiano = produto.idpetiano
+                                          where produto.nomecat like '%".$categ."%' group by petiano.nomepetiano";
 
-									</div> -->
+                      $resultfilter = mysqli_query($connect, $queryPRODfilter);
+                      $numer = 1;
+                      while($rowPRODSfilter = mysqli_fetch_array($resultfilter)){
+                        $datafilter .=
+                        '<li>
+                          <label class="checkbox-inline" for="'.$numer.'"><input name="'.$rowPRODSfilter["nomepetiano"].'" id="'.$numer.'"
+                          class="common_selector pet" type="checkbox" value="'.$rowPRODSfilter["nomepetiano"].'">'.$rowPRODSfilter["nomepetiano"].'<span class="count">('.$rowPRODSfilter["qtd"].')</span></label>
+                        </li>';
+                        $numer += 1;
+                      }
+                      $datafilter .= '</ul>';
+                      echo $datafilter;
+                    ?>
+                    <br>
+                </div>
 									<!--/ End Shop By Price -->
 
 
@@ -594,8 +575,57 @@
 	<script src="js/active.js"></script>
   <script type="text/javascript">
   $(document).ready(function(){
-    $.post("PHP/searchFETCH.php", function(exibicao){
-        $("#searchResults").html(exibicao);
+    filter_data();
+
+    function filter_data()
+    {
+        $('.filter_data').html('<div style="" >CARREGANDO...</div>');
+        var action = 'fetch_data';
+        var cat = get_filter('soum');
+        var minimum_price = $('#hidden_minimum_price').val();
+        var maximum_price = $('#hidden_maximum_price').val();
+        var pet = get_filter('pet');
+        var prod = '';
+
+        $.ajax({
+            url:"PHP/fetchprod.php",
+            method:"POST",
+            data:{action:action, prod:prod, minimum_price:minimum_price, maximum_price:maximum_price, cat:cat, pet:pet},
+            success:function(data){
+                $('.filter_data').html(data);
+            }
+        });
+    }
+
+    function get_filter(class_name){
+      var filter = [];
+      if(class_name == 'soum'){
+        filter.push('<?php echo $categ ?>');
+      }else{
+        $('.'+class_name+':checked').each(function(){
+            filter.push($(this).val());
+        });
+      }
+      return filter;
+    }
+
+    $('.common_selector').click(function(){
+        filter_data();
+    });
+
+    $('#slider-range').slider({
+        range:true,
+        min:0,
+        max:65000,
+        values:[1000, 65000],
+        step:10,
+        stop:function(event, ui)
+        {
+            $('#price_show').html('R$'+ ui.values[0] + ' - '+ 'R$' + ui.values[1]);
+            $('#hidden_minimum_price').val(ui.values[0]);
+            $('#hidden_maximum_price').val(ui.values[1]);
+            filter_data();
+        }
     });
   });
   </script>
