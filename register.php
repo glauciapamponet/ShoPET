@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
@@ -299,6 +303,32 @@
 							<!-- Form -->
 							<!-- <form action = "" method="POST"> -->
 							<form action="PHP/registercli.php" name="formulario" class="form" method="POST" onsubmit="return validarSenha()">
+							<?php
+								if($_SESSION['jaCadastrado']):
+							?>
+							<!-- Aqui fazer bonitinho -->
+							<p>Email já cadastrado :( </p>
+							<?php endif;
+								unset($_SESSION['jaCadastrado']);
+							?>
+
+							<?php
+								if($_SESSION['erro']):
+							?>
+							<!-- Aqui fazer bonitinho -->
+							<p>Erro: confira os dados</p>
+							<?php endif;
+								unset($_SESSION['erro']);
+							?>
+
+							<?php
+								if($_SESSION['sucesso']):
+							?>
+							<!-- Aqui fazer bonitinho -->
+							<p>Cadastrado com sucesso</p>
+							<?php endif; 
+								unset($_SESSION['sucesso']);
+							?>
 								<div class="row">
 									<div class="col-12">
 										<div class="form-group">
@@ -335,7 +365,7 @@
 										<div class="form-group login-btn">
 											<input type="submit" value= "Register" class="btn">
 											<!-- <button class="btn" type="">Register</button> -->
-											<a href="login.html" class="btn">Login</a>
+											<a href="login.php" class="btn">Login</a>
 										</div>
 										<!-- <div class="checkbox">
 											<label class="checkbox-inline" for="2"><input name="news" id="2" type="checkbox">Sign Up for Newsletter</label>

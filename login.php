@@ -301,13 +301,13 @@
 								<div class="row">
 									<div class="col-12">
 										<div class="form-group">
-											<label>Your Email<span>*</span></label>
+											<label>Email<span>*</span></label>
 											<input type="email" name="email" placeholder="" required="required">
 										</div>
 									</div>
 									<div class="col-12">
 										<div class="form-group">
-											<label>Your Password<span>*</span></label>
+											<label>Senha<span>*</span></label>
 											<input type="password" name="password" placeholder="" required="required">
 										</div>
 									</div>
