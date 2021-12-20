@@ -302,7 +302,7 @@
           <div class="col-lg-6 offset-lg-3 col-12">
             <div class="login-form">
               <h2>Login</h2>
-              <p>Cadastre-se para finalizar a compra mais rapidamente</p>
+              <p>Entre para finalizar a compra mais rapidamente</p>
               <!-- Form -->
               <form class="form" method="post" action="#">
                 <div class="row">
