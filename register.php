@@ -110,17 +110,11 @@
 							<?php
 								if(isset($_SESSION['sucesso'])):
 							?>
-<<<<<<< HEAD
-							<!-- Aqui fazer bonitinho -->
-							<p>Cadastrado com sucesso</p>
-							<?php endif;
-=======
 							<div>
 								<!-- Aqui fazer bonitinho -->
 								<p>Cadastrado com sucesso</p>
 							</div>
-							<?php endif; 
->>>>>>> c31237d3df97062913db289e67026d41486296e7
+							<?php endif;
 								unset($_SESSION['sucesso']);
 							?>
 
@@ -161,7 +155,7 @@
 										<div class="form-group login-btn">
 											<!-- <input type="submit" value= "Register" class="btn"> -->
 											<button class="btn" type="submit">Cadastrar</button>
-											<a href="login.php" class="btn">Login</a>
+											
 										</div>
 									</div>
 								</div>

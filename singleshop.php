@@ -91,14 +91,6 @@
 							<!-- Search Form -->
 							<div class="search-top">
 								<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
-								<!-- Search Form -->
-								<!-- <div class="search-top">
-									<form class="search-form">
-										<input type="text" placeholder="Search here..." name="search">
-										<button value="search" type="submit" onclick="redirecionar()"><i class="ti-search" ></i></button>
-									</form>
-								</div> -->
-								<!--/ End Search Form -->
 							</div>
 							<!--/ End Search Form -->
 							<div class="mobile-nav"></div>
@@ -211,15 +203,6 @@
 													<li data-thumb="<?php echo $resprod["pathimage"];?>" rel="adjustX:10, adjustY:">
 														<img src="<?php echo $resprod["pathimage"];?>" alt="#">
 													</li>
-													<!-- <li data-thumb="images/Produtos/1.jpg">
-														<img src="images/Produtos/1.jpg" alt="#">
-													</li>
-													<li data-thumb="images/Produtos/1.jpg">
-														<img src="images/Produtos/1.jpg" alt="#">
-													</li>
-													<li data-thumb="images/Produtos/1.jpg">
-														<img src="images/Produtos/1.jpg" alt="#"> -->
-													</li>
 												</ul>
 											</div>
 											<!-- End Images slider -->
@@ -231,16 +214,6 @@
 											<!-- Description -->
 											<div class="short">
                         <?php echo '<h4>'.$resprod["nomeprod"].'</h4>'; ?>
-												<!-- <div class="rating-main">
-													<ul class="rating">
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star"></i></li>
-														<li><i class="fa fa-star-half-o"></i></li>
-														<li class="dark"><i class="fa fa-star-o"></i></li>
-													</ul>
-													<a href="#" class="total-review">(102) Review</a>
-												</div> -->
 												<p class="price">
                           <span class="discount">
                             <?php echo 'R$'.$resprod["precoprod"]; ?>
@@ -271,15 +244,12 @@
 															</button>
 														</div>
 													</div>
-
 													<!--/ End Input Order -->
 												</div>
                         <p style="display: inline-block;">Vendido em unidades!</p>
                         <br><br>
 												<div class="add-to-cart">
-													<a href="#" class="btn">Colocar no carrinho</a>
-													<!-- <a href="#" class="btn min"><i class="ti-heart"></i></a> -->
-
+													<button class="btn">Colocar na sacola</a>
 												</div>
 												<p class="cat">Categoria/Petiano :<a href="cat.php?nomecat=<?php echo $resprod["nomecat"]; ?>">
                           <?php echo $resprod["nomecat"]; ?></a>,
@@ -309,18 +279,6 @@
       																<div class="single-des">
       																	<p><?php echo nl2br($resprod["desc"]); ?></p>
       																</div>
-      																<!-- <div class="single-des">
-      																	<p>Suspendisse consequatur voluptates lorem nobis accumsan natus mattis. Optio pede, optio qui metus, delectus! Ultricies impedit, minus tempor fuga, quasi, pede felis commodo bibendum voluptas nisi? Voluptatem risus tempore tempora. Quaerat aspernatur? Error praesent laoreet, cras in fames hac ea, massa montes diamlorem nec quaerat, quos occaecati leo nam aliquet corporis, ab recusandae parturient, etiam fermentum, a quasi possimus commodi, mollis voluptate mauris mollis, quisque donec</p>
-      																</div> -->
-      																<!-- <div class="single-des">
-      																	<h4>Product Features:</h4>
-      																	<ul>
-      																		<li>long established fact.</li>
-      																		<li>has a more-or-less normal distribution. </li>
-      																		<li>lmany variations of passages of. </li>
-      																		<li>generators on the Interne.</li>
-      																	</ul>
-      																</div> -->
       															</div>
       														</div>
       													</div>

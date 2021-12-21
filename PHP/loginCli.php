@@ -6,7 +6,7 @@
   $password = mysqli_real_escape_string($connect, $_POST['password']);
 
   $query = "SELECT nomecliente FROM cliente, usuario WHERE cliente.emailcliente = '".$email."'
-            AND cliente.idcliente = usuario.idcliente AND usuario.senha='$password'";
+            AND cliente.idcliente = usuario.idcliente AND usuario.senha = md5('{$password}')";
 
   $result = mysqli_query($connect, $query);
 
