@@ -32,7 +32,10 @@
 
     if(mysqli_insert_id($connect)){
         $_SESSION['sucesso'] = true;
-        // header("Location: ../login.php");
+        $_SESSION["usuario"] = $email;
+        $_SESSION["senha"] = $password;
+        header("Location: ../index.php");
+        exit();
     } else{
         $_SESSION['erro'] = true;
     }

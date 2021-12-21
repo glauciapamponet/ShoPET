@@ -114,7 +114,11 @@
 								<!-- Aqui fazer bonitinho -->
 								<p>Cadastrado com sucesso</p>
 							</div>
+<<<<<<< HEAD
 							<?php endif;
+=======
+							<?php endif; 
+>>>>>>> 49ecc98f1b766a2b1263e09f19c28d5d2155bfab
 								unset($_SESSION['sucesso']);
 							?>
 
