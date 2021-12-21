@@ -48,17 +48,6 @@
 
 	<!-- Color CSS -->
 	<link rel="stylesheet" href="css/color/color1.css">
-	<!--<link rel="stylesheet" href="css/color/color2.css">-->
-	<!--<link rel="stylesheet" href="css/color/color3.css">-->
-	<!--<link rel="stylesheet" href="css/color/color4.css">-->
-	<!--<link rel="stylesheet" href="css/color/color5.css">-->
-	<!--<link rel="stylesheet" href="css/color/color6.css">-->
-	<!--<link rel="stylesheet" href="css/color/color7.css">-->
-	<!--<link rel="stylesheet" href="css/color/color8.css">-->
-	<!--<link rel="stylesheet" href="css/color/color9.css">-->
-	<!--<link rel="stylesheet" href="css/color/color10.css">-->
-	<!--<link rel="stylesheet" href="css/color/color11.css">-->
-	<!--<link rel="stylesheet" href="css/color/color12.css">-->
 
 	<link rel="stylesheet" href="#" id="colors">
 
@@ -76,223 +65,11 @@
 	</div>
 	<!-- End Preloader -->
 
-    <!-- Header -->
-    <header class="header shop">
-      <!-- Header Inner -->
-      <div class="header-inner">
-        <div class="container">
-          <div class="cat-nav-head">
-            <div class="row">
-              <div class="col-lg-2 col-md-2 col-12">
-                <!-- Logo -->
-                <div class="logo">
-                  <a href="index.html"
-                    ><img src="images/LogoPrincipalCorte.png" alt="logo"
-                  /></a>
-                </div>
-                <!--/ End Logo -->
-                <!-- Search Form -->
-                <div class="search-top">
-                  <div class="top-search">
-                    <a href="#0"><i class="ti-search"></i></a>
-                  </div>
-                  <!-- Search Form -->
-                  <div class="search-top">
-                    <form class="search-form">
-                      <input
-                        type="text"
-                        placeholder="Search here..."
-                        name="search"
-                      />
-                      <button value="search" type="submit">
-                        <i class="ti-search"></i>
-                      </button>
-                    </form>
-                  </div>
-                  <!--/ End Search Form -->
-                </div>
-                <!--/ End Search Form -->
-                <div class="mobile-nav"></div>
-              </div>
-              <div class="col-lg-3">
-                <div class="all-category">
-                  <a
-                    class="cat-heading"
-                    data-toggle="collapse"
-                    href="#collapse"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="collapse"
-                  >
-                    <h3>
-                      <i class="fa fa-bars" aria-hidden="true"></i>CATEGORIAS
-                    </h3>
-                  </a>
-                  <ul class="main-category collapse" id="collapse">
-                    <li>
-                      <a href="#"
-                        >Tipos<i
-                          class="fa fa-angle-right"
-                          aria-hidden="true"
-                        ></i
-                      ></a>
-                      <ul class="sub-category">
-                        <li><a href="#">Acessórios</a></li>
-                        <li><a href="#">Alimentação</a></li>
-                        <li><a href="#">Beleza</a></li>
-                        <li><a href="#">Cargos</a></li>
-                        <li><a href="#">Contas</a></li>
-                        <li><a href="#">Decoração</a></li>
-                        <li><a href="#">Eletrônicos</a></li>
-                        <li><a href="#">Escritório</a></li>
-                        <li><a href="#">Estudos</a></li>
-                        <li><a href="#">Instrumentos</a></li>
-                        <li><a href="#">Moda</a></li>
-                      </ul>
-                    </li>
-
-                    <li></li>
-                    <li>
-                      <a href="#"
-                        >Petianos<i
-                          class="fa fa-angle-right"
-                          aria-hidden="true"
-                        ></i
-                      ></a>
-                      <ul class="sub-category">
-                        <li><a href="#">Alexandre</a></li>
-                        <li><a href="#">Caio</a></li>
-                        <li><a href="#">Cairolli</a></li>
-                        <li><a href="#">Eler</a></li>
-                        <li><a href="#">Furquim</a></li>
-                        <li><a href="#">Giovanna</a></li>
-                        <li><a href="#">Glaucia</a></li>
-                        <li><a href="#">João</a></li>
-                        <li><a href="#">Marin</a></li>
-                        <li><a href="#">Michelly</a></li>
-                        <li><a href="#">PET</a></li>
-                        <li><a href="#">Sena</a></li>
-                        <li><a href="#">Stefany</a></li>
-                        <li><a href="#">Thaís</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-5 col-12">
-                <div class="menu-area">
-                  <!-- Main Menu -->
-                  <nav class="navbar navbar-expand-lg">
-                    <div class="navbar-collapse">
-                      <div class="nav-inner">
-                        <div class="search-bar-top">
-                          <div class="search-bar">
-                            <form>
-                              <input
-                                name="search"
-                                placeholder="Pesquise por produtos aqui"
-                                type="search"
-                              />
-                              <button class="btnn">
-                                <i class="ti-search"></i>
-                              </button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-                  <!--/ End Main Menu -->
-                </div>
-              </div>
-              <div class="col-lg-2 col-md-3 col-12">
-                <div class="right-bar">
-                  <!-- Search Form -->
-                  <div class="sinlge-bar">
-				  	<a href="login.php" class="single-icon">
-						<i class="fa fa-sign-in"></i>
-						<!-- <i class="fa fa-sign-out"></i> -->
-					</a>
-                  </div>
-                  <div class="sinlge-bar shopping">
-                    <a href="cart.html" class="single-icon"
-                      ><i class="ti-bag"></i>
-                      <span class="total-count">2</span></a
-                    >
-                    <!-- Shopping Item -->
-                    <div class="shopping-item">
-                      <div class="dropdown-cart-header">
-                        <span>2 Itens</span>
-                        <a href="cart.html">Ver Carrinho</a>
-                      </div>
-                      <ul class="shopping-list">
-                        <li>
-                          <a href="#" class="remove" title="Remove this item"
-                            ><i class="fa fa-remove"></i
-                          ></a>
-                          <a class="cart-img" href="#"
-                            ><img
-                              src="https://via.placeholder.com/70x70"
-                              alt="#"
-                          /></a>
-                          <h4><a href="#">Woman Ring</a></h4>
-                          <p class="quantity">
-                            1x - <span class="amount">$99.00</span>
-                          </p>
-                        </li>
-                        <li>
-                          <a href="#" class="remove" title="Remove this item"
-                            ><i class="fa fa-remove"></i
-                          ></a>
-                          <a class="cart-img" href="#"
-                            ><img
-                              src="https://via.placeholder.com/70x70"
-                              alt="#"
-                          /></a>
-                          <h4><a href="#">Woman Necklace</a></h4>
-                          <p class="quantity">
-                            1x - <span class="amount">$35.00</span>
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="bottom">
-                        <div class="total">
-                          <span>Total</span>
-                          <span class="total-amount">$134.00</span>
-                        </div>
-                        <a href="checkout.html" class="btn animate"
-                          >Finalizar compra</a
-                        >
-                      </div>
-                    </div>
-                    <!--/ End Shopping Item -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ End Header Inner -->
-    </header>
-    <!--/ End Header -->
-
-		<!-- Breadcrumbs -->
-		<div class="breadcrumbs">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="bread-inner">
-							<ul class="bread-list">
-								<li><a href="index.php">Home<i class="ti-arrow-right"></i></a></li>
-								<li class="active"><a href="register.php">Cadastro</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- End Breadcrumbs -->
+	<!-- Header -->
+	<div class="breadcrumbs" align="center" style="padding:10px 0px;">
+		<a href="index.php"><img src="images/3b.png" width="5%" alt=""></a>
+	</div>
+	<!--/ End Header -->
 
 		<!-- Shop Login -->
 		<section class="shop login section">
@@ -328,7 +105,7 @@
 							?>
 							<!-- Aqui fazer bonitinho -->
 							<p>Cadastrado com sucesso</p>
-							<?php endif; 
+							<?php endif;
 								unset($_SESSION['sucesso']);
 							?>
 								<div class="row">

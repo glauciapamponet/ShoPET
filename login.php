@@ -50,17 +50,6 @@
 
     <!-- Color CSS -->
     <link rel="stylesheet" href="css/color/color1.css" />
-    <!--<link rel="stylesheet" href="css/color/color2.css">-->
-    <!--<link rel="stylesheet" href="css/color/color3.css">-->
-    <!--<link rel="stylesheet" href="css/color/color4.css">-->
-    <!--<link rel="stylesheet" href="css/color/color5.css">-->
-    <!--<link rel="stylesheet" href="css/color/color6.css">-->
-    <!--<link rel="stylesheet" href="css/color/color7.css">-->
-    <!--<link rel="stylesheet" href="css/color/color8.css">-->
-    <!--<link rel="stylesheet" href="css/color/color9.css">-->
-    <!--<link rel="stylesheet" href="css/color/color10.css">-->
-    <!--<link rel="stylesheet" href="css/color/color11.css">-->
-    <!--<link rel="stylesheet" href="css/color/color12.css">-->
 
     <link rel="stylesheet" href="#" id="colors" />
   </head>
@@ -77,160 +66,10 @@
     <!-- End Preloader -->
 
     <!-- Header -->
-    <header class="header shop">
-      <!-- Header Inner -->
-      <div class="header-inner">
-        <div class="container">
-          <div class="cat-nav-head">
-            <div class="row">
-              <div class="col-lg-2 col-md-2 col-12">
-                <!-- Logo -->
-                <div class="logo">
-                  <a href="index.php"
-                    ><img src="images/LogoPrincipalCorte.png" alt="logo"
-                  /></a>
-                </div>
-                <!--/ End Logo -->
-                <!-- Search Form -->
-                <div class="search-top">
-                  <div class="top-search">
-                    <a href="#0"><i class="ti-search"></i></a>
-                  </div>
-                  <!-- Search Form -->
-                  <div class="search-top">
-                    <form class="search-form">
-                      <input
-                        type="text"
-                        placeholder="Search here..."
-                        name="search"
-                      />
-                      <button value="search" type="submit">
-                        <i class="ti-search"></i>
-                      </button>
-                    </form>
-                  </div>
-                  <!--/ End Search Form -->
-                </div>
-                <!--/ End Search Form -->
-                <div class="mobile-nav"></div>
-              </div>
-              <div class="col-lg-3">
-                <div class="all-category">
-                  <a
-                    class="cat-heading"
-                    data-toggle="collapse"
-                    href="#collapse"
-                    role="button"
-                    aria-expanded="false"
-                    aria-controls="collapse"
-                  >
-                    <h3>
-                      <i class="fa fa-bars" aria-hidden="true"></i>CATEGORIAS
-                    </h3>
-                  </a>
-                  <ul class="main-category collapse" id="collapse">
-                    <li>
-                      <a href="#"
-                        >Tipos<i
-                          class="fa fa-angle-right"
-                          aria-hidden="true"
-                        ></i
-                      ></a>
-                      <ul class="sub-category">
-                        <li><a href="#">Acessórios</a></li>
-                        <li><a href="#">Alimentação</a></li>
-                        <li><a href="#">Beleza</a></li>
-                        <li><a href="#">Cargos</a></li>
-                        <li><a href="#">Contas</a></li>
-                        <li><a href="#">Decoração</a></li>
-                        <li><a href="#">Eletrônicos</a></li>
-                        <li><a href="#">Escritório</a></li>
-                        <li><a href="#">Estudos</a></li>
-                        <li><a href="#">Instrumentos</a></li>
-                        <li><a href="#">Moda</a></li>
-                      </ul>
-                    </li>
-
-                    <li></li>
-                    <li>
-                      <a href="#"
-                        >Petianos<i
-                          class="fa fa-angle-right"
-                          aria-hidden="true"
-                        ></i
-                      ></a>
-                      <ul class="sub-category">
-                        <li><a href="#">Alexandre</a></li>
-                        <li><a href="#">Caio</a></li>
-                        <li><a href="#">Cairolli</a></li>
-                        <li><a href="#">Eler</a></li>
-                        <li><a href="#">Furquim</a></li>
-                        <li><a href="#">Giovanna</a></li>
-                        <li><a href="#">Glaucia</a></li>
-                        <li><a href="#">João</a></li>
-                        <li><a href="#">Marin</a></li>
-                        <li><a href="#">Michelly</a></li>
-                        <li><a href="#">PET</a></li>
-                        <li><a href="#">Sena</a></li>
-                        <li><a href="#">Stefany</a></li>
-                        <li><a href="#">Thaís</a></li>
-                      </ul>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div class="col-lg-5 col-12">
-                <div class="menu-area">
-                  <!-- Main Menu -->
-                  <nav class="navbar navbar-expand-lg">
-                    <div class="navbar-collapse">
-                      <div class="nav-inner">
-                        <div class="search-bar-top">
-                          <div class="search-bar">
-                            <form>
-                              <input
-                                name="search"
-                                placeholder="Pesquise por produtos aqui"
-                                type="search"
-                              />
-                              <button class="btnn">
-                                <i class="ti-search"></i>
-                              </button>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </nav>
-                  <!--/ End Main Menu -->
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--/ End Header Inner -->
-    </header>
-    <!--/ End Header -->
-
-    <!-- Breadcrumbs -->
-    <div class="breadcrumbs">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="bread-inner">
-              <ul class="bread-list">
-                <li>
-                  <a href="index.php">Home<i class="ti-arrow-right"></i></a>
-                </li>
-                <li class="active"><a href="login.php">Login</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="breadcrumbs" align="center" style="padding:10px 0px;">
+      <a href="index.php"><img src="images/3b.png" width="5%" alt=""></a>
     </div>
-    <!-- End Breadcrumbs -->
+    <!--/ End Header -->
 
     <!-- Shop Login -->
     <section class="shop login section">
@@ -268,7 +107,8 @@
                   <div class="col-12">
                     <div class="form-group login-btn">
                       <button class="btn" type="submit">Login</button>
-                      <a href="register.php" class="btn">Cadastro</a>
+                      Primeira vez por aqui?
+                      <a href="register.php" class="lost-pass" style="margin-left:0px; color:#F36006;">Cadastre-se</a>
                     </div>
                     <div class="checkbox">
                       <label class="checkbox-inline" for="2"
@@ -276,7 +116,7 @@
                         mim</label
                       >
                     </div>
-                    <a href="#" class="lost-pass">Esqueceu sua senha?</a>
+                    <a href="#" class="lost-pass" >Esqueceu sua senha?</a>
                   </div>
                 </div>
               </form>
@@ -289,117 +129,71 @@
     <!--/ End Login -->
 
     <!-- Start Footer Area -->
-    <footer class="footer">
-      <!-- Footer Top -->
-      <div class="footer-top section">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-5 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer about">
-                <div class="logo">
-                  <a href="index.php"
-                    ><img src="images/LogoFooterCorte.png" alt="#"
-                  /></a>
-                </div>
-                <p class="text">
-                  Só aqui você encontra produtos exclusivos relacionados aos
-                  petianos e ex-petianos do PET-SI!
-                </p>
-                <p class="call">
-                  Alguma dúvida, sugestão ou reclamação? <br />
-                  Ligue para o SAC do ShoPET:<span
-                    ><a href="tel:11912345678">11 912345678</a></span
-                  >
-                </p>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer links">
-                <h4>Informação</h4>
-                <ul>
-                  <li><a href="#">Sobre nós</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Termos e Condições</a></li>
-                  <li><a href="#">Contate-nos</a></li>
-                  <li><a href="#">Ajuda</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer links">
-                <h4>Atendimento ao Cliente</h4>
-                <ul>
-                  <li><a href="#">Métodos de pagamento</a></li>
-                  <li><a href="#">Estorno</a></li>
-                  <li><a href="#">Devolução</a></li>
-                  <li><a href="#">Frete</a></li>
-                  <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-3 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer social">
-                <h4>Entre em Contato</h4>
-                <!-- Single Widget -->
-                <div class="contact">
-                  <ul>
-                    <li>Rua: Arlindo Bettio, 1000</li>
-                    <li>CEP: 03828-000</li>
-                    <li>Bairro: Vila Guaraciaba</li>
-                    <li>Cidade/UF: São Paulo/SP</li>
-                    <li>Email: contato@shopet.com.br</li>
-                    <li>11 912345678</li>
-                  </ul>
-                </div>
-                <!-- End Single Widget -->
-                <ul>
-                  <li>
-                    <a href="#"><i class="ti-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ti-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ti-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ti-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Footer Top -->
-      <div class="copyright">
-        <div class="container">
-          <div class="inner">
-            <div class="row">
-              <div class="col-lg-6 col-12">
-                <div class="left">
-                  <p>Copyright © 2021 ShoPET - Todos os direitos reservados.</p>
-                </div>
-              </div>
-              <div class="col-lg-6 col-12">
-                <div class="right">
-                  <img src="images/payments.png" alt="#" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- /End Footer Area -->
+  	<footer class="footer">
+  		<!-- Footer Top -->
+  		<div class="footer-top section">
+  			<div class="container">
+  				<div class="row">
+  					<div class="col-lg-5 col-md-6 col-12">
+  						<!-- Single Widget -->
+  						<div class="single-footer about">
+  							<div class="logo">
+  								<a href="index.php"><img src="images/LogoFooterCorte.png" alt="#"></a>
+  							</div>
+  							<p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
+  							<p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
+  						</div>
+  						<!-- End Single Widget -->
+  					</div>
+
+  					<div class="col-lg-3 col-md-6 col-12">
+  						<!-- Single Widget -->
+  						<div class="single-footer social">
+  							<h4>Entre em Contato</h4>
+  							<!-- Single Widget -->
+  							<div class="contact">
+  								<ul>
+  									<li>Rua: Arlindo Bettio, 1000</li>
+  									<li>CEP: 03828-000</li>
+  									<li>Bairro: Vila Guaraciaba</li>
+  									<li>Cidade/UF: São Paulo/SP</li>
+  									<li>Email: contato@shopet.com.br</li>
+  									<li>11 912345678</li>
+  								</ul>
+  							</div>
+  							<!-- End Single Widget -->
+  							<ul>
+  								<li><a href="#"><i class="ti-facebook"></i></a></li>
+  								<li><a href="#"><i class="ti-instagram"></i></a></li>
+  								<li><a href="#"><i class="ti-twitter"></i></a></li>
+  								<li><a href="#"><i class="ti-linkedin"></i></a></li>
+  							</ul>
+  						</div>
+  						<!-- End Single Widget -->
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  		<!-- End Footer Top -->
+  		<div class="copyright">
+  			<div class="container">
+  				<div class="inner">
+  					<div class="row">
+  						<div class="col-lg-6 col-12">
+  							<div class="left">
+  								<p>Copyright © 2021 ShoPET - Todos os direitos reservados.</p>
+  							</div>
+  						</div>
+  						<div class="col-lg-6 col-12">
+  							<div class="right">
+  								<img src="images/payments.png" alt="#">
+  							</div>
+  						</div>
+  					</div>
+  				</div>
+  			</div>
+  		</div>
+  	</footer>
 
     <!-- Jquery -->
     <script src="js/jquery.min.js"></script>

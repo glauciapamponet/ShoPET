@@ -4,7 +4,7 @@
 
 	$cart_text = '<div class="sinlge-bar">';
 	if(isset($_SESSION["usuario"])){
-		$cart_text .= '		<a href="index.php" class="single-icon">
+		$cart_text .= '		<a href="PHP/logout.php" class="single-icon">
 													<i class="fa fa-sign-out"></i>
 											</a>
 										</div>
