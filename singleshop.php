@@ -1,6 +1,6 @@
 <?php
     include_once "connection.php";
-        session_start();
+    session_start();
 
     $idprod = $_GET["idproduto"];
     //echo $idprod;
@@ -58,17 +58,6 @@
 
 	<!-- Color CSS -->
 	<link rel="stylesheet" href="css/color/color1.css">
-	<!--<link rel="stylesheet" href="css/color/color2.css">-->
-	<!--<link rel="stylesheet" href="css/color/color3.css">-->
-	<!--<link rel="stylesheet" href="css/color/color4.css">-->
-	<!--<link rel="stylesheet" href="css/color/color5.css">-->
-	<!--<link rel="stylesheet" href="css/color/color6.css">-->
-	<!--<link rel="stylesheet" href="css/color/color7.css">-->
-	<!--<link rel="stylesheet" href="css/color/color8.css">-->
-	<!--<link rel="stylesheet" href="css/color/color9.css">-->
-	<!--<link rel="stylesheet" href="css/color/color10.css">-->
-	<!--<link rel="stylesheet" href="css/color/color11.css">-->
-	<!--<link rel="stylesheet" href="css/color/color12.css">-->
 
 	<link rel="stylesheet" href="#" id="colors">
 

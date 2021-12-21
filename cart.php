@@ -1,3 +1,10 @@
+<?php
+  include_once("connection.php");
+  session_start();
+  include("sessionlogin.php");
+
+?>
+
 <!DOCTYPE html>
 <html lang="zxx">
   <head>

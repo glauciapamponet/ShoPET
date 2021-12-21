@@ -1,7 +1,7 @@
 <?php
     $servidor = "localhost";
     $usuario = "root";
-    $senha = "";
+    $senha = "glaucia";
     $dbname = "shopet";
 
     //Cria conexão

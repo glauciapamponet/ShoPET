@@ -1,10 +1,10 @@
 <?php
   include_once "connection.php";
-      session_start();
-      $productsearch = "";
-      if(isset($_GET["search"])){
-        $productsearch = $_GET["search"];
-      }
+  session_start();
+  $productsearch = "";
+  if(isset($_GET["search"])){
+    $productsearch = $_GET["search"];
+  }
 
 ?>
 

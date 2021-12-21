@@ -1,6 +1,6 @@
 <?php
     include_once "connection.php";
-        session_start();
+    session_start();
 
 ?>
 
@@ -153,49 +153,12 @@
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-3 col-12">
-							<div class="right-bar">
+							<div id="cartExibition" class="right-bar">
 								<!-- Search Form -->
 								<!-- <div class="sinlge-bar">
 									<a href="login.php" class="single-icon"><i class="fa fa-user-circle-o"
 											aria-hidden="true"></i></a>
 								</div> -->
-								<div class="sinlge-bar shopping">
-									<a href="#" class="single-icon"><i class="ti-bag"></i> <span
-											class="total-count">2</span></a>
-
-									<div class="shopping-item">
-										<div class="dropdown-cart-header">
-											<span>2 Itens</span>
-											<a href="#">Ver Carrinho</a>
-										</div>
-										<ul class="shopping-list">
-											<li>
-												<a href="#" class="remove" title="Remove this item"><i
-														class="fa fa-remove"></i></a>
-												<a class="cart-img" href="#"><img
-														src="https://via.placeholder.com/70x70" alt="#"></a>
-												<h4><a href="#">Produto</a></h4>
-												<p class="quantity">1x - <span class="amount">$00.00</span></p>
-											</li>
-											<li>
-												<a href="#" class="remove" title="Remove this item"><i
-														class="fa fa-remove"></i></a>
-												<a class="cart-img" href="#"><img
-														src="https://via.placeholder.com/70x70" alt="#"></a>
-												<h4><a href="#">Produto</a></h4>
-												<p class="quantity">1x - <span class="amount">R$00.00</span></p>
-											</li>
-										</ul>
-										<div class="bottom">
-											<div class="total">
-												<span>Total</span>
-												<span class="total-amount">R$00.00</span>
-											</div>
-											<a href="checkout.html" class="btn animate">Finalizar compra</a>
-										</div>
-									</div>
-									<!--/ End Shopping Item -->
-								 </div>
 							</div>
 						</div>
 					</div>
@@ -283,56 +246,11 @@
 	<!-- Start Product Area -->
 	<div class="product-area section">
 		<div class="container">
-			<!-- <div class="row">
-				<div class="col-12">
-					<div class="section-title">
-						<h2>Navegue por Categoria</h2>
-					</div>
-				</div>
-			</div> -->
 			<div class="row">
-				<div class="col-12">
-					  <!--TERMINA AQUI -->
-            <!-- <div id="prodExibition" class="product-info"></div> -->
-				</div>
+				<div class="col-12"></div>
 			</div>
 		</div>
 	</div>
-	<!-- End Product Area -->
-
-	<!--  -->
-  <!-- <div class="section"></div> -->
-
-	<!--<section class="section free-version-banner">
-  	<div class="product-area most-popular">
-  		<div class="container">
-  			<div class="row">
-  				<div class="col-12">
-  					<div class="section-title">
-              <h2 class="text-white wow fadeInUp" data-wow-delay=".4s"
-  							style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Sugestões Petianísticas</h2>
-
-  					</div>
-  				</div>
-  			</div>
-  			<div class="row">
-  				<div id="carrousselFETCH" class="col-12"> <!--DAQUI PRA BAIXO VAI PRO PHP -->
-        <!--</div> DAQUI PRA CIMA VAI PRO PHP -->
-  			<!-- </div>
-  		</div>
-  	</div> -->
-  	<!-- End Most Popular Area
-		 <span class="text-white wow fadeInDown" data-wow-delay=".2s"
-							style="visibility: visible; animation-delay: 0.2s; animation-name: fadeInDown;">Eshop Free
-							Lite version</span>
-						<h2 class="text-white wow fadeInUp" data-wow-delay=".4s"
-							style="visibility: visible; animation-delay: 0.4s; animation-name: fadeInUp;">Currently You
-							are using free<br> lite Version of Eshop.</h2>
-						<p class="text-white wow fadeInUp" data-wow-delay=".6s"
-							style="visibility: visible; animation-delay: 0.6s; animation-name: fadeInUp;">Please,
-							purchase full version of the template to get all pages,<br> features and commercial license.
-						</p>
-	</section>-->
 
   <!-- Start Midium Banner  -->
 	<section class="midium-banner">
@@ -471,18 +389,13 @@
 	<script src="js/active.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
-      $.post("PHP/productFETCH.php", function(exibicao){
-          $("#prodExibition").html(exibicao);
+      $.post("PHP/cartIcon.php", function(exibicao){
+          $("#cartExibition").html(exibicao);
       });
       // $.post("PHP/carrousselFETCH.php", function(carrossel){
       //   $("#carrousselFETCH").html(carrossel);
       // });
     });
-
-    function redirecionar(){
-      var valor_busca = document.getElementById("prodnome").value;
-      location.href="busca.php/"+valor_busca;
-    }
   </script>
 </body>
 
