@@ -196,70 +196,6 @@
                   <!--/ End Main Menu -->
                 </div>
               </div>
-              <div class="col-lg-2 col-md-3 col-12">
-                <div class="right-bar">
-                  <!-- Search Form -->
-                  <div class="sinlge-bar">
-                    <a href="login.html" class="single-icon">
-                      <i class="fa fa-sign-in"></i>
-                      <!-- <i class="fa fa-sign-out"></i> -->
-                    </a>
-                  </div>
-                  <div class="sinlge-bar shopping">
-                    <a href="cart.html" class="single-icon"
-                      ><i class="ti-bag"></i>
-                      <span class="total-count">2</span></a
-                    >
-                    <!-- Shopping Item -->
-                    <div class="shopping-item">
-                      <div class="dropdown-cart-header">
-                        <span>2 Itens</span>
-                        <a href="cart.html">Ver Carrinho</a>
-                      </div>
-                      <ul class="shopping-list">
-                        <li>
-                          <a href="#" class="remove" title="Remove this item"
-                            ><i class="fa fa-remove"></i
-                          ></a>
-                          <a class="cart-img" href="#"
-                            ><img
-                              src="https://via.placeholder.com/70x70"
-                              alt="#"
-                          /></a>
-                          <h4><a href="#">Woman Ring</a></h4>
-                          <p class="quantity">
-                            1x - <span class="amount">$99.00</span>
-                          </p>
-                        </li>
-                        <li>
-                          <a href="#" class="remove" title="Remove this item"
-                            ><i class="fa fa-remove"></i
-                          ></a>
-                          <a class="cart-img" href="#"
-                            ><img
-                              src="https://via.placeholder.com/70x70"
-                              alt="#"
-                          /></a>
-                          <h4><a href="#">Woman Necklace</a></h4>
-                          <p class="quantity">
-                            1x - <span class="amount">$35.00</span>
-                          </p>
-                        </li>
-                      </ul>
-                      <div class="bottom">
-                        <div class="total">
-                          <span>Total</span>
-                          <span class="total-amount">$134.00</span>
-                        </div>
-                        <a href="checkout.html" class="btn animate"
-                          >Finalizar compra</a
-                        >
-                      </div>
-                    </div>
-                    <!--/ End Shopping Item -->
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -699,5 +635,12 @@
     <script src="js/easing.js"></script>
     <!-- Active JS -->
     <script src="js/active.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $.post("PHP/cartIcon.php", function(exibicao){
+            $("#cartExibition").html(exibicao);
+        });
+      });
+    </script>
   </body>
 </html>

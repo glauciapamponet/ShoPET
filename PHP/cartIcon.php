@@ -2,9 +2,13 @@
 	include_once("../connection.php");
 	session_start();
 
-	$cart_text = '';
+	$cart_text = '<div class="sinlge-bar">';
 	if(isset($_SESSION["usuario"])){
-		$cart_text .= ' <div  class="sinlge-bar shopping">
+		$cart_text .= '		<a href="index.php" class="single-icon">
+													<i class="fa fa-sign-out"></i>
+											</a>
+										</div>
+		 								<div  class="sinlge-bar shopping">
 											<a href="cart.php" class="single-icon"><i class="ti-bag"></i>';
 		$result = mysqli_query($connect, "SELECT COUNT(carr.idproduto) AS qtd FROM carrinho carr, cliente cli
 																			WHERE cli.idcliente = carr.idcliente AND cli.emailcliente = '".$_SESSION["usuario"]."'");
@@ -48,7 +52,11 @@
 										 </div>';
 		}
 	}else{
-		$cart_text .= '<div  class="sinlge-bar shopping">
+		$cart_text .= '<a href="login.php" class="single-icon">
+											 <i class="fa fa-sign-in"></i>
+										</a>
+									</div>
+									<div  class="sinlge-bar shopping">
 										<a href="login.php" class="single-icon"><i class="ti-bag"></i>
 										</a>
 										<div class="shopping-item">

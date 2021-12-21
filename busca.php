@@ -167,51 +167,8 @@
 								<!--/ End Main Menu -->
 							</div>
 						</div>
-						<div class="col-lg-2 col-md-3 col-12">
-							<div class="right-bar">
-								<!-- Search Form -->
-								<div class="sinlge-bar">
-									<!-- <a href="#" class="single-icon"><i class="fa fa-user-circle-o"
-											aria-hidden="true"></i></a> -->
-								</div>
-								<!-- <div class="sinlge-bar shopping">
-									<a href="#" class="single-icon"><i class="ti-bag"></i> <span
-											class="total-count">2</span></a>
-
-									<div class="shopping-item">
-										<div class="dropdown-cart-header">
-											<span>2 Itens</span>
-											<a href="#">Ver Carrinho</a>
-										</div>
-										<ul class="shopping-list">
-											<li>
-												<a href="#" class="remove" title="Remove this item"><i
-														class="fa fa-remove"></i></a>
-												<a class="cart-img" href="#"><img
-														src="https://via.placeholder.com/70x70" alt="#"></a>
-												<h4><a href="#">Produto</a></h4>
-												<p class="quantity">1x - <span class="amount">$00.00</span></p>
-											</li>
-											<li>
-												<a href="#" class="remove" title="Remove this item"><i
-														class="fa fa-remove"></i></a>
-												<a class="cart-img" href="#"><img
-														src="https://via.placeholder.com/70x70" alt="#"></a>
-												<h4><a href="#">Produto</a></h4>
-												<p class="quantity">1x - <span class="amount">R$00.00</span></p>
-											</li>
-										</ul>
-										<div class="bottom">
-											<div class="total">
-												<span>Total</span>
-												<span class="total-amount">R$00.00</span>
-											</div>
-											<a href="checkout.html" class="btn animate">Finalizar compra</a>
-										</div>
-									</div> -->
-									<!--/ End Shopping Item -->
-								<!-- </div> -->
-							</div>
+            <div class="col-lg-2 col-md-3 col-12">
+							<div id="cartExibition" class="right-bar"></div>
 						</div>
 					</div>
 				</div>
@@ -469,6 +426,11 @@
             $('#hidden_maximum_price').val(ui.values[1]);
             filter_data();
         }
+    });
+  });
+  $(document).ready(function(){
+    $.post("PHP/cartIcon.php", function(exibicao){
+        $("#cartExibition").html(exibicao);
     });
   });
   </script>

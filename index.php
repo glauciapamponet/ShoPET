@@ -153,15 +153,7 @@
 							</div>
 						</div>
 						<div class="col-lg-2 col-md-3 col-12">
-							<div id="cartExibition" class="right-bar">
-								<!-- Search Form -->
-                <div class="sinlge-bar">
-  								<a href="login.php" class="single-icon">
-                        				<i class="fa fa-sign-in"></i>
-                        				<!-- <i class="fa fa-sign-out"></i> -->
-                  </a>
-								</div>
-							</div>
+							<div id="cartExibition" class="right-bar"></div>
 						</div>
 					</div>
 				</div>
@@ -394,9 +386,6 @@
       $.post("PHP/cartIcon.php", function(exibicao){
           $("#cartExibition").html(exibicao);
       });
-      // $.post("PHP/carrousselFETCH.php", function(carrossel){
-      //   $("#carrousselFETCH").html(carrossel);
-      // });
     });
   </script>
 </body>
