@@ -1,4 +1,5 @@
 <?php
+	include_once "connection.php";
 	session_start();
 ?>
 
@@ -305,32 +306,42 @@
 							<!-- Form -->
 							<!-- <form action = "" method="POST"> -->
 							<form action="PHP/registercli.php" name="formulario" class="form" method="POST" onsubmit="return validarSenha()">
+							<!-- Email já cadastrado -->
 							<?php
-								if($_SESSION['jaCadastrado']):
+								if(isset($_SESSION['jaCadastrado'])):
 							?>
-							<!-- Aqui fazer bonitinho -->
-							<p>Email já cadastrado :( </p>
+							<div>
+								<p>Email já cadastrado :( </p>
+							</div>
 							<?php endif;
 								unset($_SESSION['jaCadastrado']);
 							?>
 
+							<!-- Erro -->
 							<?php
-								if($_SESSION['erro']):
+								if(isset($_SESSION['erro'])):
 							?>
-							<!-- Aqui fazer bonitinho -->
-							<p>Erro: confira os dados</p>
+							<div>
+								<!-- Aqui fazer bonitinho -->
+								<p>Erro: confira os dados</p>
+							</div>
 							<?php endif;
 								unset($_SESSION['erro']);
 							?>
 
+							<!-- Cadastrado com sucesso -->
 							<?php
-								if($_SESSION['sucesso']):
+								if(isset($_SESSION['sucesso'])):
 							?>
-							<!-- Aqui fazer bonitinho -->
-							<p>Cadastrado com sucesso</p>
+							<div>
+								<!-- Aqui fazer bonitinho -->
+								<p>Cadastrado com sucesso</p>
+							</div>
 							<?php endif; 
 								unset($_SESSION['sucesso']);
 							?>
+
+
 								<div class="row">
 									<div class="col-12">
 										<div class="form-group">
@@ -365,8 +376,8 @@
 
 									<div class="col-12">
 										<div class="form-group login-btn">
-											<input type="submit" value= "Register" class="btn">
-											<button class="btn" type="">Cadastrar</button>
+											<!-- <input type="submit" value= "Register" class="btn"> -->
+											<button class="btn" type="submit">Cadastrar</button>
 											<a href="login.php" class="btn">Login</a>
 										</div>
 									</div>

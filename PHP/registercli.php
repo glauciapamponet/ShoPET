@@ -7,13 +7,16 @@
     $datanasc = filter_input (INPUT_POST, 'datanasc');
     $password = filter_input (INPUT_POST, md5('password'));
 
-    $queryCHECK = "SELECT idcliente FROM cliente WHERE email='$email';";
+    $queryCHECK = "SELECT idcliente FROM cliente WHERE emailcliente='$email';";
     $result_CHECK = mysqli_query($connect, $queryCHECK);
     $id = mysqli_fetch_assoc($result_CHECK);
 
-    if($id['idcliente']==1){
+    if($id['idcliente']!=""){
         $_SESSION['jaCadastrado'] = true;
+        header("Location: ../register.php");
+
         exit();
+        return;
     }
 
     $queryREGISTER = "INSERT INTO cliente (nomecliente, datanascliente, emailcliente) VALUES ('$nome', '$datanasc', '$email');";
@@ -29,6 +32,7 @@
 
     if(mysqli_insert_id($connect)){
         $_SESSION['sucesso'] = true;
+        // header("Location: ../login.php");
     } else{
         $_SESSION['erro'] = true;
     }
