@@ -5,7 +5,7 @@
     $nome = filter_input (INPUT_POST, 'name');
     $email = filter_input (INPUT_POST, 'email');
     $datanasc = filter_input (INPUT_POST, 'datanasc');
-    $password = filter_input (INPUT_POST, md5('password'));
+    $password = filter_input (INPUT_POST,'password');
 
     $queryCHECK = "SELECT idcliente FROM cliente WHERE emailcliente='$email';";
     $result_CHECK = mysqli_query($connect, $queryCHECK);
@@ -26,7 +26,7 @@
     $result_CLI = mysqli_query($connect, $queryCLIENTE);
     $idcli = mysqli_fetch_array($result_CLI);
 
-    $queryUSUARIO = "INSERT INTO usuario (idcliente, senha) VALUES ('$idcli[idcliente]','$password')";
+    $queryUSUARIO = "INSERT INTO usuario (idcliente, senha) VALUES ('$idcli[idcliente]', md5('{$password}'))";
     $result_USER = mysqli_query($connect, $queryUSUARIO);
 
 
