@@ -21,19 +21,18 @@
 		';
 
 		if($rowqtd["qtd"] > 0){
-			$result = mysqli_query($connect, "SELECT c.*, p.nomeprod, p.precoprod, (p.precoprod*c.quantidade) as sub, p.pathimage
-																				 FROM carrinho c, produto p, cliente cli WHERE cli.idcliente = c.idcliente
-																				AND p.idproduto = c.idproduto AND cli.emailcliente = '".$_SESSION["usuario"]."'");
+			$result = mysqli_query($connect, "SELECT c.idproduto, SUM(c.quantidade) as qtd , p.nomeprod, p.precoprod,
+																				SUM(p.precoprod*c.quantidade) as sub, p.pathimage FROM carrinho c, produto p,
+																				cliente cli WHERE cli.idcliente = c.idcliente AND p.idproduto = c.idproduto
+																				AND cli.emailcliente = '".$_SESSION["usuario"]."' GROUP BY p.nomeprod");
 			$total = 0.00;
 			$cart_text .= '<ul class="shopping-list">';
 			while($row = mysqli_fetch_array($result)){
 				$cart_text .= '<li>
-									 			<a href="#" class="remove" title="Remover este item"><i
-									 					class="fa fa-remove"></i></a>
 									 			<a class="cart-img" href="#"><img
 									 					src="'.$row["pathimage"].'" alt="'.$row["nomeprod"].'"></a>
-									 			<h4><a href="http://shopet/singleshop.php?idproduto='.$row["c.idproduto"].'">'.$row["nomeprod"].'</a></h4>
-													<p class="quantity">'.$row["quantidade"].'x - <span class="amount">R$'.$row["precoprod"].'</span></p>
+									 			<h4><a href="http://shopet/singleshop.php?idproduto='.$row["idproduto"].'">'.$row["nomeprod"].'</a></h4>
+													<p class="quantity">'.$row["qtd"].'x - <span class="amount">R$'.$row["precoprod"].'</span></p>
 									 		</li>';
 				$total += $row["sub"];
 			}
@@ -43,7 +42,7 @@
 												<span>Total</span>
 									 			<span class="total-amount">R$'.$total.'</span>
 									 		</div>
-												<a href="checkout.html" class="btn animate">Finalizar compra</a>
+												<a href="checkout.html" class="btn animate">Ir para a Sacola</a>
 									 	</div>
 										';
 		}else{

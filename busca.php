@@ -89,14 +89,6 @@
 							<!-- Search Form -->
 							<div class="search-top">
 								<div class="top-search"><a href="#0"><i class="ti-search"></i></a></div>
-								<!-- Search Form -->
-								<!-- <div class="search-top">
-									<form class="search-form">
-										<input type="text" placeholder="Search here..." name="search">
-										<button value="search" type="submit" onclick="redirecionar()"><i class="ti-search" ></i></button>
-									</form>
-								</div> -->
-								<!--/ End Search Form -->
 							</div>
 							<!--/ End Search Form -->
 							<div class="mobile-nav"></div>
@@ -256,7 +248,6 @@
                         echo $datafilter;
                       ?>
                       <br>
-                      <!-- <button class="btn" type="submit">Filtrar</button>
                     </form> -->
 
 									</div>
