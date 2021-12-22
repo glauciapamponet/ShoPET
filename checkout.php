@@ -145,11 +145,16 @@
               <div class="single-widget">
                 <h2>Pagamento</h2>
                 <div class="content">
-                  <div class="checkbox">
-                    <label class="checkbox-inline" for="1"
-                      ><input name="updates" id="1" type="checkbox" /> Boleto</label>
-                    <label class="checkbox-inline" for="2"
-                      ><input name="news" id="2" type="checkbox" /> PIX</label>
+                  <div class="" style="padding:15px 30px;">
+                    <input type="radio" id="bol" name="pagamento" value="boleto">
+                    <label for="boleto">Boleto</label>
+                    <br>
+                    <input type="radio" id="px" name="pagamento" value="pix">
+                    <label for="pix">PIX</label>
+                    <!-- <input name="updates" id="1" type="radio"/>
+                    <label class="checkbox-inline" for="1">Boleto</label>
+                    <input name="news" id="2" type="radio" />
+                    <label class="checkbox-inline" for="2">PIX</label> -->
                   </div>
                 </div>
               </div>
@@ -288,6 +293,18 @@
             }
         });
       }
+      $(document).on('click', '.fimcompra', function(){
+        var id = $(this).attr("id");
+        var action = 'chckout';
+        $.ajax({
+         url:"PHP/.php",
+         method:"POST",
+         data:{action: action, id:id},
+         success:function(data){
+          fetch_cart();
+         }
+        });
+      });
     });
     </script>
   </body>

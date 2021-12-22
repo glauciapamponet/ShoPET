@@ -216,7 +216,7 @@
                         <?php echo '<h4>'.$resprod["nomeprod"].'</h4>'; ?>
 												<p class="price">
                           <span class="discount">
-                            <?php echo 'R$'.$resprod["precoprod"]; ?>
+                            <?php echo 'R$'.number_format($resprod["precoprod"], 2, ',', ' '); ?>
                           </span>
                           <!-- <s>$80.00</s>  -->
                         </p>
@@ -247,7 +247,7 @@
 														</div>
 														<!--/ End Input Order -->
 													</div>
-												
+
 													<p style="display: inline-block;">Vendido em unidades!</p>
 													<br><br>
 													<div class="add-to-cart">

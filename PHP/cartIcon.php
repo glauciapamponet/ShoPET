@@ -32,7 +32,7 @@
 									 			<a class="cart-img" href="#"><img
 									 					src="'.$row["pathimage"].'" alt="'.$row["nomeprod"].'"></a>
 									 			<h4><a href="http://shopet/singleshop.php?idproduto='.$row["idproduto"].'">'.$row["nomeprod"].'</a></h4>
-													<p class="quantity">'.$row["qtd"].'x - <span class="amount">R$'.$row["precoprod"].'</span></p>
+													<p class="quantity">'.$row["qtd"].'x - <span class="amount">R$'.number_format($row["precoprod"], 2, ',', ' ').'</span></p>
 									 		</li>';
 				$total += $row["sub"];
 			}
@@ -40,7 +40,7 @@
 								 		<div class="bottom">
 											<div class="total">
 												<span>Total</span>
-									 			<span class="total-amount">R$'.$total.'</span>
+									 			<span class="total-amount">R$'.number_format($total, 2, ',', ' ').'</span>
 									 		</div>
 												<a href="cart.php" class="btn animate">Ir para a Sacola</a>
 									 	</div>

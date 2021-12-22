@@ -248,7 +248,7 @@
                         echo $datafilter;
                       ?>
                       <br>
-                    </form> -->
+                    </form>
 
 									</div>
 									<!--/ End Shop By Price -->

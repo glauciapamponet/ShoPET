@@ -32,7 +32,7 @@
                             '.$row["nomeprod"].'</a></p>
                             <p class="product-des"> '.$row["desc"].' </p>
                           </td>
-                          <td class="price" data-title="Price"> <span>R$'.$row["precoprod"].' </span> </td>
+                          <td class="price" data-title="Price"> <span>R$'.number_format($row["precoprod"], 2, ',', ' ').' </span> </td>
                           <td class="qty" data-title="Qty">
                             <div class="input-group">
                               <div class="button minus">
@@ -51,7 +51,7 @@
                               </div>
                             </div>
                           </td>
-                          <td class="total-amount" data-title="Total"> <span>R$'.$row["sub"].'</span></td>
+                          <td class="total-amount" data-title="Total"> <span>R$'.number_format($row["sub"], 2, ',', ' ').'</span></td>
                           <td class="action" data-title="Remove">
                             <a id="'.$row["idproduto"].'" href="#" class="delete"><i class="ti-trash remove-icon"></i></a>
                           </td>
@@ -61,14 +61,14 @@
     }
     if($_POST["action"] == 'summary'){
       if($qtditems > 0){
-        $total = 0.0;
+        $total = 0.00;
         while($row = mysqli_fetch_array($query)){
           $total += $row["sub"];
         }
         $cart_text .= '<ul>
-                        <li>Subtotal<span>R$'.$total.'</span></li>
+                        <li>Subtotal<span>R$'.number_format($total, 2, ',', ' ').'</span></li>
                         <li>Frete<span>Grátis</span></li>
-                        <li class="last">Total<span>R$'.$total.'</span></li>
+                        <li class="last">Total<span>R$'.number_format($total, 2, ',', ' ').'</span></li>
                       </ul>';
       }
       if(!isset($_POST["type"])){

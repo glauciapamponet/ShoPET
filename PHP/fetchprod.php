@@ -33,10 +33,6 @@
   $result = $statement->fetchAll();
   $total_row = $statement->rowCount();
 
-  // $ans = mysqli_query($connect, $query);
-  // $result = mysqli_fetch_array($ans);
-  // $rowPRODS = $result;
-
   $output = '';
   if($total_row > 0)
   {
@@ -52,12 +48,12 @@
           </a>
           <div class="button-head">
 
-            <div class="product-action-2"><a title="Add to cart" href="#">Colocar no Carrinho</a></div>
+            <div class="product-action-2"><a title="" href="#">Colocar na Sacola</a></div>
           </div>
         </div>
         <div class="product-content">
           <h3><a href="singleshop.php?idproduto='.$rowPRODS["idproduto"].'">'.$rowPRODS["nomeprod"].'</a></h3>
-          <div class="product-price"> <span>R$'.$rowPRODS["precoprod"].'</span> </div>
+          <div class="product-price"> <span>R$'.number_format($rowPRODS["precoprod"], 2, ',', ' ').'</span> </div>
         </div>
       </div>
     </div>
