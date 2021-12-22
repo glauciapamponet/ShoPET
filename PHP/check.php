@@ -12,6 +12,12 @@
     $query = mysqli_query($connect, "SELECT idcliente FROM cliente WHERE emailcliente = '".$_SESSION["usuario"]."'");
     $resid = mysqli_fetch_array($query);
     if(mysqli_query($connect, "DELETE FROM carrinho WHERE idcliente = '".$resid["idcliente"]."'")){
+      $estado= $_SESSION['state'];
+      $cidade= $_SESSION['city'];
+      $endereco= $_SESSION['adress'];
+      $cep= $_SESSION['post'];
+      $tel= $_SESSION['telephone'];
+
        header ("Location: ../index.php");
     }
   }

@@ -94,19 +94,19 @@
                   <div class="col-lg-6 col-md-6 col-12">
                     <div class="form-group">
                       <label>Telefone/Celular<span>*</span></label>
-                      <input type="text" name="number" placeholder="(xx)xxxxx-xxxx" required="required"/>
+                      <input type="text" name="telephone" placeholder="xx xxxxx-xxxx" class="form-control" onkeypress="formatar_mascara(this,'## #####-####')" maxlength=13 required="required"/>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-12">
                     <div class="form-group">
                       <label>Estado<span>*</span></label>
-                      <input type="text" name="number" placeholder="" required="required"/>
+                      <input type="text" name="state" required="required"/>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-12">
                     <div class="form-group">
                       <label>Cidade<span>*</span></label>
-                      <input type="text" name="number" placeholder="" required="required"/>
+                      <input type="text" name="city" required="required"/>
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-12">
@@ -118,7 +118,7 @@
                   <div class="col-lg-6 col-md-6 col-12">
                     <div class="form-group">
                       <label>CEP<span>*</span></label>
-                      <input type="text" name="post" placeholder="xxxxx-xxx" required="required" />
+                      <input type="text" name="post" placeholder="xxxxx-xxx" onkeypress="formatar_mascara(this,'######-###')" maxlength=10 required="required" />
                     </div>
                   </div>
                   <div class="col-12">
@@ -146,10 +146,10 @@
                 <h2>Pagamento</h2>
                 <div class="content">
                   <div class="" style="padding:15px 30px;">
-                    <input type="radio" id="bol" name="pagamento" value="boleto">
+                    <input type="radio" id="bol" name="pagamento" value="boleto" required="required">
                     <label for="boleto">Boleto</label>
                     <br>
-                    <input type="radio" id="px" name="pagamento" value="pix">
+                    <input type="radio" id="px" name="pagamento" value="pix" required="required">
                     <label for="pix">PIX</label>
                   </div>
                 </div>
@@ -302,5 +302,17 @@
       // });
     });
     </script>
+  <script>
+    function formatar_mascara(src, mascara) {
+      var campo = src.value.length;
+      var saida = mascara.substring(0,1);
+      var texto = mascara.substring(campo);
+      if(texto.substring(0,1) != saida) {
+          src.value += texto.substring(0,1);
+      }
+    }
+  </script>
+
+
   </body>
 </html>
