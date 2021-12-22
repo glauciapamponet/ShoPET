@@ -128,7 +128,7 @@
                     </div>
                   </div>
                 </div>
-              </form>
+
               <!--/ End Form -->
             </div>
           </div>
@@ -151,21 +151,19 @@
                     <br>
                     <input type="radio" id="px" name="pagamento" value="pix">
                     <label for="pix">PIX</label>
-                    <!-- <input name="updates" id="1" type="radio"/>
-                    <label class="checkbox-inline" for="1">Boleto</label>
-                    <input name="news" id="2" type="radio" />
-                    <label class="checkbox-inline" for="2">PIX</label> -->
                   </div>
                 </div>
               </div>
               <div class="single-widget get-button">
                 <div class="content">
                   <div class="button">
-                    <a href="index.php" class="btn">Concluir Compra</a>
+                    <button class="btn fimcompra" type="submit" name="button">Concluir Compra</button>
+                    <!-- <a href="index.php" class="btn fimcompra">Concluir Compra</a> -->
                   </div>
                   <small>Você será redirecionado à opção de pagamento escolhida.</small>
                 </div>
               </div>
+              </form>
               <!--/ End Button Widget -->
             </div>
           </div>
@@ -294,15 +292,12 @@
         });
       }
       $(document).on('click', '.fimcompra', function(){
-        var id = $(this).attr("id");
         var action = 'chckout';
         $.ajax({
-         url:"PHP/.php",
+         url:"PHP/check.php",
          method:"POST",
-         data:{action: action, id:id},
-         success:function(data){
-          fetch_cart();
-         }
+         data:{action:action},
+         success:function(data){}
         });
       });
     });
