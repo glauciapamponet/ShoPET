@@ -42,7 +42,7 @@
 												<span>Total</span>
 									 			<span class="total-amount">R$'.$total.'</span>
 									 		</div>
-												<a href="checkout.html" class="btn animate">Ir para a Sacola</a>
+												<a href="cart.php" class="btn animate">Ir para a Sacola</a>
 									 	</div>
 										';
 		}else{

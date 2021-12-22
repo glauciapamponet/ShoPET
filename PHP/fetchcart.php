@@ -37,12 +37,12 @@
                             <div class="input-group">
                               <div class="button minus">
                                 <button type="button" id = "'.$row["idproduto"].'" class="btn btn-primary btn-number rmv"
-                                  disabled="disabled" data-type="minus" data-field="quant[1]">
+                                   data-type="minus" data-field="quant[1]">
                                   <i class="ti-minus"></i>
                                 </button>
                               </div>
                               <input id = "qtdpd" type="text" name="quant[1]" class="input-number" data-min="1"
-                                data-max="100" value="'.$row["qtd"].'"/>
+                                disabled data-max="100" value="'.$row["qtd"].'"/>
                               <div class="button plus">
                                 <button type="button" id = "'.$row["idproduto"].'" class="btn btn-primary btn-number add"
                                   data-type="plus" data-field="quant[1]">
@@ -71,12 +71,14 @@
                         <li class="last">Total<span>R$'.$total.'</span></li>
                       </ul>';
       }
-      $cart_text .= '<div class="button5">
-                      <a href="index.php" class="btn">Continue Comprando</a>';
-      if($qtditems > 0){
-        $cart_text .= '<a href="#" class="btn">Finalizar Compra</a>';
+      if(!isset($_POST["type"])){
+        $cart_text .= '<div class="button5">
+                        <a href="index.php" class="btn">Continue Comprando</a>';
+        if($qtditems > 0){
+          $cart_text .= '<a href="checkout.php" class="btn">Finalizar Compra</a>';
+        }
+        $cart_text .= '</div>';
       }
-      $cart_text .= '</div>';
     }
   }
   echo $cart_text;

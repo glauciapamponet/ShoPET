@@ -19,7 +19,7 @@
        echo 'Adicionado!';
       }
     }elseif($_POST["action"] == 'rmv'){
-      if(isset($_POST["value"]) && $_POST["value"] > 1){
+      if(isset($_POST["value"]) && $_POST["value"] != '1'){
         if(mysqli_query($connect, "UPDATE carrinho SET quantidade = quantidade-1
                                    WHERE idproduto = '".$_POST["id"]."' AND idcliente = '".$resid["idcliente"]."'")){
          echo 'Removido!';

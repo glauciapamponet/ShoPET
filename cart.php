@@ -18,7 +18,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <!-- Title Tag  -->
-    <title>ShoPET - Carrinho</title>
+    <title>ShoPET - Sacola</title>
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/LogoIcone.png" />
     <!-- Web Font -->
@@ -174,7 +174,7 @@
                 <li>
                   <a href="index.html">Home<i class="ti-arrow-right"></i></a>
                 </li>
-                <li class="active"><a href="cart.html">Cart</a></li>
+                <li class="active"><a href="cart.html">Sacola</a></li>
               </ul>
             </div>
           </div>
@@ -202,173 +202,7 @@
                   </th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td class="image" data-title="No">
-                    <img src="https://via.placeholder.com/100x100" alt="#" />
-                  </td>
-                  <td class="product-des" data-title="Description">
-                    <p class="product-name"><a href="#">Women Dress</a></p>
-                    <p class="product-des">
-                      Maboriosam in a tonto nesciung eget distingy magndapibus.
-                    </p>
-                  </td>
-                  <td class="price" data-title="Price">
-                    <span>R$110,00 </span>
-                  </td>
-                  <td class="qty" data-title="Qty">
-                    <!-- Input Order -->
-                    <div class="input-group">
-                      <div class="button minus">
-                        <button
-                          type="button"
-                          class="btn btn-primary btn-number"
-                          disabled="disabled"
-                          data-type="minus"
-                          data-field="quant[1]"
-                        >
-                          <i class="ti-minus"></i>
-                        </button>
-                      </div>
-                      <input
-                        type="text"
-                        name="quant[1]"
-                        class="input-number"
-                        data-min="1"
-                        data-max="100"
-                        value="1"
-                      />
-                      <div class="button plus">
-                        <button
-                          type="button"
-                          class="btn btn-primary btn-number"
-                          data-type="plus"
-                          data-field="quant[1]"
-                        >
-                          <i class="ti-plus"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <!--/ End Input Order -->
-                  </td>
-                  <td class="total-amount" data-title="Total">
-                    <span>R$220,88</span>
-                  </td>
-                  <td class="action" data-title="Remove">
-                    <a href="#"><i class="ti-trash remove-icon"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="image" data-title="No">
-                    <img src="https://via.placeholder.com/100x100" alt="#" />
-                  </td>
-                  <td class="product-des" data-title="Description">
-                    <p class="product-name"><a href="#">Women Dress</a></p>
-                    <p class="product-des">
-                      Maboriosam in a tonto nesciung eget distingy magndapibus.
-                    </p>
-                  </td>
-                  <td class="price" data-title="Price">
-                    <span>R$110,00 </span>
-                  </td>
-                  <td class="qty" data-title="Qty">
-                    <!-- Input Order -->
-                    <div class="input-group">
-                      <div class="button minus">
-                        <button
-                          type="button"
-                          class="btn btn-primary btn-number"
-                          disabled="disabled"
-                          data-type="minus"
-                          data-field="quant[2]"
-                        >
-                          <i class="ti-minus"></i>
-                        </button>
-                      </div>
-                      <input
-                        type="text"
-                        name="quant[2]"
-                        class="input-number"
-                        data-min="1"
-                        data-max="100"
-                        value="2"
-                      />
-                      <div class="button plus">
-                        <button
-                          type="button"
-                          class="btn btn-primary btn-number"
-                          data-type="plus"
-                          data-field="quant[2]"
-                        >
-                          <i class="ti-plus"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <!--/ End Input Order -->
-                  </td>
-                  <td class="total-amount" data-title="Total">
-                    <span>R$220,88</span>
-                  </td>
-                  <td class="action" data-title="Remove">
-                    <a href="#"><i class="ti-trash remove-icon"></i></a>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="image" data-title="No">
-                    <img src="https://via.placeholder.com/100x100" alt="#" />
-                  </td>
-                  <td class="product-des" data-title="Description">
-                    <p class="product-name"><a href="#">Women Dress</a></p>
-                    <p class="product-des">
-                      Maboriosam in a tonto nesciung eget distingy magndapibus.
-                    </p>
-                  </td>
-                  <td class="price" data-title="Price">
-                    <span>R$110,00 </span>
-                  </td>
-                  <td class="qty" data-title="Qty">
-                    <!-- Input Order -->
-                    <div class="input-group">
-                      <div class="button minus">
-                        <button
-                          type="button"
-                          class="btn btn-primary btn-number"
-                          disabled="disabled"
-                          data-type="minus"
-                          data-field="quant[3]"
-                        >
-                          <i class="ti-minus"></i>
-                        </button>
-                      </div>
-                      <input
-                        type="text"
-                        name="quant[3]"
-                        class="input-number"
-                        data-min="1"
-                        data-max="100"
-                        value="3"
-                      />
-                      <div class="button plus">
-                        <button
-                          type="button"
-                          class="btn btn-primary btn-number"
-                          data-type="plus"
-                          data-field="quant[3]"
-                        >
-                          <i class="ti-plus"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <!--/ End Input Order -->
-                  </td>
-                  <td class="total-amount" data-title="Total">
-                    <span>R$220,88</span>
-                  </td>
-                  <td class="action" data-title="Remove">
-                    <a href="#"><i class="ti-trash remove-icon"></i></a>
-                  </td>
-                </tr>
-              </tbody>
+              <tbody class="fetch_cart"></tbody>
             </table>
             <!--/ End Shopping Summery -->
           </div>
@@ -379,18 +213,7 @@
             <div class="total-amount">
               <div class="row">
                 <div class="col-lg-8 col-md-10 col-12">
-                  <div class="right">
-                    <ul>
-                      <li>Subtotal<span>R$330,00</span></li>
-                      <li>Frete<span>Grátis</span></li>
-                      <li>Economizou<span>R$20,00</span></li>
-                      <li class="last">Total<span>R$310,00</span></li>
-                    </ul>
-                    <div class="button5">
-                      <a href="index.php" class="btn">Continue Comprando</a>
-                      <a href="#" class="btn">Finalizar Compra</a>
-                    </div>
-                  </div>
+                  <div class="right summary"> </div>
                 </div>
               </div>
             </div>
@@ -411,51 +234,14 @@
               <!-- Single Widget -->
               <div class="single-footer about">
                 <div class="logo">
-                  <a href="index.html"
-                    ><img src="images/LogoFooterCorte.png" alt="#"
-                  /></a>
+                  <a href="index.php"><img src="images/LogoFooterCorte.png" alt="#"></a>
                 </div>
-                <p class="text">
-                  Só aqui você encontra produtos exclusivos relacionados aos
-                  petianos e ex-petianos do PET-SI!
-                </p>
-                <p class="call">
-                  Alguma dúvida, sugestão ou reclamação? <br />
-                  Ligue para o SAC do ShoPET:<span
-                    ><a href="tel:11912345678">11 912345678</a></span
-                  >
-                </p>
+                <p class="text">Só aqui você encontra produtos exclusivos relacionados aos petianos e ex-petianos do PET-SI!</p>
+                <p class="call">Alguma dúvida, sugestão ou reclamação? <br> Ligue para o SAC do ShoPET:<span><a href="tel:11912345678">11 912345678</a></span></p>
               </div>
               <!-- End Single Widget -->
             </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer links">
-                <h4>Informação</h4>
-                <ul>
-                  <li><a href="#">Sobre nós</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Termos e Condições</a></li>
-                  <li><a href="#">Contate-nos</a></li>
-                  <li><a href="#">Ajuda</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
-            <div class="col-lg-2 col-md-6 col-12">
-              <!-- Single Widget -->
-              <div class="single-footer links">
-                <h4>Atendimento ao Cliente</h4>
-                <ul>
-                  <li><a href="#">Métodos de pagamento</a></li>
-                  <li><a href="#">Estorno</a></li>
-                  <li><a href="#">Devolução</a></li>
-                  <li><a href="#">Frete</a></li>
-                  <li><a href="#">Política de Privacidade</a></li>
-                </ul>
-              </div>
-              <!-- End Single Widget -->
-            </div>
+
             <div class="col-lg-3 col-md-6 col-12">
               <!-- Single Widget -->
               <div class="single-footer social">
@@ -473,18 +259,10 @@
                 </div>
                 <!-- End Single Widget -->
                 <ul>
-                  <li>
-                    <a href="#"><i class="ti-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ti-instagram"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ti-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="ti-linkedin"></i></a>
-                  </li>
+                  <li><a href="#"><i class="ti-facebook"></i></a></li>
+                  <li><a href="#"><i class="ti-instagram"></i></a></li>
+                  <li><a href="#"><i class="ti-twitter"></i></a></li>
+                  <li><a href="#"><i class="ti-linkedin"></i></a></li>
                 </ul>
               </div>
               <!-- End Single Widget -->
@@ -504,7 +282,7 @@
               </div>
               <div class="col-lg-6 col-12">
                 <div class="right">
-                  <img src="images/payments.png" alt="#" />
+                  <img src="images/payments.png" alt="#">
                 </div>
               </div>
             </div>
@@ -512,8 +290,6 @@
         </div>
       </div>
     </footer>
-    <!-- /End Footer Area -->
-
     <!-- Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
@@ -551,6 +327,69 @@
     <!-- Active JS -->
     <script src="js/active.js"></script>
     <script type="text/javascript">
+      $(document).ready(function(){
+        fetch_cart();
+        function fetch_cart(){
+            $('.fetch_cart').html('');
+            var action = 'fetch_cart';
+            $.ajax({
+                url:"PHP/fetchcart.php",
+                method:"POST",
+                data:{action:action},
+                success:function(data){
+                  $('.fetch_cart').html(data);
+                }
+            });
+            action = 'summary';
+            $.ajax({
+                url:"PHP/fetchcart.php",
+                method:"POST",
+                data:{action:action},
+                success:function(data){
+                  $('.summary').html(data);
+                }
+            });
+        }
+        $(document).on('click', '.delete', function(){
+         var id = $(this).attr("id");
+         if(confirm("Tem certeza?")){
+          var action = 'delete';
+          $.ajax({
+           url:"PHP/changecart.php",
+           method:"POST",
+           data:{action:action, id:id},
+           success:function(data){
+            fetch_cart();
+           }
+          });
+         }
+        });
+        $(document).on('click', '.add', function(){
+          var id = $(this).attr("id");
+          var action = 'add';
+          $.ajax({
+           url:"PHP/changecart.php",
+           method:"POST",
+           data:{action: action, id:id},
+           success:function(data){
+            fetch_cart();
+           }
+          });
+        });
+        $(document).on('click', '.rmv', function(){
+          var id = $(this).attr("id");
+          var action = 'rmv';
+          var value = $('#qtdpd').val();
+          $.ajax({
+           url:"PHP/changecart.php",
+           method:"POST",
+           data:{action: action, id:id, value:value},
+           success:function(data){
+            fetch_cart();
+           }
+          });
+        });
+      });
       $(document).ready(function(){
         $.post("PHP/cartIcon.php", function(exibicao){
             $("#cartExibition").html(exibicao);
