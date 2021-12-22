@@ -9,7 +9,7 @@
                   prod.idpetiano = pt.idpetiano AND prod.idproduto = "'.$idprod.'"');
 
     $resprod = mysqli_fetch_array($result);
-
+	$_SESSION['idprod'] = $idprod;
 ?>
 
 <!DOCTYPE html>
@@ -227,39 +227,42 @@
 
 											<!--/ End Size -->
 											<!-- Product Buy -->
-											<div class="product-buy" style="display:block;">
-												<div class="quantity">
-													<h6>Quantidade :</h6>
-													<!-- Input Order -->
-													<div class="input-group">
-														<div class="button minus">
-															<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
-																<i class="ti-minus"></i>
-															</button>
+											<form class = 'form' method='post' action='PHP/addCart.php'>
+												<div class="product-buy" style="display:block;">
+													<div class="quantity">
+														<h6>Quantidade :</h6>
+														<!-- Input Order -->
+														<div class="input-group">
+															<div class="button minus">
+																<button type="button" class="btn btn-primary btn-number" disabled="disabled" data-type="minus" data-field="quant">
+																	<i class="ti-minus"></i>
+																</button>
+															</div>
+															<input type="text" name="quant" class="input-number"  data-min="1" data-max="1000" value="1">
+															<div class="button plus">
+																<button type="submit" class="btn btn-primary btn-number" data-type="plus" data-field="quant">
+																	<i class="ti-plus"></i>
+																</button>
+															</div>
 														</div>
-														<input type="text" name="quant[1]" class="input-number"  data-min="1" data-max="1000" value="1">
-														<div class="button plus">
-															<button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[1]">
-																<i class="ti-plus"></i>
-															</button>
-														</div>
+														<!--/ End Input Order -->
 													</div>
-													<!--/ End Input Order -->
+												
+													<p style="display: inline-block;">Vendido em unidades!</p>
+													<br><br>
+													<div class="add-to-cart">
+														<button class="btn adiciona" type='submit'>Colocar na sacola</a>
+													</div>
+													<p class="cat">Categoria/Petiano :<a href="cat.php?nomecat=<?php echo $resprod["nomecat"]; ?>">
+													<?php echo $resprod["nomecat"]; ?></a>,
+													<a href="pet.php?nomepetiano=<?php echo $resprod["nomepetiano"]; ?>">
+														<?php echo $resprod["nomepetiano"]; ?>
+													</a></p>
+													<p class="availability">Disponibilidade : Limitada</p>
 												</div>
-                        <p style="display: inline-block;">Vendido em unidades!</p>
-                        <br><br>
-												<div class="add-to-cart">
-													<button class="btn">Colocar na sacola</a>
-												</div>
-												<p class="cat">Categoria/Petiano :<a href="cat.php?nomecat=<?php echo $resprod["nomecat"]; ?>">
-                          <?php echo $resprod["nomecat"]; ?></a>,
-                          <a href="pet.php?nomepetiano=<?php echo $resprod["nomepetiano"]; ?>">
-                            <?php echo $resprod["nomepetiano"]; ?>
-                          </a></p>
-												<p class="availability">Disponibilidade : Limitada</p>
-											</div>
+											</form>
 											<!--/ End Product Buy -->
-                      <div class="row">
+                      					<div class="row">
       									<div class="col-12">
       										<div class="product-info">
       											<div class="nav-main">
@@ -289,58 +292,6 @@
       												<div class="tab-pane fade" id="reviews" role="tabpanel">
                                 <br>Em produção.
       													<div class="tab-single review-panel">
-      														<!-- <div class="row">
-      															<div class="col-12">
-      																<div class="ratting-main">
-      																	<div class="avg-ratting">
-      																		<h4>4.5 <span>(Overall)</span></h4>
-      																		<span>Based on 1 Comments</span>
-      																	</div>
-
-      																	<div class="single-rating">
-      																		<div class="rating-author">
-      																			<img src="images/comments1.jpg" alt="#">
-      																		</div>
-      																		<div class="rating-des">
-      																			<h6>Naimur Rahman</h6>
-      																			<div class="ratings">
-      																				<ul class="rating">
-      																					<li><i class="fa fa-star"></i></li>
-      																					<li><i class="fa fa-star"></i></li>
-      																					<li><i class="fa fa-star"></i></li>
-      																					<li><i class="fa fa-star-half-o"></i></li>
-      																					<li><i class="fa fa-star-o"></i></li>
-      																				</ul>
-      																				<div class="rate-count">(<span>3.5</span>)</div>
-      																			</div>
-      																			<p>Duis tincidunt mauris ac aliquet congue. Donec vestibulum consequat cursus. Aliquam pellentesque nulla dolor, in imperdiet.</p>
-      																		</div>
-      																	</div>
-
-
-      																	<div class="single-rating">
-      																		<div class="rating-author">
-      																			<img src="images/comments2.jpg" alt="#">
-      																		</div>
-      																		<div class="rating-des">
-      																			<h6>Advin Geri</h6>
-      																			<div class="ratings">
-      																				<ul class="rating">
-      																					<li><i class="fa fa-star"></i></li>
-      																					<li><i class="fa fa-star"></i></li>
-      																					<li><i class="fa fa-star"></i></li>
-      																					<li><i class="fa fa-star"></i></li>
-      																					<li><i class="fa fa-star"></i></li>
-      																				</ul>
-      																				<div class="rate-count">(<span>5.0</span>)</div>
-      																			</div>
-      																			<p>Duis tincidunt mauris ac aliquet congue. Donec vestibulum consequat cursus. Aliquam pellentesque nulla dolor, in imperdiet.</p>
-      																		</div>
-      																	</div>
-
-      																</div>
-      															</div>
-      														</div> -->
       													</div>
       												</div>
       												<!--/ End Reviews Tab -->
@@ -425,6 +376,23 @@
   		</div>
   	</footer>
 
+
+	<script>
+	$(document).ready(function(){
+		$(document).on('click', '.adiciona', function(){
+			var id = $_GET['idproduto'];
+			var action = 'act';
+			$.ajax({
+				url:"PHP/addCart.php",
+				method:"POST",
+				data:{action: action, id:id},
+				success:function(data){
+				//coloca o q vc quer q aconteça se der bão
+				}
+			});
+		});
+	});
+	</script>
     <!-- Jquery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>

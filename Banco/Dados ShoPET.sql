@@ -78,8 +78,8 @@ INSERT INTO `shopet`.`status` (`nomestatus`) VALUES ('Pedido Entregue');
 
 -- DESCRICAO
 ALTER TABLE `produto` ADD `desc` varchar(500);
-UPDATE `shopet`.`produto` SET `desc` = 'Violência não é a resposta.<br>Ela é a pergunta e a resposta é \"sim\".<br>Adquira JÁ Stefanya, a pistola da Stefany. Ideal para ameaças!<br>OBS: SHOPET não se responsabiliza por quais atos não condizentes com a lei realizados com auxilio do produto.' WHERE (`idproduto` = '1');
-UPDATE `shopet`.`produto` SET `desc` = 'Almofada mágica toda nicolas cagezinha com lantejoulas.<br>Afinal, quem nunca quis ter Nicolas Cage te observando 24 horas por dia?' WHERE (`idproduto` = '2');
+UPDATE `shopet`.`produto` SET `desc` = 'Almofada mágica toda nicolas cagezinha com lantejoulas.<br>Afinal, quem nunca quis ter Nicolas Cage te observando 24 horas por dia?' WHERE (`idproduto` = '1');
+UPDATE `shopet`.`produto` SET `desc` = 'Violência não é a resposta.<br>Ela é a pergunta e a resposta é \"sim\".<br>Adquira JÁ Stefanya, a pistola da Stefany. Ideal para ameaças!<br>OBS: SHOPET não se responsabiliza por quais atos não condizentes com a lei realizados com auxilio do produto.' WHERE (`idproduto` = '2');
 UPDATE `shopet`.`produto` SET `desc` = 'Equipe SHOPET lamenta decepcionar, mas: não, não é o bigulim do Furquim.' WHERE (`idproduto` = '3');
 UPDATE `shopet`.`produto` SET `desc` = 'Ideal para convocação de cornos. Contudo, para tocar exige muita pratica e o título de corno-mestre.' WHERE (`idproduto` = '4');
 UPDATE `shopet`.`produto` SET `desc` = 'Sério, Furquim, de onde veio essa foto?' WHERE (`idproduto` = '5');
