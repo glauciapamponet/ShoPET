@@ -11,10 +11,8 @@
     //                                   AND cli.emailcliente = '".$_SESSION["usuario"]."' GROUP BY p.nomeprod");
     $query = mysqli_query($connect, "SELECT idcliente FROM cliente WHERE emailcliente = '".$_SESSION["usuario"]."'");
     $resid = mysqli_fetch_array($query);
-    if(isset($_POST["action"]) && $_POST["action"] == 'chckout'){
-      if(mysqli_query($connect, "DELETE FROM carrinho WHERE idcliente = '".$resid["idcliente"]."'")){
-       header ("Location: index.php");
-     }
+    if(mysqli_query($connect, "DELETE FROM carrinho WHERE idcliente = '".$resid["idcliente"]."'")){
+       header ("Location: ../index.php");
     }
   }
 

@@ -78,7 +78,7 @@
               <h2>Conclua sua compra aqui</h2>
               <p>Insira o endereço de entrega para prosseguir ao pagamento</p>
               <!-- Form -->
-              <form class="form" method="post" action="#">
+              <form class="form" method="post" action="PHP/check.php">
                 <div class="row">
                   <div class="col-lg-6 col-md-6 col-12">
                     <div class="form-group">
@@ -291,15 +291,15 @@
             }
         });
       }
-      $(document).on('click', '.fimcompra', function(){
-        var action = 'chckout';
-        $.ajax({
-         url:"PHP/check.php",
-         method:"POST",
-         data:{action:action},
-         success:function(data){}
-        });
-      });
+      // $(document).on('click', '.fimcompra', function(){
+      //   var action = 'chckout';
+      //   $.ajax({
+      //    url:"PHP/check.php",
+      //    method:"POST",
+      //    data:{action:action},
+      //    success:function(data){}
+      //   });
+      // });
     });
     </script>
   </body>
