@@ -2,7 +2,8 @@
   if(!isset($_SESSION)){
      session_start();
   }
-  include("PHP/sessionlogin.php");
+  include("PHP/sessioncart.php");
+  include("connection.php");
 
 ?>
 <!DOCTYPE html>
@@ -80,55 +81,31 @@
               <!-- Form -->
               <form class="form" method="post" action="PHP/check.php">
                 <div class="row">
-                  <div class="col-lg-6 col-md-6 col-12">
+                  <div class="col-lg-12 col-md-12 col-12">
                     <div class="form-group">
-                      <label>Nome completo<span>*</span></label>
-                      <input
-                        type="text"
-                        name="name"
-                        placeholder=""
-                        required="required"
-                      />
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-group">
-                      <label>Telefone/Celular<span>*</span></label>
-                      <input type="text" name="number" placeholder="(xx)xxxxx-xxxx" required="required"/>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-group">
-                      <label>Estado<span>*</span></label>
-                      <input type="text" name="number" placeholder="" required="required"/>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-group">
-                      <label>Cidade<span>*</span></label>
-                      <input type="text" name="number" placeholder="" required="required"/>
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-group">
-                      <label>Endereço<span>*</span></label>
-                      <input type="text" name="address" placeholder="Logradouro, nº, Bairro" required="required" />
-                    </div>
-                  </div>
-                  <div class="col-lg-6 col-md-6 col-12">
-                    <div class="form-group">
-                      <label>CEP<span>*</span></label>
-                      <input type="text" name="post" placeholder="xxxxx-xxx" required="required" />
-                    </div>
-                  </div>
-                  <div class="col-12">
-                    <div class="form-group create-account">
-                      <span>Após finalizar o pagamento, você receberá um email de confirmação do pedido.
-                        Aí é só aguardar! &#129417;</span>
+                      <label>Escolha o endereço<span>*</span></label>
+                      <select id="drop" class="" name="end">
+                        <option value="-31">Outro</option>
+                        <?php
+                          $query = mysqli_query($connect, "SELECT idcliente FROM cliente WHERE emailcliente = '".$_SESSION["usuario"]."'");
+                          $resid = mysqli_fetch_array($query)["idcliente"];
+                          $query2 = mysqli_query($connect, "SELECT * FROM endcli WHERE idcliente = '".$resid."'");
+                          while($row = mysqli_fetch_array($query2)){
+                            echo '<option value="'.$row["idend"].'">'.$row["enderecocli"].', '.$row["cidadecli"].',
+                            '.$row["estadocli"].' - CEP '.$row["cepcli"].'</option>';
+                          }
+                        ?>
+                      </select>
                     </div>
                   </div>
                 </div>
-
+                <div class="row choice"></div>
+                <div class="col-12">
+                  <div class="form-group create-account">
+                    <span>Após finalizar o pagamento, você receberá um email de confirmação do pedido.
+                      Aí é só aguardar! &#129417;</span>
+                  </div>
+                </div>
               <!--/ End Form -->
             </div>
           </div>
@@ -146,10 +123,10 @@
                 <h2>Pagamento</h2>
                 <div class="content">
                   <div class="" style="padding:15px 30px;">
-                    <input type="radio" id="bol" name="pagamento" value="boleto">
+                    <input type="radio" id="bol" name="pagamento" value="boleto" required="required">
                     <label for="boleto">Boleto</label>
                     <br>
-                    <input type="radio" id="px" name="pagamento" value="pix">
+                    <input type="radio" id="px" name="pagamento" value="pix" required="required">
                     <label for="pix">PIX</label>
                   </div>
                 </div>
@@ -158,7 +135,6 @@
                 <div class="content">
                   <div class="button">
                     <button class="btn fimcompra" type="submit" name="button">Concluir Compra</button>
-                    <!-- <a href="index.php" class="btn fimcompra">Concluir Compra</a> -->
                   </div>
                   <small>Você será redirecionado à opção de pagamento escolhida.</small>
                 </div>
@@ -278,28 +254,26 @@
     <script src="js/active.js"></script>
     <script type="text/javascript">
     $(document).ready(function(){
-      checkout();
-      function checkout(){
-        var action = 'summary';
-        var type = 'checkout';
+      checkout('summary', 'ckeckout', 'fetchcart', '.data_check');
+      checkout('end', 'A', 'enderecheck', '.choice');
+      $("#drop").change(function (){
+          if ($('.selected').attr('data-value') == '-31') {
+            checkout('end', 'A', 'enderecheck', '.choice');
+          }else{
+            var idtype = $('.selected').attr('data-value');
+            checkout('fill', idtype, 'enderecheck', '.choice');
+          }
+      });
+      function checkout(action, type, reqto, classto){
         $.ajax({
-            url:"PHP/fetchcart.php",
+            url:"PHP/"+reqto+".php",
             method:"POST",
             data:{action:action, type:type},
             success:function(data){
-              $(".data_check").html(data);
+              $(classto).html(data);
             }
         });
       }
-      // $(document).on('click', '.fimcompra', function(){
-      //   var action = 'chckout';
-      //   $.ajax({
-      //    url:"PHP/check.php",
-      //    method:"POST",
-      //    data:{action:action},
-      //    success:function(data){}
-      //   });
-      // });
     });
     </script>
   </body>

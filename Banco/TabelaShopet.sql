@@ -190,6 +190,39 @@ CREATE TABLE IF NOT EXISTS `ShoPET`.`logstatus` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
+
+CREATE TABLE `shopet`.`endcli` (
+  `idend` INT NOT NULL AUTO_INCREMENT,
+  `idcliente` INT NOT NULL,
+  `enderecocli` VARCHAR(100) NOT NULL,
+  `cepcli` VARCHAR(45) NOT NULL,
+  `cidadecli` VARCHAR(45) NOT NULL,
+  `estadocli` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idend`),
+  INDEX `fkcli_idx` (`idcliente` ASC) VISIBLE,
+  CONSTRAINT `fkcli`
+    FOREIGN KEY (`idcliente`)
+    REFERENCES `shopet`.`cliente` (`idcliente`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+    
+CREATE TABLE `shopet`.`endpedido` (
+  `idendpedido` INT NOT NULL AUTO_INCREMENT,
+  `idpedido` INT NOT NULL,
+  `enderecoped` VARCHAR(100) NOT NULL,
+  `telefone` VARCHAR(45) NULL,
+  `cidadeped` VARCHAR(45) NOT NULL,
+  `estadoped` VARCHAR(45) NOT NULL,
+  `nomedest` VARCHAR(45) NOT NULL,
+  `ceped` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idendpedido`),
+  INDEX `fkpedido_idx` (`idpedido` ASC) VISIBLE,
+  CONSTRAINT `fkpedido`
+    FOREIGN KEY (`idpedido`)
+    REFERENCES `shopet`.`pedido` (`idpedido`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
 USE `ShoPET`;
 
 SET SQL_MODE=@OLD_SQL_MODE;
