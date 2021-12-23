@@ -98,12 +98,50 @@
                       </select>
                     </div>
                   </div>
+<<<<<<< HEAD
                 </div>
                 <div class="row choice"></div>
                 <div class="col-12">
                   <div class="form-group create-account">
                     <span>Após finalizar o pagamento, você receberá um email de confirmação do pedido.
                       Aí é só aguardar! &#129417;</span>
+=======
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                      <label>Telefone/Celular<span>*</span></label>
+                      <input type="text" name="telephone" placeholder="xx xxxxx-xxxx" class="form-control" onkeypress="formatar_mascara(this,'## #####-####')" maxlength=13 required="required"/>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                      <label>Estado<span>*</span></label>
+                      <input type="text" name="state" required="required"/>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                      <label>Cidade<span>*</span></label>
+                      <input type="text" name="city" required="required"/>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                      <label>Endereço<span>*</span></label>
+                      <input type="text" name="address" placeholder="Logradouro, nº, Bairro" required="required" />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12">
+                    <div class="form-group">
+                      <label>CEP<span>*</span></label>
+                      <input type="text" name="post" placeholder="xxxxx-xxx" onkeypress="formatar_mascara(this,'######-###')" maxlength=10 required="required" />
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group create-account">
+                      <span>Após finalizar o pagamento, você receberá um email de confirmação do pedido.
+                        Aí é só aguardar! &#129417;</span>
+                    </div>
+>>>>>>> a7ac061f52eb8f428a44d41b78755ce101f986ca
                   </div>
                 </div>
               <!--/ End Form -->
@@ -276,5 +314,17 @@
       }
     });
     </script>
+  <script>
+    function formatar_mascara(src, mascara) {
+      var campo = src.value.length;
+      var saida = mascara.substring(0,1);
+      var texto = mascara.substring(campo);
+      if(texto.substring(0,1) != saida) {
+          src.value += texto.substring(0,1);
+      }
+    }
+  </script>
+
+
   </body>
 </html>
