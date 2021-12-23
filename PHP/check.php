@@ -6,30 +6,28 @@
 
   if(isset($_SESSION["usuario"])){
     $query = mysqli_query($connect, "SELECT idcliente FROM cliente WHERE emailcliente = '".$_SESSION["usuario"]."'");
-<<<<<<< HEAD
-    $resid = mysqli_fetch_array($query)["idcliente"]; // ID DO CLIENTE. USA PRA CONSULTAR O CARRINHO
-
-    //$bool1 = INSERE UM PEDIDO NA TABELA pedido (PRA PEGAR O TOTAL DO PEDIDO VIA CARRINHO NO
-    //                                            BANCO, OLHA O cartIcon.php OU O fetchcart.php)
-
-    //$bool2 = INSERE CADA PRODUTO DO CARRINHO NA TABELA grupopedido
-
-    //$bool3 = INSERE STATUS DE PEDIDO CONFIRMADO NA TABELA logstatus (O CAMPO atualização DESSA TABELA É
-    //        A HORA DO SISTEMA - COMANDO now() DO MYSQL)
-=======
     $resid = mysqli_fetch_array($query);
-    if(mysqli_query($connect, "DELETE FROM carrinho WHERE idcliente = '".$resid["idcliente"]."'")){
-      $estado= $_SESSION['state'];
-      $cidade= $_SESSION['city'];
-      $endereco= $_SESSION['adress'];
-      $cep= $_SESSION['post'];
-      $tel= $_SESSION['telephone'];
+    // if(mysqli_query($connect, "DELETE FROM carrinho WHERE idcliente = '".$resid["idcliente"]."'")){
+    //   $estado= $_SESSION['state'];
+    //   $cidade= $_SESSION['city'];
+    //   $endereco= $_SESSION['adress'];
+    //   $cep= $_SESSION['post'];
+    //   $tel= $_SESSION['telephone'];
+    //
+    //    header ("Location: ../index.php");
+    // }
 
-       header ("Location: ../index.php");
-    }
-  }
->>>>>>> a7ac061f52eb8f428a44d41b78755ce101f986ca
 
+// ================== COISAS PRA FAZER AQUI ======================
+
+
+  //$bool1 = INSERE UM PEDIDO NA TABELA pedido (PRA PEGAR O TOTAL DO PEDIDO VIA CARRINHO NO
+  //                                            BANCO, OLHA O cartIcon.php OU O fetchcart.php)
+
+  //$bool2 = INSERE CADA PRODUTO DO CARRINHO NA TABELA grupopedido
+
+  //$bool3 = INSERE STATUS DE PEDIDO CONFIRMADO NA TABELA logstatus (O CAMPO atualização DESSA TABELA É
+  //        A HORA DO SISTEMA - COMANDO now() DO MYSQL)
     // if (TEM CAMPOS DE ENDERECO NO $_POST PRA INSERIR(isset)){
     //  INSERE NA TABELA endpedido AS COISAS DO FORMS
     //    if (O CHECKBOX DE GUARDAR ENDEREÇO TA MARCADO) {

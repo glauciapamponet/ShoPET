@@ -9,7 +9,6 @@
     header("Location: ../login.php");
     exit();
   }
-  include("../connection.php");
   $query = mysqli_query($connect, "SELECT idcliente FROM cliente WHERE emailcliente = '".$_SESSION["usuario"]."'");
   $resid = mysqli_fetch_array($query)["idcliente"];
 
