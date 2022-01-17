@@ -7,42 +7,71 @@
   if(isset($_SESSION["usuario"])){
     $query = mysqli_query($connect, "SELECT idcliente FROM cliente WHERE emailcliente = '".$_SESSION["usuario"]."'");
     $resid = mysqli_fetch_array($query);
-    // if(mysqli_query($connect, "DELETE FROM carrinho WHERE idcliente = '".$resid["idcliente"]."'")){
-    //   $estado= $_SESSION['state'];
-    //   $cidade= $_SESSION['city'];
-    //   $endereco= $_SESSION['adress'];
-    //   $cep= $_SESSION['post'];
-    //   $tel= $_SESSION['telephone'];
-    //
-    //    header ("Location: ../index.php");
-    // }
+
+    $getiduser = mysqli_query($connect, "SELECT idcliente FROM cliente WHERE emailcliente='".$_SESSION['usuario']."';");
+    $iduser= mysqli_fetch_assoc($getiduser);
+
+    $query1 = mysqli_query($connect, "SELECT c.idproduto, SUM(c.quantidade) as qtd , p.nomeprod, p.precoprod,
+    SUM(p.precoprod*c.quantidade) as sub, p.pathimage FROM carrinho c, produto p,
+    cliente cli WHERE cli.idcliente = c.idcliente AND p.idproduto = c.idproduto
+    AND cli.idcliente = '".$iduser['idcliente']."' GROUP BY p.nomeprod");
 
 
-// ================== COISAS PRA FAZER AQUI ======================
+  $total = 0.00;  
+    while($row = mysqli_fetch_array($query1)){
+      $total += $row["sub"]; //bool1
+    } 
+    $tipopag = $_POST['pagamento'];
+    if($tipopag == 'boleto') $tipopag = 1;
+    else $tipopag = 2;
+    
+    $bool1 = mysqli_query($connect, "INSERT INTO pedido (idcliente, idtipopag, valortotal) VALUES ('".$iduser['idcliente']."','".$tipopag."', '".$total."');");
+
+    $qIdpedido = mysqli_query($connect, "SELECT idpedido FROM pedido ORDER BY idcliente DESC LIMIT 1;");
+    $idpedido = mysqli_fetch_array($qIdpedido);
+
+    $query2 = mysqli_query($connect, "SELECT c.idproduto, SUM(c.quantidade) as qtd , p.nomeprod, p.precoprod,
+    SUM(p.precoprod*c.quantidade) as sub, p.pathimage FROM carrinho c, produto p,
+    cliente cli WHERE cli.idcliente = c.idcliente AND p.idproduto = c.idproduto
+    AND cli.idcliente = '".$iduser['idcliente']."' GROUP BY p.nomeprod");
+
+    while($row = mysqli_fetch_array($query2)){
+      $bool2= mysqli_query($connect, "INSERT INTO grupopedido (idproduto, idpedido, quantidade, subtotal) VALUES ('".$row['idproduto']."','".$idpedido['idpedido']."', '".$row['qtd']."', '".$row['sub']."');");
+    }
+  
+    $bool3 = mysqli_query($connect, "INSERT INTO logstatus (idpedido, nomestatus, atualizacao) VALUES ('".$idpedido['idpedido']."', 'Pedido Confirmado', now())");
 
 
-  //$bool1 = INSERE UM PEDIDO NA TABELA pedido (PRA PEGAR O TOTAL DO PEDIDO VIA CARRINHO NO
-  //                                            BANCO, OLHA O cartIcon.php OU O fetchcart.php)
+    
+    if(isset($_POST['name'], $_POST['telephone'], $_POST['state'], $_POST['city'], $_POST['adress'], $_POST['post'])){
+      $nome = $_POST['name'];
+      $tel = $_POST['telephone'];
+      $estado = $_POST['state'];
+      $cidade = $_POST['city'];
+      $end = $_POST['adress'];
+      $cep = $_POST['post'];
+      echo "entrou aki <br>";
+      $qEndped = mysqli_query($connect, "INSERT INTO endpedido (idpedido, enderecoped, telefone, cidadeped, estadoped, nomedest, ceped) VALUES ('".$idpedido['idpedido']."', '".$end."', '".$tel."', '".$cidade."', '".$estado."', '".$nome."','".$cep."');");
+      if(isset($_POST['saveEnd'])){
+        echo "combobox ok <br>";
+        $qEndcli = mysqli_query($connect, "INSERT INTO endcli (idcliente, enderecocli, cidadecli, estadocli, cepcli) VALUES ('".$iduser['idcliente']."', '".$end."', '".$cidade."', '".$estado."','".$cep."');");
+      } 
+    }else{
+      echo "aa";
+      $qEndCli = mysqli_query($connect, "SELECT enderecocli, cepcli, cidadecli, estadocli FROM endcli WHERE idend= '".$_POST['end']."';");
+      $endcli= mysqli_fetch_array($qEndCli);
 
-  //$bool2 = INSERE CADA PRODUTO DO CARRINHO NA TABELA grupopedido
+      $qNome = mysqli_query($connect, "SELECT nomecliente FROM cliente WHERE emailcliente = '".$_SESSION['usuario']."';");
+      $nome = mysqli_fetch_array($qNome);
 
-  //$bool3 = INSERE STATUS DE PEDIDO CONFIRMADO NA TABELA logstatus (O CAMPO atualização DESSA TABELA É
-  //        A HORA DO SISTEMA - COMANDO now() DO MYSQL)
-    // if (TEM CAMPOS DE ENDERECO NO $_POST PRA INSERIR(isset)){
-    //  INSERE NA TABELA endpedido AS COISAS DO FORMS
-    //    if (O CHECKBOX DE GUARDAR ENDEREÇO TA MARCADO) {
-    //      INSERIR NA TABELA endcli TUDO QUE TA NO FORMS MENOS TELEFONE E NOME
-    //    }
-    // }else{
-    //    INSERE NA TABELA endpedido O ENDEREÇO QUE TA NO COMBOBOX (PEGA ESSE ENDEREÇO PELO ID DELE NA TABELA endcli E
-    //    O NOME DO CLIENTE - NESSE CASO NAO VAI TELEFONE)
-    // }
+      $qEndped = mysqli_query($connect, "INSERT INTO endpedido (idpedido, enderecoped, cidadeped, estadoped, nomedest, ceped) VALUES ('".$idpedido['idpedido']."', '".$endcli['enderecocli']."', '".$endcli['cidadecli']."', '".$endcli['cidadecli']."', '".$nome['nomecliente']."','".$endcli['cepcli']."');");
 
-    //if ($bool1 && $bool2 && $bool3) {
+    }
+    if ($bool1 && $bool2 && $bool3) {
       if(mysqli_query($connect, "DELETE FROM carrinho WHERE idcliente = '".$resid["idcliente"]."'")){
         header ("Location: ../index.php");
       }
-    //}
+    }
 
   }
 ?>

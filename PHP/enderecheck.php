@@ -36,7 +36,7 @@
                   <div class="col-lg-6 col-md-6 col-12">
                     <div class="form-group">
                       <label>Endereço<span>*</span></label>
-                      <input type="text" name="address" placeholder="Logradouro, nº, Bairro" required="required" />
+                      <input type="text" name="adress" placeholder="Logradouro, nº, Bairro" required="required" />
                     </div>
                   </div>
                   <div class="col-lg-6 col-md-6 col-12">
@@ -48,7 +48,7 @@
                   </div>
                   <div class="col-12" style="padding-bottom:10px;">
 										<div align="right" class="form-group create-account">
-											<input id="cbox" type="checkbox">
+											<input id="cbox" name="saveEnd" type="checkbox">
 											<label>Salvar endereço?</label>
 										</div>
 									</div>';

@@ -24,16 +24,16 @@
         while($row = mysqli_fetch_array($query)){
           if(strlen($row["desc"])> 120){$row["desc"] = substr($row["desc"], 0, 120).'...';}
           $cart_text .= '<tr>
-                          <td class="image" data-title="No">
+                          <td class="image" data-title="Produto">
                             <img src="'.$row["pathimage"].'" alt="#" />
                           </td>
-                          <td class="product-des" data-title="Description">
+                          <td class="product-des" data-title="Nome">
                             <p class="product-name"><a href="http://shopet/singleshop.php?idproduto='.$row["idproduto"].'">
                             '.$row["nomeprod"].'</a></p>
                             <p class="product-des"> '.$row["desc"].' </p>
                           </td>
-                          <td class="price" data-title="Price"> <span>R$'.number_format($row["precoprod"], 2, ',', ' ').' </span> </td>
-                          <td class="qty" data-title="Qty">
+                          <td class="price" data-title="Preço"> <span>R$'.number_format($row["precoprod"], 2, ',', '.').' </span> </td>
+                          <td class="qty" data-title="Quantidade">
                             <div class="input-group">
                               <div class="button minus">
                                 <button type="button" id = "'.$row["idproduto"].'" class="btn btn-primary btn-number rmv"
@@ -51,7 +51,7 @@
                               </div>
                             </div>
                           </td>
-                          <td class="total-amount" data-title="Total"> <span>R$'.number_format($row["sub"], 2, ',', ' ').'</span></td>
+                          <td class="total-amount" data-title="Total"> <span>R$'.number_format($row["sub"], 2, ',', '.').'</span></td>
                           <td class="action" data-title="Remove">
                             <a id="'.$row["idproduto"].'" href="#" class="delete"><i class="ti-trash remove-icon"></i></a>
                           </td>
@@ -66,9 +66,9 @@
           $total += $row["sub"];
         }
         $cart_text .= '<ul>
-                        <li>Subtotal<span>R$'.number_format($total, 2, ',', ' ').'</span></li>
+                        <li>Subtotal<span>R$'.number_format($total, 2, ',', '.').'</span></li>
                         <li>Frete<span>Grátis</span></li>
-                        <li class="last">Total<span>R$'.number_format($total, 2, ',', ' ').'</span></li>
+                        <li class="last">Total<span>R$'.number_format($total, 2, ',', '.').'</span></li>
                       </ul>';
       }
       if(!isset($_POST["type"])){

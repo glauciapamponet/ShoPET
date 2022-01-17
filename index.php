@@ -165,7 +165,7 @@
 	<!-- Slider Area -->
 	<section class="hero-slider">
 		<!-- Single Slider -->
-		<div class="single-slider" style="background-image: url('images/Banners/large_banner.jpg')">
+		<div class="single-slider" style="background-image: url('images/Banners/large_banner.png')">
 			<div class="container">
 				<div class="row no-gutters">
 					<div class="col-lg-9 offset-lg-3 col-12">
@@ -173,9 +173,10 @@
 							<div class="row">
 								<div class="col-lg-7 col-12">
 									<div class="hero-text">
-										<h1>Almofada da Ste</h1>
-										<p><span>Oportunidade única!! <br> Nicolas Cage,
-											<br> te observando a noite.</span></p>
+										<h1 style="color:#00000000">Almofada da Ste</h1>
+										<p style="color:#00000000">Oportunidade única!! <br> Nicolas Cage! 
+										<!-- te observando a noite. -->
+											<br> </p>
 										<div class="button">
 											<a href=singleshop.php?idproduto=1 class="btn">Compre Agora!</a>
 										</div>
@@ -201,7 +202,7 @@
 						<img src="/images/Banners/small_banner_2">
 						<div class="content">
 							<p>Coleção Tutor</p>
-							<h3>Caneca de Tutor </h3>
+							<h3>Caneca de <br>Tutor </h3>
 							<a href="singleshop.php?idproduto=20">Compre Agora</a>
 						</div>
 					</div>
@@ -225,7 +226,7 @@
 						<img src="/images/Banners/small_banner_3" alt="#">
 						<div class="content">
 							<p>Coleção Tutor</p>
-							<h3>Tênis de Tutor <br> Para correr</h3>
+							<h3>Tênis do <br>Tutor</h3>
 							<a href="singleshop.php?idproduto=19">Compre Agora</a>
 						</div>
 					</div>

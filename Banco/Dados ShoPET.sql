@@ -120,8 +120,14 @@ UPDATE `shopet`.`produto` SET `desc` = 'Equipe ShoPET alerta: nunca confie em lo
 UPDATE `shopet`.`produto` SET `desc` = '¢นi໓ค໓໐ ¢໐๓ ค ๑นคli໓ค໓ē ໓ēŞŞē ๓i¢r໐f໐ຖē, คŞ pēŞŞ໐คŞ ຖค໐ งค໐ ēຖtēຖ໓ēr น๓ค pคlคงrค' WHERE (`idproduto` = '31');
 UPDATE `shopet`.`produto` SET `desc` = 'Os boatos são verdadeiros, você irá chorar de emoção ao ler esse readme e talvez até esqueça o que você estava fazendo antes de ler.' WHERE (`idproduto` = '38');
 
+<<<<<<< HEAD
 
 -- TIPOPAG
 
 INSERT INTO `shopet`.`tipopag` (`idtipopag`, `tipopag`) VALUES ('1', 'Boleto');
 INSERT INTO `shopet`.`tipopag` (`idtipopag`, `tipopag`) VALUES ('2', 'PIX');
+=======
+-- TIPO PAGAMENTO
+INSERT INTO shopet.tipopag (idtipopag, tipopag) VALUES ('1', 'Boleto');
+INSERT INTO shopet.tipopag (idtipopag, tipopag) VALUES ('2', 'PIX');
+>>>>>>> 0ba838c12e0e088aecddd2c66ffec617fff382b6
