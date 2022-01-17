@@ -223,6 +223,22 @@ CREATE TABLE `shopet`.`endpedido` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
 
+CREATE TABLE `shopet`.`tipopag` (
+  `idtipopag` INT NOT NULL AUTO_INCREMENT,
+  `tipopag` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idtipopag`));
+
+ALTER TABLE `shopet`.`pedido` 
+ADD INDEX `fktipopag_idx` (`idtipopag` ASC) VISIBLE;
+;
+ALTER TABLE `shopet`.`pedido` 
+ADD CONSTRAINT `fktipopag`
+  FOREIGN KEY (`idtipopag`)
+  REFERENCES `shopet`.`tipopag` (`idtipopag`)
+  ON DELETE NO ACTION
+  ON UPDATE NO ACTION;
+
+
 USE `ShoPET`;
 
 SET SQL_MODE=@OLD_SQL_MODE;
